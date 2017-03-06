@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+            "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>HTML4</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> <!-- needed for transitional -->
+    </head>
+    <body>
+        <h1>Titlu foarete mare</h1>
+        <h2>Titlu mai putin mare</h2>
+        <h3>Titlu destul de mare</h3>
+        <h4>Titlu maricel</h4>
+        <h5>Titlu mai mic</h5>
+        <h6>Titlu mic</h6>
+        <center>Asta e centrat(dar nu e bun in html5!)</center>
+        <p>Acesta este un paragraf. <span>Acesta este un span in interiorul paragrafului</span>. <br >
+            Inca paragraf chiar si dupa line-break.</p>
+        <a href="http://google.com" target="_blank"> Link catre google care se deschide in tab nou</a>
+        <img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=350%C3%97150&amp;w=350&amp;h=150" height="200" width="300" alt="placeholder" title="ceva placeholder" >
+
+        <p>Lista cu diacriticele limbii romane</p>
+        <ul>
+            <li>&#x0103;</li>
+            <li>&icirc;</li>
+            <li>&acirc;</li>
+            <li>&#x021b;</li>
+            <li>&#x0219;</li>
+            <li>
+                <ol type="1" start="20">
+                    <li>&#x0103;</li>
+                    <li>&icirc;</li>
+                    <li>&acirc;</li>
+                    <li>&#x021b;</li>
+                    <li>&#x0219;</li>
+                </ol>
+            </li>
+            <li>
+                <ol type="A">
+                    <li>&#x0103;</li>
+                    <li>&icirc;</li>
+                    <li>&acirc;</li>
+                    <li>&#x021b;</li>
+                    <li>&#x0219;</li>
+                </ol>
+            </li>
+            <li>
+                <ol type="i">
+                    <li>&#x0103;</li>
+                    <li>&icirc;</li>
+                    <li>&acirc;</li>
+                    <li>&#x021b;</li>
+                    <li>&#x0219;</li>
+                </ol>
+            </li>
+        </ul>
+
+        <img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=350%C3%97150&amp;w=350&amp;h=150" height="200px" width="300px" alt="placeholder" title="ceva placeholder">
+        <div>
+        <form action=".">
+            <table border="1">
+                <tr id="head-fisa" bgcolor="yellow" align="center" >
+                    <th colspan="6">Fisa Student</th>
+                </tr>
+                <tr>
+                    <td><label for="nume"><strong>Nume/Prenume</strong></label></td>
+                    <td ><input id="nume" type="text" name="nume"></td>
+                    <td><label><strong>Sex</strong></label></td>
+                    <td rowspan="2">
+                        <label for="sex-m">M</label>
+                        <input type="radio" name="sex" id="sex-m" value="m" checked="checked">
+                        <label for="sex-f">F</label>
+                        <input type="radio" name="sex" id="sex-f" value="f">
+                    </td>
+                    <td><label for="data-nastere"><strong>Data nasterii</strong></label></td>
+                    <td><input id="data-nastere" type="text" name="data-nastere" value="01/01/2010"></td>
+                </tr>
+                <tr>
+                    <td><label for="adresa"><strong>Adresa</strong></label></td>
+                    <td colspan="2"><input id="adresa" type="text" name="adresa"  ></td>
+                </tr>
+                <tr>
+                    <td><label for="email" ><b>Email</b></label></td>
+                    <td ><input id="email" type="text" name="email" ></td>
+                    <td><label for="judet"><strong>Judet</strong></label></td>
+                    <td ><input id="judet" type="text" name="judet" maxlength="2"></td>
+                </tr>
+               <tr>
+                    <td valign="bottom"><label><strong>Scoala</strong></label></td>
+                    <td colspan="5">
+                        <table>
+                            <tr>
+                            <td>
+                                <fieldset>
+                                    <legend>Sectie/An:</legend>
+                                    An
+                                    <input id="an" type="text">
+
+                                    Sectie
+                                    <input id="sectie" type="text" readonly="readonly" value="Info Romana" >
+                                </fieldset>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td><label for="materie">Materia preferata</label></td>
+                                <td><select id="materie">
+                                      <option value="PW">Programare Web</option>
+                                      <option value="SGBD">Sisteme de Gestiune a Bazelor de Date</option>
+                                      <option value="MMP" selected="selected">Metode de Proiectare si Programare</option>
+                                      <option value="ISS">Ingineria Sistemelor Soft</option>
+                                      <option value="IA">Inteligenta Artificiala</option>
+                                </select></td>
+                            </tr>
+                        </table>
+                    </td>
+               </tr>
+                <tr>
+                    <td rowspan="3" colspan="2"> Limbi straine</td>
+                    <td colspan="2">
+                        <label for="romana">Romana</label>
+                        <input id="romana" type="checkbox" name="limba" value="romana" >
+                    </td>
+                    <td colspan="2">
+                        <label for="engleza">Engleza</label>
+                        <input id="engleza" type="checkbox" name="limba" value="engleza" >
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="franceza">Franceza</label>
+                        <input id="franceza" type="checkbox" name="limba" value="franceza" >
+                    </td>
+                    <td colspan="2">
+                        <label for="germana">Germana</label>
+                        <input id="germana" type="checkbox" name="limba" value="germana" >
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="italiana">Italiana</label>
+                        <input id="italiana" type="checkbox" name="limba" value="italiana" >
+                    </td>
+                    <td colspan="2">
+                        <label for="mandarina">Mandarina</label>
+                        <input id="mandarina" type="checkbox" name="limba" value="mandarina" disabled="disabled" >
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><label for="comentarii"><strong>Comentarii</strong></label></td>
+                    <td colspan="5">
+                        <textarea id="comentarii" name="comentarii" cols="50" rows="4"> PLACEHOLDER </textarea>
+                    </td>
+                </tr>
+                <tr><td colspan="6"><input type="submit" value="Submit" ></td></tr>
+            </table>
+        </form>
+
+        </div>
+    </body>
+</html>
