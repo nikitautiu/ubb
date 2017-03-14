@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Repository.StudentSQLRepoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-03-07T11:59:06" hostname="/0:0:0:0:0:0:0:1%lo" time="0.451">
-  <properties/>
-  <testcase name="testAll" classname="Repository.StudentSQLRepoTest" time="0.451"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
