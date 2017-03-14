@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <bean id="clientRepo" class="Repository.ClientFileRepo">
+        <constructor-arg value="clients.txt"/>
+    </bean>
+
+    <bean id="movieRepo" class="Repository.MovieFileRepo">
+        <constructor-arg value="movies.txt"/>
+    </bean>
+
+    <bean id="rentalRepo" class="Repository.RentalXMLRepo">
+        <constructor-arg value="rentals.xml"/>
+    </bean>
+
+    <bean id="controller" class="Controller.Controller">
+        <constructor-arg ref="movieRepo" />
+        <constructor-arg ref="clientRepo" />
+        <constructor-arg ref="rentalRepo" />
+    </bean>
+
+</beans>
