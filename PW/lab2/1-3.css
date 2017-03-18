@@ -1,0 +1,22 @@
+#navbar {
+    background-color: yellow;
+}
+
+#navbar ul {
+    list-style-type: none;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    border: solid;
+}
+
+#navbar li {
+    width: 150px;
+    height: 25px;
+    display: inline;
+    border-style: solid;
+    margin: 0;
+    float: left;
+    padding: 0;
+    text-align: left;
+}
