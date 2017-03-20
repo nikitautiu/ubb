@@ -1,21 +1,20 @@
-package Repository;
+package repository;
 
-import Domain.Student;
+import utils.DbConnManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Collection;
 import java.util.Properties;
 
-/**
- * Created by vitiv on 3/7/17.
- */
-public class StudentSQLRepo implements ICrudRepository<Student, Integer> {
+public class SqlCrudRepository<E, ID> implements ICrudRepository<E, ID> {
     private DbConnManager connManager;
-
-    public StudentSQLRepo(Properties props) {
+    private ISqlCrudStrategy strat;
+    public SqlCrudRepository(Properties props, ISqlCrudStrategy strat) {
         connManager = new DbConnManager(props);
+        this.strat = strat;
     }
 
     @Override
@@ -34,16 +33,12 @@ public class StudentSQLRepo implements ICrudRepository<Student, Integer> {
     }
 
     @Override
-    public void add(Student entity) {
+    public void add(E entity) {
         Connection con = connManager.getConnection();
 
         // Insert with known id(update)
-         // insert with autoincrement
-        try (PreparedStatement preStmt = con.prepareStatement("insert into Students(id ,nume, nrMatricol, medie) values (?,?,?,?)")) {
-            preStmt.setInt(1, entity.getId());
-            preStmt.setString(2, entity.getNume());
-            preStmt.setString(3, entity.getNrMatricol());
-            preStmt.setDouble(4, entity.getMedie());
+        // insert with autoincrement
+        try (PreparedStatement preStmt = strat.getInsertStmt();
             int result = preStmt.executeUpdate();
         } catch (SQLException ex) {
             System.out.println("Error DB " + ex);
@@ -51,10 +46,10 @@ public class StudentSQLRepo implements ICrudRepository<Student, Integer> {
     }
 
     @Override
-    public void delete(Integer integer) {
+    public void delete(ID id) {
         Connection con = connManager.getConnection();
         try (PreparedStatement preStmt = con.prepareStatement("delete from Students where id=?")) {
-            preStmt.setInt(1, integer);
+            preStmt.setInt(1, id);
             preStmt.executeUpdate();
         } catch (SQLException ex) {
             System.out.println("Error DB " + ex);
@@ -62,18 +57,14 @@ public class StudentSQLRepo implements ICrudRepository<Student, Integer> {
     }
 
     @Override
-    public Student find(Integer integer) {
+    public E find(ID id) {
         Connection con = connManager.getConnection();
 
         try (PreparedStatement preStmt = con.prepareStatement("select * from Students where id=?")) {
-            preStmt.setInt(1, integer);
+            preStmt.setInt(1, id);
             try (ResultSet result = preStmt.executeQuery()) {
                 if (result.next()) {
-                    int id = result.getInt("id");
-                    String nume = result.getString("nume");
-                    String nrMatricol = result.getString("nrMatricol");
-                    Double medie = result.getDouble("medie");
-                    Student stud = new Student(id, nume, nrMatricol, medie);
+                    E stud = start.getEntity(result);
                     return stud;
                 }
             }
@@ -83,8 +74,16 @@ public class StudentSQLRepo implements ICrudRepository<Student, Integer> {
         return null;
     }
 
+//    private E getEntity(ResultSet result) throws SQLException {
+//        int id = result.getInt("id");
+//        String nume = result.getString("nume");
+//        String nrMatricol = result.getString("nrMatricol");
+//        Double medie = result.getDouble("medie");
+//        return new Student(id, nume, nrMatricol, medie);
+//    }
+
     @Override
-    public Iterable<Student> getAll() {
+    public Collection<E> getAll() {
         return null;
     }
 }

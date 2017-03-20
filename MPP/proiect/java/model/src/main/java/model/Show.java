@@ -8,13 +8,15 @@ import java.util.Date;
 public class Show implements IWithId<Integer> {
     private int id;
     private int artistId;
+    private int locationId;
     private Date startTime;
     private int availableSeats;
 
 
-    public Show(int id, int artistId, Date startTime, int availableSeats) {
+    public Show(int id, int artistId, int locationId, Date startTime, int availableSeats) {
         this.id = id;
         this.artistId = artistId;
+        this.locationId = locationId;
         this.startTime = startTime;
         this.availableSeats = availableSeats;
     }

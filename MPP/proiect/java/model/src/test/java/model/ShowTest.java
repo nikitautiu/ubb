@@ -17,7 +17,7 @@ public class ShowTest {
     @Before
     public void setUp() throws Exception {
         Date testDate = new GregorianCalendar(2016, 12, 7).getTime();
-        this.testShow = new Show(1, 2, testDate, 100);
+        this.testShow = new Show(1, 2, 3, testDate, 100);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class ShowTest {
     @Test
     public void equals() throws Exception {
         Date compDate = new GregorianCalendar(2016, 12, 7).getTime();
-        Show compShow = new Show(1, 2, compDate, 100);
+        Show compShow = new Show(1, 2, 3, compDate, 100);
         assertEquals(testShow, compShow);
     }
 

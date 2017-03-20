@@ -1,0 +1,31 @@
+BEGIN TRANSACTION;
+CREATE TABLE "Show" (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`artistId`	INTEGER NOT NULL,
+	`locationId`	INTEGER,
+	`startTime`	TEXT CHECK(datetime(startTime) IS NOT NULL),
+	`availableSeats`	INTEGER,
+	FOREIGN KEY(`artistId`) REFERENCES `Artist`(`id`),
+	FOREIGN KEY(`locationId`) REFERENCES `Location`(`id`)
+);
+INSERT INTO `Show` VALUES (1,1,1,'2012-12-12T12:12Z',100);
+INSERT INTO `Show` VALUES (2,1,2,'2012-12-11',110);
+CREATE TABLE "Purchase" (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`showId`	INTEGER NOT NULL,
+	`clientName`	TEXT,
+	`quantity`	INTEGER NOT NULL DEFAULT 1 CHECK(quantity > 0),
+	FOREIGN KEY(`showId`) REFERENCES `Show`(`id`)
+);
+CREATE TABLE "Location" (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`name`	TEXT NOT NULL
+);
+INSERT INTO `Location` VALUES (1,'Lake Stage');
+INSERT INTO `Location` VALUES (2,'Forest Stage');
+CREATE TABLE `Artist` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`name`	TEXT NOT NULL
+);
+INSERT INTO `Artist` VALUES (1,'Whitesnake');
+COMMIT;

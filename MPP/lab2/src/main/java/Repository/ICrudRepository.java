@@ -1,6 +1,8 @@
 package Repository;
 
 
+import java.util.Collection;
+
 /**
  * CRUD repository interface
  * Defines all the operations necessary for performing CRUD
@@ -40,5 +42,5 @@ public interface ICrudRepository<E, ID> {
      * Returns an iterable over all entities of the repo
      * @return the iterable over the repo
      */
-    Iterable<E> getAll();
+    Collection<E> getAll();
 }
