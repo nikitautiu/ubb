@@ -27,7 +27,41 @@ public class PurchaseSqlRepo implements ICrudRepository<Purchase, Integer> {
 
     @Override
     public void add(Purchase entity) {
-        throw new UnsupportedOperationException();
+        Connection con = connManager.getConnection();
+        Helpers helpers = new Helpers(entity, con).invoke();
+
+        if(!doesIdExist(entity, con))
+            throw new RepositoryException("Show id not in db");
+
+        int sold = helpers.getSold();
+        int total = helpers.getTotal();
+        if(entity.getQuantity() + sold >= total)
+            throw new RepositoryException("Purchase exceeds total seats");
+
+        // otherwise
+        try (PreparedStatement preStmt = con.prepareStatement("insert into Purchase(showId, clientName, quantity) values(?, ?, ?)")) {
+            preStmt.setInt(1, entity.getShowId());
+            preStmt.setString(2, entity.getClientName());
+            preStmt.setInt(3, entity.getQuantity());
+            preStmt.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error DB " + ex);
+        }
+    }
+
+    private boolean doesIdExist(Purchase entity, Connection con) {
+
+        try (PreparedStatement preStmt = con.prepareStatement("select exists(select * from Show where id=?)")) {
+            preStmt.setInt(1, entity.getShowId());
+            try (ResultSet result = preStmt.executeQuery()) {
+                if(result.next()) {
+                    return result.getBoolean(1);
+                }
+            }
+        } catch (SQLException ex) {
+            throw new RepositoryException(ex.getSQLState());
+        }
+        return false;
     }
 
     @Override
@@ -57,9 +91,46 @@ public class PurchaseSqlRepo implements ICrudRepository<Purchase, Integer> {
                 }
             }
         } catch (SQLException ex) {
-            System.out.println("Error DB " + ex);
+            throw new RepositoryException(ex.getSQLState());
         }
 
         return Purchases;
+    }
+
+    private static class Helpers {
+        private Purchase entity;
+        private Connection con;
+        private int sold;
+        private int total;
+
+        public Helpers(Purchase entity, Connection con) {
+            this.entity = entity;
+            this.con = con;
+        }
+
+        public int getSold() {
+            return sold;
+        }
+
+        public int getTotal() {
+            return total;
+        }
+
+        public Helpers invoke() {
+            sold = 0;
+            total = 0;
+            try (PreparedStatement preStmt = con.prepareStatement("select sum(Purchase.quantity) as sold, Show.availableSeats as total from Purchase join Show on Purchase.showId=Show.id WHERE Show.id=?")) {
+                preStmt.setInt(1, entity.getShowId());
+                try (ResultSet result = preStmt.executeQuery()) {
+                    if(result.next()) {
+                        sold = result.getInt("sold");
+                        total = result.getInt("total");
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            return this;
+        }
     }
 }
