@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -60,15 +62,21 @@ public class ShowDataSqlRepo implements ICrudRepository<ShowData, Integer> {
                     int id = result.getInt("id");
                     String artistName = result.getString("artistName");
                     String locationName = result.getString("locationName");
-                    Date startTime = result.getTime("startTime");
+
+                    SimpleDateFormat parseD = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    String startTimeStr = result.getString("startTime");
+                    Date startTime = parseD.parse(startTimeStr);
+
                     int soldSeats = result.getInt("soldSeats");
                     int availableSeats = result.getInt("availableSeats");
 
                     ShowDatas.add(new ShowData(id, artistName, locationName, startTime, soldSeats, availableSeats));
                 }
+            } catch (ParseException e) {
+                throw new RepositoryException("date parse error");
             }
         } catch (SQLException ex) {
-            System.out.println("Error DB " + ex);
+            throw new RepositoryException("Error DB " + ex);
         }
         return ShowDatas;
     }

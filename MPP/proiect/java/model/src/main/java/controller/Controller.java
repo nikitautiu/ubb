@@ -12,6 +12,11 @@ import utils.IObserver;
  */
 public class Controller implements IObserver<Integer> {
     private Service service;
+
+    public ObservableList<ShowData> getDataModel() {
+        return dataModel;
+    }
+
     private ObservableList<ShowData> dataModel;
 
     public Controller(Service service) {
