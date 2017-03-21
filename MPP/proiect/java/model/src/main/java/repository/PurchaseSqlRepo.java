@@ -1,6 +1,7 @@
 package repository;
 
 import model.Purchase;
+import model.validator.PurchaseValidator;
 import utils.DbConnManager;
 
 import java.sql.Connection;
@@ -30,12 +31,14 @@ public class PurchaseSqlRepo implements ICrudRepository<Purchase, Integer> {
         Connection con = connManager.getConnection();
         Helpers helpers = new Helpers(entity, con).invoke();
 
+        new PurchaseValidator().accept(entity);
+
         if(!doesIdExist(entity, con))
             throw new RepositoryException("Show id not in db");
 
         int sold = helpers.getSold();
         int total = helpers.getTotal();
-        if(entity.getQuantity() + sold >= total)
+        if(entity.getQuantity() + sold > total)
             throw new RepositoryException("Purchase exceeds total seats");
 
         // otherwise

@@ -2,14 +2,17 @@ package Ui;
 
 
 import controller.Controller;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Callback;
 import model.Show;
 import model.dtos.ShowData;
 
+import javax.swing.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -53,6 +56,8 @@ public class FxmlController {
     @FXML
     private DatePicker datePicker;
     @FXML
+    private TextField quantityText;
+    @FXML
     private Button buyBtn;
 
 
@@ -82,18 +87,11 @@ public class FxmlController {
                     return property;
                 }
         );
-        remainingColumn.setCellFactory(column -> new TableCell<ShowData, Integer>() {
-            @Override
-            protected void updateItem(Integer item, boolean empty) {
-                super.updateItem(item, empty);
-
-                if (item == null || empty) {
-                    setText(null);
-                    setStyle("");
-                } else {
-                    setStyle("-fx-background-color: #F00");
-                }
-            }
+        remainingColumn.setCellFactory(getTableColumnTableCellCallback());
+        remainingColumn.setCellValueFactory(p -> {
+            SimpleIntegerProperty prop = new SimpleIntegerProperty();
+            prop.setValue(p.getValue().getAvailableSeats() - p.getValue().getSoldSeats());
+            return prop.asObject();
         });
         idSrcColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         artistSrcColumn.setCellValueFactory(new PropertyValueFactory<>("artistName"));
@@ -105,7 +103,22 @@ public class FxmlController {
                     property.setValue(dateFormat.format(show.getValue().getStartTime()));
                     return property;
                 }
-        );        remainingSrcColumn.setCellFactory(column -> new TableCell<ShowData, Integer>() {
+        );
+        remainingSrcColumn.setCellFactory(getTableColumnTableCellCallback());
+        remainingSrcColumn.setCellValueFactory(p -> {
+            SimpleIntegerProperty prop = new SimpleIntegerProperty();
+            prop.setValue(p.getValue().getAvailableSeats() - p.getValue().getSoldSeats());
+            return prop.asObject();
+        });
+        datePicker.valueProperty().addListener((ov, oldValue, newValue) -> {
+            handleFilters();
+        });
+
+
+    }
+
+    private Callback<TableColumn<ShowData, Integer>, TableCell<ShowData, Integer>> getTableColumnTableCellCallback() {
+        return column -> new TableCell<ShowData, Integer>() {
             @Override
             protected void updateItem(Integer item, boolean empty) {
                 super.updateItem(item, empty);
@@ -114,13 +127,14 @@ public class FxmlController {
                     setText(null);
                     setStyle("");
                 } else {
-                    setStyle("-fx-background-color: #F00");
+                    setText(item.toString());
+                    if(item == 0)
+                        setStyle("-fx-background-color: #F00");
+                    else
+                        setStyle("");
                 }
             }
-        });
-        datePicker.valueProperty().addListener((ov, oldValue, newValue) -> {
-            handleFilters();
-        });
+        };
     }
 
     @FXML
@@ -145,5 +159,37 @@ public class FxmlController {
 
             };
         srcModel.setPredicate(pred);
+    }
+
+    @FXML
+    void handleBuyBtn() {
+        int quantity;
+        ShowData data;
+
+        try {
+            quantity = Integer.parseInt(quantityText.getText());
+        } catch(Exception ex) {
+            JOptionPane.showMessageDialog(null, "Invalid quantity",
+                    "Invalid quantity",
+                    JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        data = srcTable.getSelectionModel().getSelectedItem();
+        if(data == null) {
+            JOptionPane.showMessageDialog(null, "Select a show",
+                    "Select a show",
+                    JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        try {
+            String clientName = nameText.getText();
+            controller.addPurchase(data.getId(), clientName, quantity);
+        } catch(Exception ex) {
+            JOptionPane.showMessageDialog(null,
+                    ex.getMessage(),
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
