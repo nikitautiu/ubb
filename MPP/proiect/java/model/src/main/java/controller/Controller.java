@@ -40,4 +40,8 @@ public class Controller implements IObserver<Integer> {
     public void update(Integer integer) {
         populateList();
     }
+
+    public boolean login(String username, String password) {
+        return service.login(username, password);
+    }
 }
