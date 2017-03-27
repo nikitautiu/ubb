@@ -10,13 +10,19 @@ html, body {
     height: 100%;
 }
 #center-div {
+    text-shadow: 4px 4px 0px #4AB18E;
+    font-weight: 600;
+    font-size: 3em;
+
+    text-align: center;
+    color: #aa44aa;
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 100px;
-    opacity: 0.4;
-    color: #eeeeee;
+    padding: 20px;
+    opacity: 0.6;
 
     background: darkmagenta url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
 
@@ -28,7 +34,6 @@ html, body {
 #center-div:hover {
 
     opacity: 1;
-    color: #333333;
 
     background: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 
