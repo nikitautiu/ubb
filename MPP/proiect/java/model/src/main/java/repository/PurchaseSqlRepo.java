@@ -28,6 +28,7 @@ public class PurchaseSqlRepo implements ICrudRepository<Purchase, Integer> {
 
     @Override
     public void add(Purchase entity) {
+
         Connection con = connManager.getConnection();
         Helpers helpers = new Helpers(entity, con).invoke();
 
