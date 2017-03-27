@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    background: radial-gradient(circle, cyan, magenta);
+
+}
+
+#main-view {
+    position: relative;
+    height: 100%;
+}
+#center-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 100px;
+    opacity: 0.4;
+    color: #eeeeee;
+
+    background: darkmagenta url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+
+    border-radius: 10px;
+    text-transform: uppercase
+;
+}
+
+#center-div:hover {
+
+    opacity: 1;
+    color: #333333;
+
+    background: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+
+}
