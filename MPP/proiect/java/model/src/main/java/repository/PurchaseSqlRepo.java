@@ -123,12 +123,12 @@ public class PurchaseSqlRepo implements ICrudRepository<Purchase, Integer> {
         public Helpers invoke() {
             sold = 0;
             total = 0;
-            try (PreparedStatement preStmt = con.prepareStatement("select sum(Purchase.quantity) as sold, Show.availableSeats as total from Purchase join Show on Purchase.showId=Show.id WHERE Show.id=?")) {
+            try (PreparedStatement preStmt = con.prepareStatement("select total(Purchase.quantity) as sold, Show.availableSeats as ava from Show left join Purchase on Purchase.showId=Show.id WHERE Show.id=?")) {
                 preStmt.setInt(1, entity.getShowId());
                 try (ResultSet result = preStmt.executeQuery()) {
                     if(result.next()) {
                         sold = result.getInt("sold");
-                        total = result.getInt("total");
+                        total = result.getInt("ava");
                     }
                 }
             } catch (SQLException e) {

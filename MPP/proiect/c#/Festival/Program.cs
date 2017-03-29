@@ -21,7 +21,8 @@ namespace Festival
             var showRepo = new ShowDataSqlRepo("festival.db");
             var purchaseRepo = new PurchaseSqlRepo("festival.db");
             var userRepo = new UserSqlRepo("festival.db");
-            var ctrl = new Controller.Controller(showRepo, purchaseRepo, userRepo);
+            var service = new Service.Service(showRepo, purchaseRepo, userRepo);
+            var ctrl = new Controller.Controller(service);
             var loginForm = new LoginForm(ctrl);
             Application.Run(loginForm);
 

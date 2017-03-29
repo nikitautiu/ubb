@@ -5,7 +5,6 @@ import model.User;
 import model.dtos.ShowData;
 import repository.ICrudRepository;
 import repository.IUserRepo;
-import utils.IObservable;
 import utils.IObserver;
 
 import java.math.BigInteger;
@@ -19,7 +18,7 @@ import java.util.Objects;
 /**
  * Created by vitiv on 3/21/17.
  */
-public class Service implements IObservable<Integer> {
+public class Service implements IService {
     private ICrudRepository<Purchase, Integer> purchaseRepo;
     private ICrudRepository<ShowData, Integer> showRepo;
     private IUserRepo userRepo;
@@ -32,11 +31,13 @@ public class Service implements IObservable<Integer> {
         this.userRepo = userRepo;
     }
 
+    @Override
     public void addPurchase(Purchase entity) {
         purchaseRepo.add(entity);
         notifyObservers(null);
     }
 
+    @Override
     public Collection<ShowData> getAll(){
         return showRepo.getAll();
     }
@@ -56,6 +57,7 @@ public class Service implements IObservable<Integer> {
         observers.stream().forEach(x->x.update(t));
     }
 
+    @Override
     public boolean login(String username, String password) {
         User user = userRepo.findByName(username);
         if(user == null)

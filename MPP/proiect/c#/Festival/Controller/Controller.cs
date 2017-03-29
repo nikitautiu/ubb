@@ -7,22 +7,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Festival.Model;
 using Festival.Repository;
+using Festival.Service;
 
 namespace Festival.Controller
 {
     
     public class Controller
     {
-        private ICrudRepository<int, ShowData> ShowRepo;
-        private ICrudRepository<int, Purchase> PurchaseRepo;
-        private IUserRepo userRepo;
+        private IService serv;
         public IBindingList ShowBindingList { get; }
 
-        public Controller(ICrudRepository<int, ShowData> showRepo, ICrudRepository<int, Purchase> purchaseRepo, IUserRepo userRepo)
+        public Controller(IService serv)
         {
-            this.ShowRepo = showRepo;
-            this.PurchaseRepo = purchaseRepo;
-            this.userRepo = userRepo;
+            this.serv = serv;
+            this.serv.ChangeOccured += RefreshList;
             ShowBindingList = new BindingList<ShowData>();
 
             RefreshList();
@@ -31,7 +29,7 @@ namespace Festival.Controller
         private void RefreshList()
         {
             ShowBindingList.Clear();
-            foreach (var showData in ShowRepo.findAll())
+            foreach (var showData in serv.GetAll())
             {
                 ShowBindingList.Add(showData);
             }
@@ -39,31 +37,15 @@ namespace Festival.Controller
 
         public void AddPurchase(int showId, string clientName, int quantity)
         {
-            PurchaseRepo.save(new Purchase {Id = 0, ShowId = showId, ClientName = clientName, Quantity = quantity});
-            RefreshList();
+            serv.AddPurchase(showId, clientName, quantity);
         }
 
         public bool Login(string username, string password)
         {
-            var user = userRepo.findByName(username);
-            var hash = CalculateMD5Hash(password);
-
-            return user != null && user.PassHash == hash;
+            return serv.Login(username, password);
         }
 
-        private string CalculateMD5Hash(string input)
-        {
-            MD5 md5 = System.Security.Cryptography.MD5.Create();
-            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
-            byte[] hash = md5.ComputeHash(inputBytes);
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < hash.Length; i++)
-            {
-                sb.Append(hash[i].ToString("x2")); // to lowercase hex
-            }
-            return sb.ToString();
 
-        }
 
     }
 }
