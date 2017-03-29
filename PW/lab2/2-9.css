@@ -1,8 +1,7 @@
 html, body {
     margin: 0;
     height: 100%;
-    background: radial-gradient(circle, cyan, magenta);
-
+    background: linear-gradient(cyan, magenta);
 }
 
 #main-view {
@@ -22,7 +21,7 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    opacity: 0.6;
+    opacity: 0.3;
 
     background: darkmagenta url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
 
@@ -38,3 +37,10 @@ html, body {
     background: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 
 }
+
+#center-div p::selection {
+    color: cyan;
+    background: magenta;
+
+}
+
