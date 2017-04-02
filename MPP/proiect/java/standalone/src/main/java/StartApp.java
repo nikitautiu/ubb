@@ -5,7 +5,8 @@ import javafx.stage.Stage;
 import model.Purchase;
 import model.dtos.ShowData;
 import repository.*;
-import services.Service;
+import services.IServerService;
+import services.LocalService;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -37,7 +38,7 @@ public class StartApp extends Application {
                 new ShowDataSqlRepo(props);
         IUserRepo userRepo = new UserSqlRepo(props);
 
-        Service service = new Service(purchaseRepo, showDataRepo, userRepo);
+        IServerService service = new LocalService(purchaseRepo, showDataRepo, userRepo);
         Controller ctrl = new Controller(service);
         Gui gui = new Gui(primaryStage, ctrl);
         gui.run();

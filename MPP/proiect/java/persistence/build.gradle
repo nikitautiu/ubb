@@ -2,8 +2,6 @@ group 'ProiectMPP'
 version '1.0'
 
 apply plugin: 'java'
-apply plugin: 'idea'
-
 
 sourceCompatibility = 1.8
 
@@ -12,6 +10,6 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile project(':model')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
-

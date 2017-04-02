@@ -1,5 +1,4 @@
-package repository;
-
+import repository.ArtistSqlRepo;
 import model.Artist;
 import org.junit.Before;
 import org.junit.Test;

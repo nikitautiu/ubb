@@ -1,5 +1,5 @@
-package repository;
 
+import repository.PurchaseSqlRepo;
 import model.Purchase;
 import org.junit.Before;
 import org.junit.Test;

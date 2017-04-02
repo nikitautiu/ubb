@@ -18,14 +18,14 @@ import java.util.Objects;
 /**
  * Created by vitiv on 3/21/17.
  */
-public class Service implements IService {
+public class LocalService implements IServerService {
     private ICrudRepository<Purchase, Integer> purchaseRepo;
     private ICrudRepository<ShowData, Integer> showRepo;
     private IUserRepo userRepo;
     private List<IObserver<Integer>> observers = new ArrayList<>();
 
 
-    public Service(ICrudRepository<Purchase, Integer> purchaseRepo, ICrudRepository<ShowData, Integer> showRepo, IUserRepo userRepo) {
+    public LocalService(ICrudRepository<Purchase, Integer> purchaseRepo, ICrudRepository<ShowData, Integer> showRepo, IUserRepo userRepo) {
         this.purchaseRepo = purchaseRepo;
         this.showRepo = showRepo;
         this.userRepo = userRepo;
@@ -34,27 +34,11 @@ public class Service implements IService {
     @Override
     public void addPurchase(Purchase entity) {
         purchaseRepo.add(entity);
-        notifyObservers(null);
     }
 
     @Override
     public Collection<ShowData> getAll(){
         return showRepo.getAll();
-    }
-
-    @Override
-    public void addObserver(IObserver<Integer> e) {
-        observers.add(e);
-    }
-
-    @Override
-    public void removeObserver(IObserver<Integer> e) {
-        observers.remove(e);
-    }
-
-    @Override
-    public void notifyObservers(Integer t) {
-        observers.stream().forEach(x->x.update(t));
     }
 
     @Override
