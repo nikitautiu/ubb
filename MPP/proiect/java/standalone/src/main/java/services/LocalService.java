@@ -57,4 +57,9 @@ public class LocalService implements IServerService {
         String passHash = new BigInteger(1 ,m.digest()).toString(16);
         return Objects.equals(passHash, user.getPassHash());
     }
+
+    @Override
+    public void logout(IClientService clientService) {
+
+    }
 }

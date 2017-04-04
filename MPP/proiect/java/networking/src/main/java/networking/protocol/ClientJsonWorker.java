@@ -9,7 +9,6 @@ import services.IServerService;
 import services.ServiceException;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.Collection;
@@ -49,6 +48,9 @@ public class ClientJsonWorker implements Runnable, IClientService {
                 }
             } catch (IOException e) {
                 e.printStackTrace();
+            } catch(NullPointerException e) {
+                this.server.logout(this);
+                break;
             }
             try {
                 Thread.sleep(1000);
@@ -67,21 +69,10 @@ public class ClientJsonWorker implements Runnable, IClientService {
 
     private JsonObject handleRequest(JsonObject request){
         if (Objects.equals(request.get("name").getAsString(), "login")){
-            System.out.println("Login request ...");
-
-            String username = request.get("username").getAsString();
-            String password = request.get("password").getAsString();
-
-            try {
-                boolean status = server.login(username, password, this);
-                JsonObject response = new JsonObject();
-                response.addProperty("type", "response");
-                response.addProperty("success", status);
-                return response;
-            } catch (ServiceException e) {
-                connected=false;
-                return getErrorResponse(e);
-            }
+            return login(request);
+        }
+        if (Objects.equals(request.get("name").getAsString(), "logout")){
+            return logout(request);
         }
         if (Objects.equals(request.get("name").getAsString(), "addPurchase")){
             return addPurchase(request);
@@ -90,6 +81,35 @@ public class ClientJsonWorker implements Runnable, IClientService {
             return getAll();
         }
         return null;
+    }
+
+    private JsonObject logout(JsonObject request) {
+        System.out.println("Logout request ...");
+        this.server.logout(this);
+        Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm").create();
+
+        JsonObject response = new JsonObject();
+        response.add("type", gson.toJsonTree("response"));
+        response.add("success", gson.toJsonTree(true));
+        return response;
+    }
+
+    private JsonObject login(JsonObject request) {
+        System.out.println("Login request ...");
+
+        String username = request.get("username").getAsString();
+        String password = request.get("password").getAsString();
+
+        try {
+            boolean status = server.login(username, password, this);
+            JsonObject response = new JsonObject();
+            response.addProperty("type", "response");
+            response.addProperty("success", status);
+            return response;
+        } catch (ServiceException e) {
+            connected=false;
+            return getErrorResponse(e);
+        }
     }
 
     private JsonObject addPurchase(JsonObject request) {
@@ -156,13 +176,27 @@ public class ClientJsonWorker implements Runnable, IClientService {
     }
 
     @Override
-    public void changesOccured() {
+    public void changesOccurred(Collection<ShowData> changedValues) {
         Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm").create();
         System.out.println("Notifying one client");
 
         JsonObject response = new JsonObject();
         response.add("type", gson.toJsonTree("update"));
-        response.add("name", gson.toJsonTree("changesOccured"));
+        response.add("name", gson.toJsonTree("changesOccurred"));
+
+        JsonArray showArray = new JsonArray();
+        for(ShowData s : changedValues) {
+            JsonObject show = new JsonObject();
+            show.add("id", gson.toJsonTree(s.getId()));
+            show.add("artistName", gson.toJsonTree(s.getLocationName()));
+            show.add("locationName", gson.toJsonTree(s.getArtistName()));
+            show.add("startTime", gson.toJsonTree(s.getStartTime()));
+            show.add("soldSeats", gson.toJsonTree(s.getSoldSeats()));
+            show.add("availableSeats", gson.toJsonTree(s.getAvailableSeats()));
+
+            showArray.add(show);
+        }
+        response.add("shows", showArray);
 
         try {
             sendUpdate(response);

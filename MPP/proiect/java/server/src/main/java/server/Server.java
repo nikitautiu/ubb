@@ -15,6 +15,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
 
 
 public class Server implements IServerService {
@@ -32,7 +33,7 @@ public class Server implements IServerService {
 
 
     private final int defaultThreadsNo=5;
-    private void notifyClients() {
+    private void notifyClients(Collection<ShowData> values) {
         System.out.println("Changes occurred - notifying clients");
 
         ExecutorService executor = Executors.newFixedThreadPool(defaultThreadsNo);
@@ -40,7 +41,7 @@ public class Server implements IServerService {
             if (client != null)
                 executor.execute(() -> {
                     try {
-                        client.changesOccured();
+                        client.changesOccurred(values);
                     } catch (ServiceException e) {
                         System.err.println("Error notifying " + e);
                     }
@@ -54,7 +55,7 @@ public class Server implements IServerService {
     @Override
     public void addPurchase(Purchase entity) {
         purchaseRepo.add(entity);
-        notifyClients();
+        this.notifyClients(showRepo.getAll().stream().filter(x->x.getId() == entity.getShowId()).collect(Collectors.toList()));
     }
 
     @Override
@@ -81,5 +82,11 @@ public class Server implements IServerService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public void logout(IClientService clientService) {
+        System.out.println("Client logged out");
+        this.loggedClients.remove(clientService);
     }
 }

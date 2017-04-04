@@ -12,4 +12,5 @@ public interface IServerService {
     void addPurchase(Purchase entity) ;
     Collection<ShowData> getAll() ;
     boolean login(String username, String password, IClientService client) ;
+    void logout(IClientService clientService);
 }

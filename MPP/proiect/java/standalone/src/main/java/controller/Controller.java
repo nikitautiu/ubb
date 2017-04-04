@@ -6,7 +6,8 @@ import model.Purchase;
 import model.ShowData;
 import services.IClientService;
 import services.IServerService;
-import utils.IObserver;
+
+import java.util.Collection;
 
 /**
  * Created by vitiv on 3/21/17.
@@ -43,7 +44,7 @@ public class Controller implements IClientService {
     }
 
     @Override
-    public void changesOccured() {
+    public void changesOccurred(Collection<ShowData> changedValues) {
         populateList();
     }
 }

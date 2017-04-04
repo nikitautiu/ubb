@@ -96,8 +96,21 @@ public class ServerObjectProxy implements IServerService {
 
 
     private void handleUpdate(JsonObject response) {
-        if(Objects.equals(response.get("name").getAsString(), "changesOccured")) {
-            client.changesOccured();
+        if(Objects.equals(response.get("name").getAsString(), "changesOccurred")) {
+            Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm").create();
+            ArrayList<ShowData> shows = new ArrayList<>();
+            for(JsonElement elem : response.get("shows").getAsJsonArray()) {
+                JsonObject object = elem.getAsJsonObject();
+                int id = object.get("id").getAsInt();
+                String artistName = object.get("artistName").getAsString();
+                String locationName = object.get("locationName").getAsString();
+                Date startTime = gson.fromJson(object.get("startTime"), Date.class);
+                int availableSeats = object.get("availableSeats").getAsInt();
+                int soldSeats = object.get("soldSeats").getAsInt();
+
+                shows.add(new ShowData(id, artistName, locationName, startTime, soldSeats, availableSeats));
+            }
+            client.changesOccurred(shows);
         }
     }
 
@@ -172,6 +185,16 @@ public class ServerObjectProxy implements IServerService {
             throw new ServiceException(response.get("message").getAsString());
         }
         return false;
+    }
+
+    @Override
+    public void logout(IClientService clientService) {
+        this.client = null;
+        Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm").create();
+        JsonObject request = new JsonObject();
+        request.addProperty("name", "logout");
+        sendRequest(request);
+        JsonObject response=readResponse();
     }
 
     private class ReaderThread implements Runnable{

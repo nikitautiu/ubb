@@ -6,8 +6,9 @@ import model.Purchase;
 import model.ShowData;
 import services.IClientService;
 import services.IServerService;
-import services.ServiceException;
-import utils.IObserver;
+
+import java.util.Collection;
+import java.util.HashMap;
 
 /**
  * Created by vitiv on 3/21/17.
@@ -46,7 +47,9 @@ public class Controller implements IClientService {
     }
 
     @Override
-    public void changesOccured() {
-        populateList();
+    public void changesOccurred(Collection<ShowData> changedValues) {
+        HashMap<Integer, ShowData> newVals = new HashMap<>();
+        changedValues.forEach(x -> newVals.put(x.getId(), x));
+        dataModel.replaceAll(x -> newVals.getOrDefault(x.getId(), x));
     }
 }
