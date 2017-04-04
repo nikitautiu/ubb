@@ -1,9 +1,8 @@
 package repository;
 
-import model.dtos.ShowData;
+import model.ShowData;
 import utils.DbConnManager;
 
-import javax.naming.OperationNotSupportedException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

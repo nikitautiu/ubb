@@ -2,7 +2,7 @@ package services;
 
 import model.Purchase;
 import model.User;
-import model.dtos.ShowData;
+import model.ShowData;
 import repository.ICrudRepository;
 import repository.IUserRepo;
 import utils.IObserver;
@@ -42,7 +42,7 @@ public class LocalService implements IServerService {
     }
 
     @Override
-    public boolean login(String username, String password) {
+    public boolean login(String username, String password, IClientService client) {
         User user = userRepo.findByName(username);
         if(user == null)
             return false;

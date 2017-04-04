@@ -6,6 +6,7 @@ import model.Purchase;
 import model.ShowData;
 import services.IClientService;
 import services.IServerService;
+import services.ServiceException;
 import utils.IObserver;
 
 /**
@@ -23,23 +24,25 @@ public class Controller implements IClientService {
     public Controller(IServerService serverService) {
         this.serverService = serverService;
         dataModel = FXCollections.observableArrayList();
-        populateList();
     }
 
-    public void addPurchase(int showId, String name, int quantity) {
+    public void addPurchase(int showId, String name, int quantity)  {
         serverService.addPurchase(new Purchase(0, showId, name, quantity));
-        populateList();
     }
 
-    private void populateList() {
+    private void populateList()  {
         dataModel.clear();
         Iterable<ShowData> tasks = serverService.getAll();
         tasks.forEach(x -> dataModel.add(x));
     }
 
 
-    public boolean login(String username, String password) {
-        return serverService.login(username, password, this);
+    public boolean login(String username, String password)  {
+        if(serverService.login(username, password, this)) {
+            populateList();
+            return true;
+        }
+        return false;
     }
 
     @Override

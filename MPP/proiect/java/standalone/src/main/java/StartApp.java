@@ -3,7 +3,7 @@ import controller.Controller;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import model.Purchase;
-import model.dtos.ShowData;
+import model.ShowData;
 import repository.*;
 import services.IServerService;
 import services.LocalService;

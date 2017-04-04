@@ -1,4 +1,4 @@
-package model.dtos;
+package model;
 
 import model.IWithId;
 
