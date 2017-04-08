@@ -1,0 +1,13 @@
+.open-menu {
+    display: block;
+}
+
+.closed-menu {
+    display: none;
+    height: 0 ;
+}
+
+.menu-container ul {
+    list-style-type: none;
+    padding: 0;
+}

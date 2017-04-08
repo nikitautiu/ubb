@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+    <script type="text/javascript">
+        function initDropdowns() {
+            var dropdown = document.querySelectorAll('.dropdown');
+            dropdown.forEach(function(menu) {
+                // needs scope to get children of current node
+                var toggle = menu.querySelector(':scope > .menu-toggle');
+                var submenu = menu.querySelector(':scope > .menu');
+                submenu.classList.add("closed-menu");
+                toggle.onclick = function() {
+                  submenu.classList.toggle('closed-menu');
+                  submenu.classList.toggle('open-menu');
+                };
+            });
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="dropdown.css" />
+</head>
+<body>
+    <div class="menu-container">
+    <ul>
+        <li class="dropdown">
+            <a  class="menu-toggle" href="#">Menu</a>
+            <ul class="menu">
+                <li class="dropdown"><a class="menu-toggle" href="#">Submenu 1</a>
+                    <ul class="menu">
+                        <li>Subsubmenu 1</li>
+                        <li>Subsubmenu 2</li>
+                        <li>Subsubmenu 3</li>
+                        <li>Subsubmenu 4</li>
+                        <li>Subsubmenu 5</li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="menu-toggle" href="#">Submenu 2</a>
+                    <ul class="menu">
+                        <li>Subsubmenu 1</li>
+                        <li>Subsubmenu 2</li>
+                        <li>Subsubmenu 3</li>
+                        <li>Subsubmenu 4</li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="menu-toggle" href="#">Submenu 3</a>
+                    <ul class="menu">
+                        <li>Subsubmenu 1</li>
+                        <li>Subsubmenu 2</li>
+                        <li>Subsubmenu 3</li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="menu-toggle" href="#">Submenu 4</a>
+                    <ul class="menu">
+                        <li>Subsubmenu 1</li>
+                        <li>Subsubmenu 2</li>
+                        <li>Subsubmenu 3</li>
+                        <li>Subsubmenu 4</li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="menu-toggle" href="#">Submenu 5</a>
+                    <ul class="menu">
+                        <li>Subsubmenu 1</li>
+                        <li>Subsubmenu 2</li>
+                        <li>Subsubmenu 3</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+    <script type="text/javascript">initDropdowns();</script>
+</body>
+</html>
