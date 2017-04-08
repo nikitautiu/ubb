@@ -18,7 +18,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 
-public class ServerObjectProxy implements IServerService {
+public class ServerJsonProxy implements IServerService {
     private String host;
     private int port;
 
@@ -32,7 +32,7 @@ public class ServerObjectProxy implements IServerService {
     private BlockingQueue<JsonObject> qresponses;
     private volatile boolean finished;
 
-    public ServerObjectProxy(String host, int port) {
+    public ServerJsonProxy(String host, int port) {
         this.host = host;
         this.port = port;
         //responses=new ArrayList<Response>();

@@ -2,7 +2,7 @@ import Ui.Gui;
 import controller.Controller;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import networking.protocol.ServerObjectProxy;
+import networking.protocol.ServerJsonProxy;
 import services.IServerService;
 
 import java.io.FileReader;
@@ -38,7 +38,7 @@ public class StartApp extends Application {
         System.out.println("Using server IP "+serverIP);
         System.out.println("Using server port "+serverPort);
 
-        IServerService service = new ServerObjectProxy(serverIP, serverPort);
+        IServerService service = new ServerJsonProxy(serverIP, serverPort);
         Controller ctrl = new Controller(service);
         Gui gui = new Gui(primaryStage, ctrl);
         gui.run();
