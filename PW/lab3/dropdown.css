@@ -1,13 +1,69 @@
-.open-menu {
-    display: block;
+body {
+    margin: 0;
+    width: 100%;
 }
 
-.closed-menu {
-    display: none;
-    height: 0 ;
+.menu-container {
+    max-width: 500px;
+    margin: 20px auto 0;
+}
+
+
+.menu-container .menu {
+    transition: all 0.5s linear;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+}
+
+.menu-container .open-menu > .menu {
+    opacity: 1;
+    max-height: 100%;
+}
+
+
+.menu-container a {
+    color: #dddddd;
+    text-decoration: none;
 }
 
 .menu-container ul {
     list-style-type: none;
     padding: 0;
+}
+
+.menu-container li a {
+    width: 200px;
+    line-height: 30px;
+    height: 30px;
+    color: #dddddd;
+    padding-left: 5px;
+}
+
+.menu-container li {
+    background-color: #7799aa;
+    border-radius: 3px;
+}
+
+.menu-container li li {
+    background-color: #999999;
+}
+
+.menu-container li li li {
+    background-color: #cccccc;
+}
+
+.menu-container li li li a {
+    color: #111111;
+}
+
+.menu-container .open-menu > .menu-toggle:before {
+    content: "-";
+    padding-right: 5px;
+}
+
+.menu-container .menu-toggle:before {
+    content: "+";
+    padding-right: 5px;
 }
