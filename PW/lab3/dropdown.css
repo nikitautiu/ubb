@@ -10,7 +10,7 @@ body {
 
 
 .menu-container .menu {
-    transition: all 0.5s linear;
+    transition: max-height 0.5s linear, visibility 0s, opacity 0.5s;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -19,7 +19,7 @@ body {
 
 .menu-container .open-menu > .menu {
     opacity: 1;
-    max-height: 100%;
+    max-height: 1000px;
 }
 
 

@@ -9,7 +9,6 @@
             dropdown.forEach(function(menu) {
                 // needs scope to get children of current node
                 var toggle = menu.querySelector(':scope > .menu-toggle');
-                var submenu = menu.querySelector(':scope > .menu');
                 toggle.onclick = function() {
                   menu.classList.toggle('open-menu');
                 };
