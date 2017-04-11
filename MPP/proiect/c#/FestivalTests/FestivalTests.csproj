@@ -81,9 +81,17 @@
     <Compile Include="Repository\ShowDataSqlRepoTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Festival\Festival.csproj">
+    <ProjectReference Include="..\Festival\Standalone.csproj">
       <Project>{E184173F-3875-46CD-AFC7-6A50B8FC1C54}</Project>
-      <Name>Festival</Name>
+      <Name>Standalone</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Festival\Persistence\Persistence.csproj">
+      <Project>{9CD0B9FE-323E-4514-8DB6-6DB9113BDD3B}</Project>
+      <Name>Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\model\Model.csproj">
+      <Project>{3ded8602-0f85-41ac-8ae1-b40b5eb20c86}</Project>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

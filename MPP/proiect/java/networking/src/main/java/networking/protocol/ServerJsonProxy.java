@@ -105,10 +105,10 @@ public class ServerJsonProxy implements IServerService {
                 String artistName = object.get("artistName").getAsString();
                 String locationName = object.get("locationName").getAsString();
                 Date startTime = gson.fromJson(object.get("startTime"), Date.class);
-                int availableSeats = object.get("availableSeats").getAsInt();
-                int soldSeats = object.get("soldSeats").getAsInt();
+                int remainingSeats = object.get("remainingSeats").getAsInt();
 
-                shows.add(new ShowData(id, artistName, locationName, startTime, soldSeats, availableSeats));
+
+                shows.add(new ShowData(id, artistName, locationName, startTime, remainingSeats));
             }
             client.changesOccurred(shows);
         }
@@ -153,10 +153,9 @@ public class ServerJsonProxy implements IServerService {
                 String artistName = object.get("artistName").getAsString();
                 String locationName = object.get("locationName").getAsString();
                 Date startTime = gson.fromJson(object.get("startTime"), Date.class);
-                int availableSeats = object.get("availableSeats").getAsInt();
-                int soldSeats = object.get("soldSeats").getAsInt();
+                int remainingSeats = object.get("remainingSeats").getAsInt();
 
-                shows.add(new ShowData(id, artistName, locationName, startTime, soldSeats, availableSeats));
+                shows.add(new ShowData(id, artistName, locationName, startTime, remainingSeats));
             }
         }
         return shows;

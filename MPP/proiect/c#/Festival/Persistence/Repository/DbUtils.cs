@@ -36,7 +36,7 @@ namespace Festival.Repository
             {
                 instance = null;
             }
-            if (instance == null || instance.State == System.Data.ConnectionState.Closed)
+            if(instance == null || instance.State == System.Data.ConnectionState.Closed)
             {
                 instance = createConnection(filename);
                 instance.Open();
@@ -44,8 +44,5 @@ namespace Festival.Repository
             }
             return instance;
         }
-
-   
-        
     }
 }

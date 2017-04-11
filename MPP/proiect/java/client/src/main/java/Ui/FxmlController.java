@@ -2,7 +2,6 @@ package Ui;
 
 
 import controller.Controller;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
@@ -85,11 +84,8 @@ public class FxmlController {
                 }
         );
         remainingColumn.setCellFactory(getTableColumnTableCellCallback());
-        remainingColumn.setCellValueFactory(p -> {
-            SimpleIntegerProperty prop = new SimpleIntegerProperty();
-            prop.setValue(p.getValue().getAvailableSeats() - p.getValue().getSoldSeats());
-            return prop.asObject();
-        });
+        remainingColumn.setCellValueFactory(new PropertyValueFactory<>("remainingSeats"));
+
         idSrcColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         artistSrcColumn.setCellValueFactory(new PropertyValueFactory<>("artistName"));
         locationSrcColumn.setCellValueFactory(new PropertyValueFactory<>("locationName"));
@@ -102,11 +98,8 @@ public class FxmlController {
                 }
         );
         remainingSrcColumn.setCellFactory(getTableColumnTableCellCallback());
-        remainingSrcColumn.setCellValueFactory(p -> {
-            SimpleIntegerProperty prop = new SimpleIntegerProperty();
-            prop.setValue(p.getValue().getAvailableSeats() - p.getValue().getSoldSeats());
-            return prop.asObject();
-        });
+        remainingSrcColumn.setCellValueFactory(new PropertyValueFactory<>("remainingSeats"));
+
         datePicker.valueProperty().addListener((ov, oldValue, newValue) -> {
             handleFilters();
         });

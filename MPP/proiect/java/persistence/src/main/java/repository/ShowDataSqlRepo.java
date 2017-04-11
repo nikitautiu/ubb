@@ -52,7 +52,7 @@ public class ShowDataSqlRepo implements ICrudRepository<ShowData, Integer> {
 
         String queryStr = "select s.id as id, a.name as artistName,  " +
                 "l.name as locationName, datetime(s.startTime) as startTime,  " +
-                "cast(total(p.quantity) as integer) as soldSeats, s.availableSeats as availableSeats " +
+                "(s.availableSeats - cast(total(p.quantity) as integer)) as remainingSeats " +
                 "from  Show as s  join Artist as a on a.id = s.artistId join Location as l " +
                 "on l.id = s.locationId left join Purchase as p on p.showId = s.id group by s.id;";
         try (PreparedStatement preStmt = con.prepareStatement(queryStr)) {
@@ -66,10 +66,9 @@ public class ShowDataSqlRepo implements ICrudRepository<ShowData, Integer> {
                     String startTimeStr = result.getString("startTime");
                     Date startTime = parseD.parse(startTimeStr);
 
-                    int soldSeats = result.getInt("soldSeats");
-                    int availableSeats = result.getInt("availableSeats");
+                    int remainingSeats = result.getInt("remainingSeats");
 
-                    ShowDatas.add(new ShowData(id, artistName, locationName, startTime, soldSeats, availableSeats));
+                    ShowDatas.add(new ShowData(id, artistName, locationName, startTime, remainingSeats));
                 }
             } catch (ParseException e) {
                 throw new RepositoryException("date parse error");

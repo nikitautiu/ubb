@@ -104,6 +104,8 @@ public class ClientJsonWorker implements Runnable, IClientService {
             boolean status = server.login(username, password, this);
             JsonObject response = new JsonObject();
             response.addProperty("type", "response");
+            response.addProperty("name", "login");
+
             response.addProperty("success", status);
             return response;
         } catch (ServiceException e) {
@@ -124,6 +126,8 @@ public class ClientJsonWorker implements Runnable, IClientService {
             server.addPurchase(new Purchase(0, showId, clientName, quantity));
             JsonObject response = new JsonObject();
             response.add("type", gson.toJsonTree("response"));
+            response.add("name", gson.toJsonTree("addPurchase"));
+
             return response;
         } catch (ServiceException e) {
             return  getErrorResponse(e);
@@ -142,12 +146,12 @@ public class ClientJsonWorker implements Runnable, IClientService {
                 show.add("artistName", gson.toJsonTree(s.getLocationName()));
                 show.add("locationName", gson.toJsonTree(s.getArtistName()));
                 show.add("startTime", gson.toJsonTree(s.getStartTime()));
-                show.add("soldSeats", gson.toJsonTree(s.getSoldSeats()));
-                show.add("availableSeats", gson.toJsonTree(s.getAvailableSeats()));
+                show.add("remainingSeats", gson.toJsonTree(s.getRemainingSeats()));
 
                 showArray.add(show);
             }
             response.add("shows", showArray);
+            response.addProperty("name", "getAll");
             return response;
         } catch (ServiceException e) {
             return getErrorResponse(e);
@@ -191,8 +195,7 @@ public class ClientJsonWorker implements Runnable, IClientService {
             show.add("artistName", gson.toJsonTree(s.getLocationName()));
             show.add("locationName", gson.toJsonTree(s.getArtistName()));
             show.add("startTime", gson.toJsonTree(s.getStartTime()));
-            show.add("soldSeats", gson.toJsonTree(s.getSoldSeats()));
-            show.add("availableSeats", gson.toJsonTree(s.getAvailableSeats()));
+            show.add("remainingSeats", gson.toJsonTree(s.getRemainingSeats()));
 
             showArray.add(show);
         }

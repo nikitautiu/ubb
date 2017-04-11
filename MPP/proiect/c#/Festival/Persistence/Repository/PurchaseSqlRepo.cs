@@ -9,7 +9,7 @@ using Festival.Model.Validator;
 
 namespace Festival.Repository
 {
-    class PurchaseSqlRepo: ICrudRepository<int, Purchase>
+    public class PurchaseSqlRepo: ICrudRepository<int, Purchase>
     {
         private string filename;
 
