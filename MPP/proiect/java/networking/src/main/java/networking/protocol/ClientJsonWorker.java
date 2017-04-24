@@ -11,6 +11,7 @@ import services.ServiceException;
 import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.rmi.RemoteException;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -49,7 +50,7 @@ public class ClientJsonWorker implements Runnable, IClientService {
             } catch (IOException e) {
                 e.printStackTrace();
             } catch(NullPointerException e) {
-                this.server.logout(this);
+                    this.server.logout(this);
                 break;
             }
             try {
@@ -75,7 +76,8 @@ public class ClientJsonWorker implements Runnable, IClientService {
             return logout(request);
         }
         if (Objects.equals(request.get("name").getAsString(), "addPurchase")){
-            return addPurchase(request);
+                return addPurchase(request);
+
         }
         if (Objects.equals(request.get("name").getAsString(), "getAll")){
             return getAll();
@@ -86,6 +88,7 @@ public class ClientJsonWorker implements Runnable, IClientService {
     private JsonObject logout(JsonObject request) {
         System.out.println("Logout request ...");
         this.server.logout(this);
+
         Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm").create();
 
         JsonObject response = new JsonObject();
@@ -114,7 +117,7 @@ public class ClientJsonWorker implements Runnable, IClientService {
         }
     }
 
-    private JsonObject addPurchase(JsonObject request) {
+    private JsonObject addPurchase(JsonObject request)  {
         System.out.println("AddPurchase request ...");
         Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm").create();
 

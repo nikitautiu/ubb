@@ -10,6 +10,7 @@ import services.IServerService;
 import services.ServiceException;
 
 import java.math.BigInteger;
+import java.rmi.RemoteException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;

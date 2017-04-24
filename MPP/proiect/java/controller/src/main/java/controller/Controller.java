@@ -7,13 +7,16 @@ import model.ShowData;
 import services.IClientService;
 import services.IServerService;
 
+import java.io.Serializable;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.Collection;
 import java.util.HashMap;
 
 /**
  * Created by vitiv on 3/21/17.
  */
-public class Controller implements IClientService {
+public class Controller extends UnicastRemoteObject implements IClientService, Serializable {
     private IServerService serverService;
     private ObservableList<ShowData> dataModel;
 
@@ -22,27 +25,33 @@ public class Controller implements IClientService {
     }
 
 
-    public Controller(IServerService serverService) {
+    public Controller(IServerService serverService) throws RemoteException {
+        super();
         this.serverService = serverService;
         dataModel = FXCollections.observableArrayList();
     }
 
     public void addPurchase(int showId, String name, int quantity)  {
+
         serverService.addPurchase(new Purchase(0, showId, name, quantity));
+
     }
 
     private void populateList()  {
         dataModel.clear();
-        Iterable<ShowData> tasks = serverService.getAll();
+        Iterable<ShowData> tasks = null;
+        tasks = serverService.getAll();
         tasks.forEach(x -> dataModel.add(x));
     }
 
 
     public boolean login(String username, String password)  {
+
         if(serverService.login(username, password, this)) {
             populateList();
             return true;
         }
+
         return false;
     }
 

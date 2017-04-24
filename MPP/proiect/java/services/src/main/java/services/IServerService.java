@@ -3,6 +3,8 @@ package services;
 import model.Purchase;
 import model.ShowData;
 
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.util.Collection;
 
 /**
@@ -12,5 +14,5 @@ public interface IServerService {
     void addPurchase(Purchase entity) ;
     Collection<ShowData> getAll() ;
     boolean login(String username, String password, IClientService client) ;
-    void logout(IClientService clientService);
+    void logout(IClientService clientService) ;
 }

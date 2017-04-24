@@ -10,6 +10,7 @@ import services.IServerService;
 import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -99,7 +100,7 @@ public class ServerJsonProxy implements IServerService {
         if(Objects.equals(response.get("name").getAsString(), "changesOccurred")) {
             Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm").create();
             ArrayList<ShowData> shows = new ArrayList<>();
-            for(JsonElement elem : response.get("shows").getAsJsonArray()) {
+            for (JsonElement elem : response.get("shows").getAsJsonArray()) {
                 JsonObject object = elem.getAsJsonObject();
                 int id = object.get("id").getAsInt();
                 String artistName = object.get("artistName").getAsString();
@@ -111,7 +112,9 @@ public class ServerJsonProxy implements IServerService {
                 shows.add(new ShowData(id, artistName, locationName, startTime, remainingSeats));
             }
             client.changesOccurred(shows);
+
         }
+
     }
 
     @Override
