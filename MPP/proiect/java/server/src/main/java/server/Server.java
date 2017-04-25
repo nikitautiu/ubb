@@ -45,6 +45,8 @@ public class Server implements IServerService {
                         client.changesOccurred(values);
                     } catch (ServiceException e) {
                         System.err.println("Error notifying " + e);
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
                     }
                 });
         }

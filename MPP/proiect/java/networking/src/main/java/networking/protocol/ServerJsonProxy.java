@@ -96,7 +96,7 @@ public class ServerJsonProxy implements IServerService {
     }
 
 
-    private void handleUpdate(JsonObject response) {
+    private void handleUpdate(JsonObject response) throws RemoteException {
         if(Objects.equals(response.get("name").getAsString(), "changesOccurred")) {
             Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy HH:mm").create();
             ArrayList<ShowData> shows = new ArrayList<>();

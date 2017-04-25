@@ -1,9 +1,11 @@
 package model;
 
+import java.io.Serializable;
+
 /**
  * Created by vitiv on 3/18/17.
  */
-public class Purchase implements IWithId<Integer> {
+public class Purchase implements IWithId<Integer>, Serializable {
     private int id;
     private int showId;
     private String clientName;

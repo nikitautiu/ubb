@@ -9,6 +9,7 @@ import java.util.Collection;
 /**
  * Created by vitiv on 4/2/17.
  */
-public interface IClientService {
-    void changesOccurred(Collection<ShowData> changedValues);
+public interface IClientService extends Remote {
+    void changesOccurred(Collection<ShowData> changedValues) throws RemoteException;
+
 }

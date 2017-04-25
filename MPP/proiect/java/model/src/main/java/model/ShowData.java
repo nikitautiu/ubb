@@ -1,11 +1,12 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by vitiv on 3/20/17.
  */
-public class ShowData implements IWithId<Integer> {
+public class ShowData implements IWithId<Integer>, Serializable {
     private int remainingSeats;
     private int id;
     private String artistName;
