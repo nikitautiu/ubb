@@ -65,9 +65,9 @@ Game.prototype.getContentForValue = function (value) {
     }
 };
 
-Game.prototype.generateBoard = function() {
-    if(!this._isNumbers)
-        this._icons = getRandomSubarray(faList, (this._width*this._height)/2);  // get the icons
+Game.prototype._genBoard = function() {
+    if (!this._isNumbers)
+        this._icons = getRandomSubarray(faList, (this._width * this._height) / 2);  // get the icons
 
     this._buildBoard(this._width, this._height);
     $("#game-container").html("");
@@ -76,7 +76,7 @@ Game.prototype.generateBoard = function() {
     for (var i = 0; i < this._height; ++i) {
         var line = $("<div>").addClass("game-line");
         for (var j = 0; j < this._width; ++j) {
-            line.append($("<div>").attr("id",  this._getCardId(i, j))
+            line.append($("<div>").attr("id", this._getCardId(i, j))
                 .addClass("card-container")
                 .click((function (obj, i, j) {
                     return (function () {
@@ -89,8 +89,38 @@ Game.prototype.generateBoard = function() {
         }
         $("#game-container").append(line);
     }
-
 };
+
+Game.prototype.generateBoard = function() {
+    // flips all the cards back, animating a board clear
+    $('.card-container').each(function(i, el){
+        setTimeout(function(){
+            $(el).removeClass("flipped");
+        }, i * 50);
+    });
+
+    // delay the construction
+    setTimeout(this._genBoard.bind(this), $('.card-container').length * 50 + 50);
+};
+
+Game.prototype.winAnimation = function() {
+    // flips all the cards back, animating a board clear
+    $('.card-container').each(function(i, el){
+        setTimeout(function(){
+            $(el).removeClass("flipped");
+        }, i * 50);
+    });
+    setTimeout(function() {
+        $('.card-container').each(function(i, el) {
+            setTimeout(function() {
+                $('.back', el).html("");
+                $("<i>").addClass("fa fa-trophy").appendTo($('.back', el));
+                $(el).addClass("flipped");
+            }, i*50);
+        });
+    }, $('.card-container').length * 50);
+};
+
 
 Game.prototype.cardClicked = function(x, y) {
     if(!this._guessed[x][y]) {
@@ -99,6 +129,13 @@ Game.prototype.cardClicked = function(x, y) {
             if (this._values[this._last_value[0]][this._last_value[1]] === this._values[x][y]) {
                 this._guessed[this._last_value[0]][this._last_value[1]] = true;
                 this._guessed[x][y] = true;
+
+                var win = true;
+                for(var i=0; i<this._height; ++i)
+                    for(var j=0; j < this._width; ++j)
+                        win = win && this._guessed[i][j];
+                if(win)
+                    setTimeout(this.winAnimation.bind(this), 1500);
             }
             else {
                 setTimeout((function(obj, x, y, xx, yy) {
