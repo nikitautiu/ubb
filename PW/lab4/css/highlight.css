@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.highlight-container {
+    max-width: 500px;
+    margin: 0 auto;
+
+    user-select: none;
+}
+
+.highlight-container .word {
+    cursor: pointer;
+}
+
+.highlight-container .highlighted {
+    background-color: #7799aa;
+}
+
