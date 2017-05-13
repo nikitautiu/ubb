@@ -58,7 +58,7 @@ Game.prototype._initCanvas = function () {
     context = myStickman.getContext('2d');
     context.beginPath();
     context.strokeStyle = "#000";
-    context.lineWidth = 3;
+    context.lineWidth = 1;
 
 };
 

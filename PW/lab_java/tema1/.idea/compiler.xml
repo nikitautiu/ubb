@@ -2,8 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="lab_java_main" target="1.8" />
-      <module name="lab_java_test" target="1.8" />
       <module name="tema1_java_main" target="1.8" />
       <module name="tema1_java_test" target="1.8" />
     </bytecodeTargetLevel>

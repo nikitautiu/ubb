@@ -8,7 +8,7 @@
         <servlet-class>Hangman.Hangman</servlet-class>
         <init-param>
             <param-name>DataBaseURL</param-name>
-            <param-value>jdbc:sqlite:/mnt/data/Documents/Facultate/sem4/PW/lab_java2/hangman.db</param-value>
+            <param-value>jdbc:sqlite:/mnt/data/Documents/Facultate/sem4/PW/lab_java/tema1/hangman.db</param-value>
         </init-param>
         <init-param>
             <param-name>DataBaseDriver</param-name>
