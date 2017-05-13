@@ -9,6 +9,8 @@ using Festival.Repository;
 using Festival.Service;
 using Festival.Networking;
 using Festival.Server;
+using Festival.Repository;
+using Persistence.Repository;
 
 namespace Festival.Server
 {
@@ -16,9 +18,9 @@ namespace Festival.Server
     {
         static void Main(string[] args)
         {
-            var showRepo = new ShowDataSqlRepo("festival.db");
-            var purchaseRepo = new PurchaseSqlRepo("festival.db");
-            var userRepo = new UserSqlRepo("festival.db");
+            var showRepo = new ShowDataEntityRepo();
+            var purchaseRepo = new PruchaseEntityRepo();
+            var userRepo = new UserEntityRepo();
             var service = new Server.Server(showRepo, purchaseRepo, userRepo);
 
             SerialServer server = new SerialServer("127.0.0.1", 8080, service);

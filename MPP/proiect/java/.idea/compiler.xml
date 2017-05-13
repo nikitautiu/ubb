@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="client_main" target="1.8" />
+      <module name="client_test" target="1.8" />
+      <module name="controller_main" target="1.8" />
+      <module name="controller_test" target="1.8" />
+      <module name="Festival_main" target="1.8" />
+      <module name="Festival_test" target="1.8" />
+      <module name="java-json_main" target="1.8" />
+      <module name="java-json_test" target="1.8" />
+      <module name="java-rpc_main" target="1.8" />
+      <module name="java-rpc_test" target="1.8" />
+      <module name="json_main" target="1.8" />
+      <module name="json_test" target="1.8" />
+      <module name="model_main" target="1.8" />
+      <module name="model_test" target="1.8" />
+      <module name="networking_main" target="1.8" />
+      <module name="networking_test" target="1.8" />
+      <module name="persistence_main" target="1.8" />
+      <module name="persistence_test" target="1.8" />
+      <module name="rpc_main" target="1.8" />
+      <module name="rpc_test" target="1.8" />
+      <module name="rpcClient_main" target="1.8" />
+      <module name="rpcClient_test" target="1.8" />
+      <module name="server_main" target="1.8" />
+      <module name="server_test" target="1.8" />
+      <module name="services_main" target="1.8" />
+      <module name="services_test" target="1.8" />
+      <module name="standalone_main" target="1.8" />
+      <module name="standalone_test" target="1.8" />
+      <module name="ui_main" target="1.8" />
+      <module name="ui_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

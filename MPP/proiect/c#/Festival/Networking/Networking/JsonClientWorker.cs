@@ -53,6 +53,9 @@ namespace Festival.Networking
                     var response = this.handleRequest(request);
                     this.sendResponse(response);
                 }
+                catch (ArgumentNullException e)
+                {
+                }
                 catch (Exception e)
                 {
                     Console.WriteLine("Reading error " + e);

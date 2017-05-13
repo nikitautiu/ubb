@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Festival.iml" filepath="$PROJECT_DIR$/.idea/modules/Festival.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Festival_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Festival_main.iml" group="Festival" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Festival_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Festival_test.iml" group="Festival" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_main.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_test.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/controller.iml" filepath="$PROJECT_DIR$/.idea/modules/controller.iml" group="controller" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/controller/controller_main.iml" filepath="$PROJECT_DIR$/.idea/modules/controller/controller_main.iml" group="controller" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/controller/controller_test.iml" filepath="$PROJECT_DIR$/.idea/modules/controller/controller_test.iml" group="controller" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/java-rpc.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/java-rpc.iml" group="rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/java-rpc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/java-rpc_main.iml" group="rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/java-rpc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/java-rpc_test.iml" group="rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/json/json.iml" filepath="$PROJECT_DIR$/.idea/modules/json/json.iml" group="json" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/json.iml" filepath="$PROJECT_DIR$/.idea/modules/json.iml" group="json" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/json/json_main.iml" filepath="$PROJECT_DIR$/.idea/modules/json/json_main.iml" group="json" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/json/json_test.iml" filepath="$PROJECT_DIR$/.idea/modules/json/json_test.iml" group="json" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/model.iml" filepath="$PROJECT_DIR$/.idea/modules/model/model.iml" group="model" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/model_main.iml" filepath="$PROJECT_DIR$/.idea/modules/model/model_main.iml" group="model" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/model/model_test.iml" filepath="$PROJECT_DIR$/.idea/modules/model/model_test.iml" group="model" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/networking/networking.iml" filepath="$PROJECT_DIR$/.idea/modules/networking/networking.iml" group="networking" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/networking/networking_main.iml" filepath="$PROJECT_DIR$/.idea/modules/networking/networking_main.iml" group="networking" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/networking/networking_test.iml" filepath="$PROJECT_DIR$/.idea/modules/networking/networking_test.iml" group="networking" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/persistence.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/persistence.iml" group="persistence" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/persistence_main.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/persistence_main.iml" group="persistence" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/persistence_test.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/persistence_test.iml" group="persistence" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc.iml" group="rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpcClient.iml" filepath="$PROJECT_DIR$/.idea/modules/rpcClient.iml" group="rpcClient" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient_main.iml" group="rpcClient" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient_test.iml" group="rpcClient" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/rpc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/rpc_main.iml" group="rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/rpc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/rpc_test.iml" group="rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/server.iml" filepath="$PROJECT_DIR$/.idea/modules/server/server.iml" group="server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/server/server_main.iml" group="server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/server/server_test.iml" group="server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/services.iml" filepath="$PROJECT_DIR$/.idea/modules/services/services.iml" group="services" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/services_main.iml" filepath="$PROJECT_DIR$/.idea/modules/services/services_main.iml" group="services" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/services/services_test.iml" filepath="$PROJECT_DIR$/.idea/modules/services/services_test.iml" group="services" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/standalone/standalone.iml" filepath="$PROJECT_DIR$/.idea/modules/standalone/standalone.iml" group="standalone" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/standalone/standalone_main.iml" filepath="$PROJECT_DIR$/.idea/modules/standalone/standalone_main.iml" group="standalone" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/standalone/standalone_test.iml" filepath="$PROJECT_DIR$/.idea/modules/standalone/standalone_test.iml" group="standalone" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui.iml" filepath="$PROJECT_DIR$/.idea/modules/ui.iml" group="ui" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui/ui_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ui/ui_main.iml" group="ui" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui/ui_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ui/ui_test.iml" group="ui" />
+    </modules>
+  </component>
+</project>
