@@ -1,0 +1,47 @@
+body {
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    width: 100%;
+    margin: 0;
+}
+
+
+#page-container {
+    margin: 20px auto 0;
+    max-width: 495px;
+    align-items: center;
+}
+
+.guess {
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.guess li {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+    font-size:1.5em;
+    width: 1.5em;
+}
+
+#mistakes {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.bad-guess li {
+    text-decoration: line-through;
+}
+
+#stickman {
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    border: black dashed 2px;
+    padding: 15px;
+}
