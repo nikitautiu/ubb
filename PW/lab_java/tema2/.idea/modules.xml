@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1655361113/tema2_java.iml" filepath="$PROJECT_DIR$/.idea/modules/-1655361113/tema2_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1655361113/tema2_java_main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1655361113/tema2_java_main.iml" group="tema2_java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1655361113/tema2_java_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-1655361113/tema2_java_test.iml" group="tema2_java" />
+    </modules>
+  </component>
+</project>

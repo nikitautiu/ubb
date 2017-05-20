@@ -1,0 +1,38 @@
+body {
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    width: 100%;
+    margin: 0;
+}
+
+
+#turn, #game-stats {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+#page-container {
+    margin: 20px auto 0;
+    max-width: 495px;
+    align-items: center;
+}
+
+#game-board {
+    margin: 0 auto;
+}
+
+#game-board td {
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    line-height: 100px;
+    text-align: center;
+}
+
+#game-board { border-collapse: collapse; }
+
+#game-board td + td,
+th + th { border-left: 1px solid; }
+#game-board tr + tr { border-top: 1px solid; }
