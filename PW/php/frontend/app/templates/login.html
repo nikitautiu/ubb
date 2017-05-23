@@ -1,0 +1,20 @@
+<div class="page-container">
+    <form name="loginForm">
+        <label for="username-input">Username</label>
+        <input id="username-input" type="text" name="username"  ng-model="login.username" required />
+        <span ng-show="loginForm.username.$dirty && loginForm.username.$invalid">Username is required</span>
+
+        <br />
+        <label for="password-input">Password</label>
+        <input id="password-input" type="password" name="password" ng-model="login.password" required />
+        <span ng-show="loginForm.password.$dirty && loginForm.password.$invalid">Password is required</span>
+
+        <br/>
+        <input type="submit" ng-click="submit()"
+               ng-disabled="loginForm.username.$invalid || loginForm.password.$invalid" value="Login">
+
+        <span ng-show="loginForm.$submitted && loginForm.$error.usernameOrPassword">Bad username or password</span>
+        <span ng-show="loginForm.$submitted && !loginForm.$error.usernameOrPassword">Welcome {{login.username}}</span>
+
+    </form>
+</div>
