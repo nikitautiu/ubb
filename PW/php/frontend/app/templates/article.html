@@ -1,14 +1,30 @@
-<div class="page-container">
-    <article id="main-article">
-        <header class="article-title">
-            <h2>{{ article.title }}</h2>
-        </header>
-        <p class="article-contents">{{ article.content }}</p>
+<div class="container">
+    <article id="main-article" class="well">
+        <div class="media-body">
+            <header class="article-title">
+                <h4 class="media-heading">{{ article.title }}</h4>
+            </header>
+            <p class="article-contents">{{ article.content }}</p>
+        </div>
     </article>
-    <section class="comment-section">
-        <article class="comment" ng-repeat="comment in article.comments">
-            <h2 class="comment-author">{{ comment.author }}</h2>
-            <p class="comment-content">{{ comment.content }}</p>
-        </article>
+    <section class="panel panel-default widget">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-comment"></span>
+            <span class="panel-title">Comments</span>
+        </div>
+        <ul class="list-group panel-body">
+            <li class="list-group-item row" ng-repeat="comment in article.comments">
+                <strong class="comment-author mb-1">
+                    {{ comment.author }}
+                </strong>
+                <span class="action pull-right btn btn-success btn-xs" ng-if="!comment.moderated">
+                        <span class="glyphicon glyphicon-ok"></span>
+                </span>
+                <p class="comment-text">
+                    {{ comment.content }}
+                </p>
+
+            </li>
+        </ul>
     </section>
 </div>
