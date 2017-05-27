@@ -27,6 +27,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/persistence.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/persistence.iml" group="persistence" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/persistence_main.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/persistence_main.iml" group="persistence" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/persistence_test.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/persistence_test.iml" group="persistence" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rest.iml" filepath="$PROJECT_DIR$/.idea/modules/rest.iml" group="rest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rest/rest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rest/rest_main.iml" group="rest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rest/rest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rest/rest_test.iml" group="rest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc.iml" group="rpc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpcClient.iml" filepath="$PROJECT_DIR$/.idea/modules/rpcClient.iml" group="rpcClient" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient_main.iml" group="rpcClient" />

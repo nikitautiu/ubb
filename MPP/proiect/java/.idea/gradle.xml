@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/model" />
             <option value="$PROJECT_DIR$/networking" />
             <option value="$PROJECT_DIR$/persistence" />
+            <option value="$PROJECT_DIR$/rest" />
             <option value="$PROJECT_DIR$/rpc" />
             <option value="$PROJECT_DIR$/rpcClient" />
             <option value="$PROJECT_DIR$/server" />

@@ -40,7 +40,22 @@ public class ArtistSqlRepo implements ICrudRepository<Artist, Integer> {
 
     @Override
     public Artist find(Integer integer) {
-        throw new UnsupportedOperationException();
+        Connection con = connManager.getConnection();
+        ArrayList<Artist> artists = new ArrayList<>();
+
+        try (PreparedStatement preStmt = con.prepareStatement("select * from Artist where id=?")) {
+            preStmt.setInt(1, integer);
+            try (ResultSet result = preStmt.executeQuery()) {
+                if(result.next()) {
+                    int id = result.getInt("id");
+                    String name = result.getString("name");
+                    return new Artist(id, name);
+                }
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error DB " + ex);
+        }
+        return null;
     }
 
     @Override

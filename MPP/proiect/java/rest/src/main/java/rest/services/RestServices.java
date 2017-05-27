@@ -1,4 +1,4 @@
-package services;
+package rest.services;
 
 import model.Artist;
 import model.User;

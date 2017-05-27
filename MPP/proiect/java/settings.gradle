@@ -11,4 +11,5 @@ include 'json'
 include 'rpcClient'
 include 'ui'
 include 'controller'
+include 'rest'
 

@@ -20,6 +20,8 @@
       <module name="networking_test" target="1.8" />
       <module name="persistence_main" target="1.8" />
       <module name="persistence_test" target="1.8" />
+      <module name="rest_main" target="1.8" />
+      <module name="rest_test" target="1.8" />
       <module name="rpc_main" target="1.8" />
       <module name="rpc_test" target="1.8" />
       <module name="rpcClient_main" target="1.8" />
