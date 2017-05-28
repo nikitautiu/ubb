@@ -1,20 +1,39 @@
 <div class="page-container">
-    <form name="loginForm">
-        <label for="username-input">Username</label>
-        <input id="username-input" type="text" name="username"  ng-model="login.username" required />
-        <span ng-show="loginForm.username.$dirty && loginForm.username.$invalid">Username is required</span>
+    <form name="loginCtrl.loginForm" class="form-horizontal" ng-if="loginCtrl.model.loginName == null">
+        <fieldset>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="username">Username</label>
+                <div class="col-md-4">
+                    <input id="username" name="username" type="text" placeholder="" class="form-control input-md" ng-model="loginCtrl.login.username" required="zzz">
+                    <div ng-show="loginCtrl.loginForm.username.$dirty && loginCtrl.loginForm.username.$invalid">Username is required</div>
+                </div>
+            </div>
 
-        <br />
-        <label for="password-input">Password</label>
-        <input id="password-input" type="password" name="password" ng-model="login.password" required />
-        <span ng-show="loginForm.password.$dirty && loginForm.password.$invalid">Password is required</span>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="password">Password</label>
+                <div class="col-md-4">
+                    <input id="password" name="password" type="password" placeholder="" class="form-control input-md" ng-model="loginCtrl.login.password" required="">
+                    <div ng-show="loginCtrl.loginForm.password.$dirty && loginCtrl.loginForm.password.$invalid">Password is required</div>
 
-        <br/>
-        <input type="submit" ng-click="submit()"
-               ng-disabled="loginForm.username.$invalid || loginForm.password.$invalid" value="Login">
+                </div>
+            </div>
 
-        <span ng-show="loginForm.$submitted && loginForm.$error.usernameOrPassword">Bad username or password</span>
-        <span ng-show="loginForm.$submitted && !loginForm.$error.usernameOrPassword">Welcome {{login.username}}</span>
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="loginBtn"></label>
+                <div class="col-md-4">
+                    <button id="loginBtn" name="loginBtn" class="btn btn-primary" ng-click="loginCtrl.submitLogin()">Login</button>
+                </div>
+            </div>
+            <div ng-show="loginCtrl.loginForm.$error.usernameOrPassword">Bad username or password</div>
 
+        </fieldset>
     </form>
+
+
+    <div ng-if="loginCtrl.model.loginName != null">
+        Logged in as {{loginCtrl.model.loginName}}. <a href="#" ng-click="loginCtrl.submitLogout()">Logout?</a>
+    </div>
 </div>

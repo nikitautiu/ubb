@@ -8,11 +8,10 @@ angular.module('articlesApp', [
 ]).
 config(['$routeProvider', function($routeProvider) {
     $routeProvider.
-    when("/articles", {templateUrl: "templates/articles.html", controller: "articlesController", name: 'article-list'
+    when("/articles", {templateUrl: "templates/articles.html", controller: "articlesController as articlesCtrl", name: 'article-list'
     }).  // list view
-    when("/articles/:id", {templateUrl: "templates/article.html", controller: "articleController", name: 'article-detail'}).  // detail view
-    when("/login", {templateUrl: "templates/login.html", controller: "loginController", name: 'login'}).  // login view
-    when("/welcome", {templateUrl: "templates/welcome.html", controller: "welcomeController", name: 'welcome'}).  // login view
+    when("/articles/:id", {templateUrl: "templates/article.html", controller: "articleController as articleCtrl", name: 'article-detail'}).  // detail view
+    when("/login", {templateUrl: "templates/login.html", controller: "loginController as loginCtrl", name: 'login'}).  // login view
 
     otherwise({redirectTo: '/articles'});  // default
 }]);

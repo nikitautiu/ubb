@@ -2,9 +2,9 @@
     <article id="main-article" class="well">
         <div class="media-body">
             <header class="article-title">
-                <h4 class="media-heading">{{ article.title }}</h4>
+                <h4 class="media-heading">{{ articleCtrl.article.title }}</h4>
             </header>
-            <p class="article-contents">{{ article.content }}</p>
+            <p class="article-contents">{{ articleCtrl.article.content }}</p>
         </div>
     </article>
     <section class="panel panel-default widget">
@@ -13,12 +13,12 @@
             <span class="panel-title">Comments</span>
         </div>
         <ul class="list-group panel-body">
-            <li class="list-group-item row" ng-repeat="comment in article.comments">
+            <li class="list-group-item row" ng-repeat="comment in articleCtrl.article.comments track by $index">
                 <strong class="comment-author mb-1">
                     {{ comment.author }}
                 </strong>
                 <span class="action pull-right btn btn-success btn-xs" ng-if="!comment.moderated">
-                        <span class="glyphicon glyphicon-ok"></span>
+                        <span class="glyphicon glyphicon-ok" ng-click="articleCtrl.moderate(comment)"></span>
                 </span>
                 <p class="comment-text">
                     {{ comment.content }}
@@ -27,4 +27,47 @@
             </li>
         </ul>
     </section>
+    <form name="articleCtrl.commentForm" class="form-horizontal">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Comment</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="name">Name</label>
+                <div class="col-md-4">
+                    <input id="name" name="author" type="text" placeholder="" class="form-control input-md" ng-model="articleCtrl.commInput.author" required="">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="email">Email</label>
+                <div class="col-md-4">
+                    <input id="email" name="email" type="email" placeholder="" class="form-control input-md" ng-model="articleCtrl.commInput.email"  required="">
+
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="content">Comment</label>
+                <div class="col-md-4">
+                    <textarea class="form-control" id="content" ng-model="articleCtrl.commInput.content"  name="content"></textarea>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="singlebutton"></label>
+                <div class="col-md-4">
+                    <button id="singlebutton" name="singlebutton" class="btn btn-primary" ng-click="articleCtrl.submitComment()">Submit</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
 </div>

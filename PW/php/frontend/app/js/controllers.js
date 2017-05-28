@@ -2,35 +2,75 @@
  * Created by vitiv on 5/22/17.
  */
 angular.module('articlesApp.controllers', []).
-controller('articlesController', function($scope, articlesAPI) {
-    articlesAPI.getArticles().then(
-        function(result) {
-            $scope.articles = result;
-        });
-}).
-controller('articleController', function($scope, $routeParams, articlesAPI) {
-    $scope.id = parseInt($routeParams.id);
+controller('articlesController', function(articlesAPI) {
+    this.articles = [];
 
-    // set the article async
-    articlesAPI.getArticle($scope.id).then(
-        function(result) {
-            $scope.article = result;
-        });
+    let intialize = () => {
+        articlesAPI.getArticles().then(
+            (result) => {
+                this.articles = result;
+            });
+    };
+    intialize();
 }).
-controller('loginController', function($scope, $location, articlesAPI) {
-    $scope.login = {username: "", password: ""};
+controller('articleController', function($routeParams, articlesAPI) {
+    this.id = parseInt($routeParams.id);
+    this.article = {};
+    this.commInput = {};
 
-    $scope.submit = function() {
-        articlesAPI.login($scope.login.username, $scope.login.password).then(success => {
+
+    intialize = () => {
+        // set the article async
+        articlesAPI.getArticle(this.id).then(
+            (result) => {
+                this.article = result;
+            });
+    };
+
+    this.moderate = (comment) => {
+        articlesAPI.moderateComment(comment.id).then(
+            () => {
+                comment.moderated = true;
+            }
+        );
+    };
+
+    this.submitComment = () => {
+        comment = this.commInput;
+        id = this.id;
+        articlesAPI.addComment(id, comment).then((commResult) => {
+            this.article.comments.push(commResult); // append the returned comment
+        });
+    };
+
+    intialize();
+}).
+controller('loginController', function($location, articlesAPI) {
+    this.model = articlesAPI.model;
+    this.login = {username: "", password: ""};
+
+    this.submitLogin = () => {
+        let loginUser = this.login.username;
+        articlesAPI.login(this.login.username, this.login.password).then(success => {
             if(success) {
-                $scope.loginForm.$setValidity("usernameOrPassword", true);
+                this.loginName = loginUser; // to avoid rewrite
             }
             else {
-                $scope.loginForm.$setValidity("usernameOrPassword", false);
+                this.loginForm.$setValidity("usernameOrPassword", false);
             }
         });
     };
+
+    this.submitLogout = () => {
+        articlesAPI.logout().then(() => {
+            this.loginName = null;
+        });
+    };
 }).
-controller('welcomeController', function($window, $scope) {
-    $scope.curretUser = $window.sessionStorage.getItem(userStorageKey);
+controller('welcomeController', function($window) {
+    this.curretUser = $window.sessionStorage.getItem(userStorageKey);
+}).
+controller('headerController', function(articlesAPI) {
+    this.model = articlesAPI.model;
+    articlesAPI.getLoginName().then( function() {let c;});
 });
