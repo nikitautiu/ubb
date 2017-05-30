@@ -22,7 +22,7 @@ public interface ICrudRepository<E, ID> {
      * @param entity the entity to add
      * @throws RepositoryException in case the id is already in the repo
      */
-    void add(E entity);
+    E add(E entity);
 
     /**
      *

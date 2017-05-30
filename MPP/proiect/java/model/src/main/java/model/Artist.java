@@ -4,12 +4,22 @@ package model;
  * Created by vitiv on 3/18/17.
  */
 public class Artist implements IWithId<Integer> {
-    private int id;
+    private Integer id;
     private String name;
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + name.hashCode();
+        return result;
+    }
 
     public Artist(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Artist() {
     }
 
     @Override
@@ -41,10 +51,4 @@ public class Artist implements IWithId<Integer> {
         return name.equals(artist.name);
     }
 
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + name.hashCode();
-        return result;
-    }
 }

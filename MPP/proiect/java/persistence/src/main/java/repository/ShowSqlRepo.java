@@ -26,7 +26,7 @@ public class ShowSqlRepo implements ICrudRepository<Show, Integer> {
     }
 
     @Override
-    public void add(Show entity) {
+    public Show add(Show entity) {
         throw new UnsupportedOperationException();
     }
 

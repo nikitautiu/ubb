@@ -27,7 +27,7 @@ public class PurchaseSqlRepo implements ICrudRepository<Purchase, Integer> {
     }
 
     @Override
-    public void add(Purchase entity) {
+    public Purchase add(Purchase entity) {
 
         Connection con = connManager.getConnection();
         Helpers helpers = new Helpers(entity, con).invoke();
@@ -51,6 +51,8 @@ public class PurchaseSqlRepo implements ICrudRepository<Purchase, Integer> {
         } catch (SQLException ex) {
             System.out.println("Error DB " + ex);
         }
+
+        return entity;
     }
 
     private boolean doesIdExist(Purchase entity, Connection con) {

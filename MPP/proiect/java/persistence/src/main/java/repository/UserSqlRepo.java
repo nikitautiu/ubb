@@ -3,7 +3,6 @@ package repository;
 import model.User;
 import utils.DbConnManager;
 
-import javax.naming.OperationNotSupportedException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,7 +28,7 @@ public class UserSqlRepo implements IUserRepo {
     }
 
     @Override
-    public void add(User entity) {
+    public User add(User entity) {
         throw new UnsupportedOperationException();
     }
 

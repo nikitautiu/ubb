@@ -3,7 +3,6 @@ package repository;
 import model.Location;
 import utils.DbConnManager;
 
-import javax.naming.OperationNotSupportedException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,7 +28,7 @@ public class LocationSqlRepo implements ICrudRepository<Location, Integer> {
     }
 
     @Override
-    public void add(Location entity) {
+    public Location add(Location entity) {
         throw new UnsupportedOperationException();
     }
 

@@ -46,16 +46,27 @@ public class RestServices {
             return new ResponseEntity<>(artist, HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public Artist create(@RequestBody Artist artist){
-        artistRepo.add(artist);
-        return artist;
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> deleteById(@PathVariable Integer id){
+        Artist artist = artistRepo.find(id);
+        if (artist==null)
+            return new ResponseEntity<>("Artist not found", HttpStatus.NOT_FOUND);
+        else {
+            artistRepo.delete(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+    }
 
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<?> create(@RequestBody Artist artist){
+        artistRepo.add(artist);
+        return new ResponseEntity<>(artist, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-    public Artist update(@RequestBody Artist artist) {
+    public Artist update(@RequestBody Artist artist, @PathVariable Integer id) {
         System.out.println("Updating user ...");
+        artist.setId(id);   // set it to the id
         artistRepo.add(artist);
         return artist;
 

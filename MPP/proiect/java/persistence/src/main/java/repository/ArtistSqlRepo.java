@@ -1,13 +1,10 @@
 package repository;
 
 import model.Artist;
+import model.validator.ArtistValidator;
 import utils.DbConnManager;
 
-import javax.naming.OperationNotSupportedException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Properties;
@@ -29,13 +26,47 @@ public class ArtistSqlRepo implements ICrudRepository<Artist, Integer> {
     }
 
     @Override
-    public void add(Artist entity) {
-        throw new UnsupportedOperationException();
+    public Artist add(Artist entity) {
+        Connection con = connManager.getConnection();
+        new ArtistValidator().accept(entity);
+
+        if(entity.getId() == null) {
+            // insert
+            try (PreparedStatement preStmt = con.prepareStatement("insert into Artist(name) values(?)", Statement.RETURN_GENERATED_KEYS)) {
+                preStmt.setString(1, entity.getName());
+                preStmt.executeUpdate();
+                ResultSet result = preStmt.getGeneratedKeys();
+                if (result.next()) {
+                    entity.setId(result.getInt(1)); // set the added key
+                }
+
+            } catch (SQLException ex) {
+                System.out.println("Error DB " + ex);
+            }
+        } else {
+            // update
+            try (PreparedStatement preStmt = con.prepareStatement("update Artist set name=? where id=?")) {
+                preStmt.setString(1, entity.getName());
+                preStmt.setInt(2, entity.getId());
+                preStmt.executeUpdate();
+            } catch (SQLException ex) {
+                System.out.println("Error DB " + ex);
+            }
+        }
+        return entity;
     }
 
     @Override
-    public void delete(Integer integer) {
-        throw new UnsupportedOperationException();
+    public void delete(Integer id) {
+        Connection con = connManager.getConnection();
+
+        // insert
+        try (PreparedStatement preStmt = con.prepareStatement("delete from Artist where id=?")) {
+            preStmt.setInt(1, id);
+            preStmt.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error DB " + ex);
+        }
     }
 
     @Override
