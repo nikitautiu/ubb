@@ -8,12 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client.iml" group="client" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_main.iml" group="client" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_test.iml" group="client" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/controller.iml" filepath="$PROJECT_DIR$/.idea/modules/controller.iml" group="controller" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/controller/controller.iml" filepath="$PROJECT_DIR$/.idea/modules/controller/controller.iml" group="controller" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/controller/controller_main.iml" filepath="$PROJECT_DIR$/.idea/modules/controller/controller_main.iml" group="controller" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/controller/controller_test.iml" filepath="$PROJECT_DIR$/.idea/modules/controller/controller_test.iml" group="controller" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/java-rpc.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/java-rpc.iml" group="rpc" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/java-rpc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/java-rpc_main.iml" group="rpc" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/java-rpc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/java-rpc_test.iml" group="rpc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/json/json.iml" filepath="$PROJECT_DIR$/.idea/modules/json/json.iml" group="json" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/json.iml" filepath="$PROJECT_DIR$/.idea/modules/json.iml" group="json" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/json/json_main.iml" filepath="$PROJECT_DIR$/.idea/modules/json/json_main.iml" group="json" />
@@ -27,14 +24,17 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/persistence.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/persistence.iml" group="persistence" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/persistence_main.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/persistence_main.iml" group="persistence" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/persistence_test.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/persistence_test.iml" group="persistence" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rest.iml" filepath="$PROJECT_DIR$/.idea/modules/rest.iml" group="rest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rest/rest.iml" filepath="$PROJECT_DIR$/.idea/modules/rest/rest.iml" group="rest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rest/rest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rest/rest_main.iml" group="rest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rest/rest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rest/rest_test.iml" group="rest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/rpc.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/rpc.iml" group="rpc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc.iml" group="rpc" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpcClient.iml" filepath="$PROJECT_DIR$/.idea/modules/rpcClient.iml" group="rpcClient" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient.iml" filepath="$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient.iml" group="rpcClient" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient_main.iml" group="rpcClient" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rpcClient/rpcClient_test.iml" group="rpcClient" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/rpc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/rpc_main.iml" group="rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/rpc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/rpc_main.iml" group="rpc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/rpc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/rpc_test.iml" group="rpc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpc/rpc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rpc/rpc_test.iml" group="rpc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/server.iml" filepath="$PROJECT_DIR$/.idea/modules/server/server.iml" group="server" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/server/server_main.iml" group="server" />
@@ -45,7 +45,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/standalone/standalone.iml" filepath="$PROJECT_DIR$/.idea/modules/standalone/standalone.iml" group="standalone" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/standalone/standalone_main.iml" filepath="$PROJECT_DIR$/.idea/modules/standalone/standalone_main.iml" group="standalone" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/standalone/standalone_test.iml" filepath="$PROJECT_DIR$/.idea/modules/standalone/standalone_test.iml" group="standalone" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui.iml" filepath="$PROJECT_DIR$/.idea/modules/ui.iml" group="ui" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui/ui.iml" filepath="$PROJECT_DIR$/.idea/modules/ui/ui.iml" group="ui" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui/ui_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ui/ui_main.iml" group="ui" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ui/ui_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ui/ui_test.iml" group="ui" />
     </modules>

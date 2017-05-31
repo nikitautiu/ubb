@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":rpc:main" external.linked.project.path="$MODULE_DIR$/../../../rpc" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="ProiectMPP" external.system.module.type="sourceSet" external.system.module.version="1.0" type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="Spring" name="Spring">
-      <configuration />
-    </facet>
-  </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../../rpc/build/classes/main" />
-    <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../rpc/src/main">
-      <sourceFolder url="file://$MODULE_DIR$/../../../rpc/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../rpc/src/main/resources" type="java-resource" />
-    </content>
-    <orderEntry type="inheritedJdk" />
+<module version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="server_main" />
-    <orderEntry type="module" module-name="services_main" />
-    <orderEntry type="module" module-name="controller_main" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-context:4.3.7.RELEASE" level="project" />
-    <orderEntry type="module" module-name="model_main" />
-    <orderEntry type="module" module-name="networking_main" />
-    <orderEntry type="module" module-name="persistence_main" />
-    <orderEntry type="library" name="Gradle: org.xerial:sqlite-jdbc:3.16.1" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:4.3.7.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:4.3.7.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-core:4.3.7.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: org.springframework:spring-expression:4.3.7.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.2.4" level="project" />
-    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
   </component>
 </module>
