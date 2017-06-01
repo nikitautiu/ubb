@@ -36,10 +36,11 @@ controller('articleController', function($routeParams, articlesAPI) {
     };
 
     this.submitComment = () => {
-        comment = this.commInput;
-        id = this.id;
+        let comment = this.commInput;
+        let id = this.id;
         articlesAPI.addComment(id, comment).then((commResult) => {
-            this.article.comments.push(commResult); // append the returned comment
+            if(articlesAPI.model.loginName !== null)
+                this.article.comments.push(commResult); // append the returned comment
         });
     };
 
@@ -62,7 +63,7 @@ controller('loginController', function($location, articlesAPI) {
     };
 
     this.submitLogout = () => {
-        articlesAPI.logout().then(() => {
+        articlesAPI.logout().then((result) => {
             this.loginName = null;
         });
     };
@@ -72,5 +73,5 @@ controller('welcomeController', function($window) {
 }).
 controller('headerController', function(articlesAPI) {
     this.model = articlesAPI.model;
-    articlesAPI.getLoginName().then( function() {let c;});
+    articlesAPI.getLoginName().then( function() {});
 });

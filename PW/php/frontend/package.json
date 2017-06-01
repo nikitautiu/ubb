@@ -6,10 +6,10 @@
   },
 
   "dependencies": {
-    "angular": "~1.5.11",
-    "angular-route": "~1.5.0",
-    "angular-loader": "~1.5.0",
-    "angular-mocks": "~1.5.0",
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "angular-loader": "^1.6.4",
+    "angular-resource": "^1.6.4",
     "bootstrap": "^3.3.7"
   },
 

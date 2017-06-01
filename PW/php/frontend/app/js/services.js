@@ -6,15 +6,146 @@ angular.module('articlesApp.services', []).factory('articlesAPI', function ($htt
         return $injector.get('API');
     return $injector.get('dummy');
 
-}).factory('API', function ($http) {
+}).factory('API', function ($http, $resource, $q) {
     let articlesAPI = {};
+    let restApiResources = {
+        articles: $resource(apiEndpoint + "articles/"),
+        comments: $resource(apiEndpoint + "articles/:articleId/comments/:commentId/", {articleId: "@articleId", commentId: "@id"},
+            {
+                moderate: {
+                    method: 'PUT',
+                    url: apiEndpoint + "comments/:commentId/",
+                    params: {commentId: "@id"}
+                }
+            }),
+        me: $resource(apiEndpoint + "users/me/", {},
+            {
+                login: {
+                    method: 'PUT',
+                },
+                logout: {
+                    method: 'PUT',
+                    params: {username: null} // to logout set the username to null
+                }
+            }),
+    };
+
+
+    articlesAPI.model = {
+        loginName: null,
+        articles: null,
+    };
+
+    articlesAPI.getLoginName = function() {
+        let deferred = $q.defer();
+        deferred.resolve('test');
+        return deferred.promise;
+    };
+
+    articlesAPI.getArticles = function () {
+        let deferred = $q.defer();
+
+        restApiResources.articles.get().$promise.then(
+            (result) => deferred.resolve(result.articles),
+            (error) => deferred.reject(error)
+        );
+
+        return deferred.promise;
+    };
 
     articlesAPI.getArticle = function (id) {
+        let deferred = $q.defer();
+        restApiResources.articles.get((result) => {
+                let article = result.articles.filter((article) => article.id === id)[0];
+                deferred.resolve(article);
+            },
+            (error) => deferred.reject(error)
+        );
 
-        return $http({
-            method: 'JSONP',
-            url: 'http://ergast.com/api/f1/2013/driverStandings.json?callback=JSON_CALLBACK'
+        return deferred.promise;
+    };
+
+    articlesAPI.addComment = function(articleId, comm) {
+        let deferred = $q.defer();
+
+
+        // validation
+        if(comm.author.trim() === "") {
+            deferred.reject({error: "author cannot be blank"});
+            return deferred.promise;
+        }
+        if(comm.email.trim() === "") {
+            deferred.reject({error: "email cannot be blank"});
+            return deferred.promise;
+        }
+        if(comm.content.trim() === "") {
+            deferred.reject({error: "content cannot be blank"});
+            return deferred.promise;
+        }
+        comm.articleId = articleId;
+
+        restApiResources.comments.save(comm).$promise.then((result) => {
+                deferred.resolve(result);
+            },
+            (error) => deferred.reject(error)
+        );
+
+        return deferred.promise;
+    };
+
+    articlesAPI.moderateComment = function(commId) {
+        let deferred = $q.defer();
+
+        restApiResources.comments.moderate({id: commId, moderated: true}).$promise.then((result) => {
+            deferred.resolve();
         });
+        return deferred.promise;
+
+    };
+
+    articlesAPI.login = function(username, password) {
+        // both sets the login name in the model and returns login success
+        let deferred = $q.defer();
+
+        restApiResources.me.login({username: username, password: password}).$promise.then((result) => {
+                if(result.username === username)  // it means that the password check passed
+                    articlesAPI.model.loginName = username;
+                // otherwise the user remained null
+                deferred.resolve(result.success);
+            },
+            (error) => deferred.reject(error)
+        );
+
+        return deferred.promise;
+    };
+
+    articlesAPI.logout = function() {
+        let deferred = $q.defer();
+
+        restApiResources.me.logout({}).$promise.then((result) => {
+                if(result.username === null) {
+                    articlesAPI.model.loginName = null;
+                    deferred.resolve(true);
+                }
+            },
+            (error) => deferred.reject(error)
+        );
+
+        return deferred.promise;
+    };
+
+    articlesAPI.getLoginName = function () {
+        // sets the loginname in the model and returns it async
+        let deferred = $q.defer();
+
+        restApiResources.me.get().$promise.then((result) => {
+               this.model.loginName = result.username;
+               deferred.resolve(result.username);
+            },
+            (error) => deferred.reject(error)
+        );
+
+        return deferred.promise;
     };
 
     return articlesAPI;
@@ -129,6 +260,7 @@ angular.module('articlesApp.services', []).factory('articlesAPI', function ($htt
                         return deferred.promise;
                     }
                 }
+
     };
 
     articlesAPI.addComment = function(articleId, comm) {
@@ -159,7 +291,6 @@ angular.module('articlesApp.services', []).factory('articlesAPI', function ($htt
             return deferred.promise;
         }
 
-
         // get max id
         let maxInd = -1;
         for(let article of storage['articles'])
@@ -169,7 +300,7 @@ angular.module('articlesApp.services', []).factory('articlesAPI', function ($htt
         comm.id = maxInd + 1;
         foundArticle.comments.push(comm);
         _saveToLocalStorage(storage);
-        deferred.resolve(comm);
+        deferred.resolve(articlesAPI.model.loginName !== null ? comm : null);
 
         return deferred.promise;
     };

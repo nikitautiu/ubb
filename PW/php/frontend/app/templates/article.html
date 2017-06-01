@@ -17,8 +17,8 @@
                 <strong class="comment-author mb-1">
                     {{ comment.author }}
                 </strong>
-                <span class="action pull-right btn btn-success btn-xs" ng-if="!comment.moderated">
-                        <span class="glyphicon glyphicon-ok" ng-click="articleCtrl.moderate(comment)"></span>
+                <span class="action pull-right btn btn-success btn-xs" ng-click="articleCtrl.moderate(comment)" ng-if="!comment.moderated">
+                        <span class="glyphicon glyphicon-ok"></span>
                 </span>
                 <p class="comment-text">
                     {{ comment.content }}
