@@ -12,10 +12,6 @@ import repository.RepositoryException;
 import java.util.Collection;
 
 
-/**
- * Created by grigo on 5/10/17.
- */
-
 @RestController
 @RequestMapping("/artists/")
 public class RestServices {
@@ -25,17 +21,20 @@ public class RestServices {
     @Autowired
     private ICrudRepository<Artist, Integer> artistRepo;
 
+
     @RequestMapping("/greeting")
     public String greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return String.format(template, name);
     }
 
+    @CrossOrigin(origins = "http://localhost:8000")
     @RequestMapping( method=RequestMethod.GET)
     public Artist[] getAll(){
         Collection<Artist> artists = artistRepo.getAll();
         return artists.toArray(new Artist[0]); // convert to array
     }
 
+    @CrossOrigin(origins = "http://localhost:8000")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> getById(@PathVariable Integer id){
 
@@ -46,6 +45,7 @@ public class RestServices {
             return new ResponseEntity<>(artist, HttpStatus.OK);
     }
 
+    @CrossOrigin(origins = "http://localhost:8000")
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteById(@PathVariable Integer id){
         Artist artist = artistRepo.find(id);
@@ -57,12 +57,14 @@ public class RestServices {
         }
     }
 
+    @CrossOrigin(origins = "http://localhost:8000")
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> create(@RequestBody Artist artist){
         artistRepo.add(artist);
         return new ResponseEntity<>(artist, HttpStatus.CREATED);
     }
 
+    @CrossOrigin(origins = "http://localhost:8000")
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public Artist update(@RequestBody Artist artist, @PathVariable Integer id) {
         System.out.println("Updating user ...");

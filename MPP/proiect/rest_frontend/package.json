@@ -1,0 +1,26 @@
+{
+  "name": "angular-seed",
+  "private": true,
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "angular-loader": "^1.6.4",
+    "angular-resource": "^1.6.4"
+  },
+
+  "scripts": {
+    "update-deps": "npm update",
+
+    "prestart": "npm install && ln -sfT ../node_modules app/node_modules",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app",
+
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+
+    "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index.html',loaderFile='app/node_modules/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=node_modules/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
+  }
+}

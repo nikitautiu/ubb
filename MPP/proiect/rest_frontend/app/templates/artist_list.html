@@ -1,0 +1,17 @@
+<div class="page-container">
+    <ul class="artists-list">
+        <!--<li class="artist-item" ng-repeat="artist in artistsCtrl.model.artists">-->
+            <!--<span class="artist-details">{{artist.id}} - {{artist.name}}</span>-->
+            <!--<a href="#" ng-click="artistsCtrl.remove(artist)"> Delete </a>-->
+            <!--<a href="#" ng-click="artistsCtrl.edit(artist)"> Edit </a>-->
+        <!--</li>-->
+        <li class="artist-item" ng-repeat="artist in artistsCtrl.model.artists">
+            <list-item artist="artist" on-delete="artistsCtrl.remove(value)" on-edit="artistsCtrl.update(value)">
+            </list-item>
+        </li>
+    </ul>
+    <form name="artistsCtrl.addForm">
+        <input id="name" name="name" type="text"  ng-model="artistsCtrl.formModel.name" required="">
+        <button id="addBtn" name="addBtn" ng-click="artistsCtrl.add()">Add</button>
+    </form>
+</div>

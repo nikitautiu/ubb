@@ -1,0 +1,6 @@
+<span class="artist-details">{{$ctrl.artist.id}} - {{$ctrl.artist.name}}</span>
+<a href="" ng-click="$ctrl.onDelete({value: $ctrl.artist})"> Delete </a>
+<a href="" ng-click="$ctrl.editToggled = !$ctrl.editToggled"> Edit </a>
+<input ng-show="$ctrl.editToggled"  name="value" type="text"
+       ng-model="$ctrl.value" required="" />
+<button ng-show="$ctrl.editToggled"  name="addBtn" ng-click="$ctrl.update()">Update</button>

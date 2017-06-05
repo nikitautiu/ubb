@@ -8,7 +8,6 @@
           factory-method="invoke" />
 
 
-
     <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
 
         <property name="serviceName" value="Festival"/>
@@ -17,9 +16,6 @@
         <property name="servicePort" value="1099"/>
     </bean>
 
-    <bean class="rest.services.CorsFactory"
-          factory-method="invoke">
-    </bean>
 
 
 </beans>
