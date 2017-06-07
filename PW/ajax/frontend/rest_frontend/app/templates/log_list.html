@@ -1,0 +1,30 @@
+<div class="page-container">
+    <form ng-if="logsCtrl.model.username == null" name="logsCtrl.addForm">
+        <input id="username" name="username" type="text"  ng-model="logsCtrl.loginModel.username" required="">
+        <input id="password" name="password" type="password"  ng-model="logsCtrl.loginModel.password" required="">
+        <button id="loginBtn" name="loginBtn" ng-click="logsCtrl.login()">Login</button>
+    </form>
+    <div ng-if="logsCtrl.model.username != null">
+        <span> Logged in as {{ logsCtrl.model.username }}</span>
+        <button id="logoutBtn" name="logoutBtn" ng-click="logsCtrl.logout()">Logout</button>
+    </div>
+    <ul class="logs-list">
+        <!--<li class="log-item" ng-repeat="log in logsCtrl.model.logs">-->
+            <!--<span class="log-details">{{log.id}} - {{log.name}}</span>-->
+            <!--<a href="#" ng-click="logsCtrl.remove(log)"> Delete </a>-->
+            <!--<a href="#" ng-click="logsCtrl.edit(log)"> Edit </a>-->
+        <!--</li>-->
+        <li class="log-item" ng-repeat="log in logsCtrl.model.logs">
+            <list-item log="log" user="logsCtrl.model" on-delete="logsCtrl.remove(value)">
+            </list-item>
+        </li>
+    </ul>
+    <form ng-if="logsCtrl.model.username != null" name="logsCtrl.addForm">
+        <input id="text" name="text" type="text"  ng-model="logsCtrl.formModel.text" required="">
+        <input id="type" name="type" type="text"  ng-model="logsCtrl.formModel.type" required="">
+
+        <input id="severity" name="severity" type="text"  ng-model="logsCtrl.formModel.severity" required="">
+
+        <button id="addBtn" name="addBtn" ng-click="logsCtrl.add()">Add</button>
+    </form>
+</div>

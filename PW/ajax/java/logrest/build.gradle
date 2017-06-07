@@ -1,0 +1,28 @@
+group 'logrest'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
+    }
+}
+
+
+dependencies {
+    compile 'org.springframework:spring-context:4.3.7.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.16.1'
+}

@@ -1,0 +1,11 @@
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/CORSFilter.java
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/services/DataServicesImpl.java
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/controller/RestController.java
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/model/Log.java
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/model/Severity.java
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/dao/DataDaoImpl.java
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/controller/LoginController.java
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/model/User.java
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/dao/DataDao.java
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/model/LogDTO.java
+/mnt/data/Documents/Facultate/sem4/PW/ajax/java/log/src/main/java/logrest/services/DataServices.java

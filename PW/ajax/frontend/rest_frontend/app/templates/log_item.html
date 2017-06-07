@@ -1,0 +1,2 @@
+<span class="log-details">{{$ctrl.log.date}} - {{$ctrl.log.type}} - {{$ctrl.log.severity}} - {{$ctrl.log.text}} - {{$ctrl.log.username}}  </span>
+<a ng-if="$ctrl.user.username == $ctrl.log.username" href="" ng-click="$ctrl.onDelete({value: $ctrl.log})"> Delete </a>

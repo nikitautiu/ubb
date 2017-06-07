@@ -1,0 +1,11 @@
+logrest/dao/DataDaoImpl.class
+logrest/model/LogDTO.class
+logrest/services/DataServicesImpl.class
+logrest/controller/LoginController.class
+logrest/dao/DataDao.class
+logrest/model/Log.class
+logrest/model/User.class
+logrest/services/DataServices.class
+logrest/model/Severity.class
+logrest/controller/RestController.class
+logrest/CORSFilter.class
