@@ -42,7 +42,7 @@ binary_op = "<" | ">" | "<=" | ">=" | "!=" | "==" | "+" | "-" | "/" | "*" | "&&"
 index_expr = identifier subscript {subscript}
 subscript = "[" expr "]"
 pre_unary_expr = pre_unary_op expr
-pre_unary_op = "+" | "-"
+pre_unary_op = "+" | "-" | "!"
 call_expr = identifier "(" call_params ")"
 call_params = {expr ","} expr
 ```
@@ -86,9 +86,10 @@ digit = "0" | nonzero_digit
 | == | 25 |
 | + | 26 |
 | - | 27 |
-| / | 28 |
-| * | 29 |
-| && | 30 |
-| || | 31 |
-| ^ | 32 |
+| ! | 28 |
+| / | 29 |
+| * | 30 |
+| && | 31 |
+| || | 32 |
+| ^ | 33 |
 
