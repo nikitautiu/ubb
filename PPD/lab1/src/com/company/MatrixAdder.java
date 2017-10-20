@@ -67,7 +67,7 @@ public class MatrixAdder {
                 e.printStackTrace();
             }
 
-        // transfer them back to the matrix
+        // deliniarize them back to matrix form
         for(int i = 0; i < n; ++i)
             for(int j = 0; j < m; ++j) {
                 result[i][j] = contigResult[i * n + j];
@@ -76,31 +76,4 @@ public class MatrixAdder {
         return result;
     }
 
-    /**
-     * Prints m numbers concurrently on n threads.
-     * @param n the number of threads
-     * @param m the number of numbers
-     */
-    public static void foo(int n, int m) {
-        for(int i = 0; i < n; ++i) {
-            final int threadNum = i;
-            Thread thread = new Thread(() -> {
-                String name = Thread.currentThread().getName();
-
-                for(int j = 0; j < m; ++j) {
-                    System.out.println("Thread " + threadNum + " - " + j);
-
-                    // a bit of delay to see the concurrency better
-                    try {
-                        // random to observe the threads better
-                        int delay = ThreadLocalRandom.current().nextInt(0, 1000);
-                        TimeUnit.MILLISECONDS.sleep(delay);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-            thread.start();
-        }
-    }
 }

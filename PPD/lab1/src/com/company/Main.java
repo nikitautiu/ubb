@@ -49,13 +49,17 @@ public class Main {
     public static void main(String[] args) {
         int a[][] = {{1, 2, 3}, {2, 1, 1}, {0, 3, 1}},
             b[][] = {{-1, 2,1}, {1, 1, 1}, {0, -2, 3}};
+        int a2[][] = {{1, 2, 3}, {2, 1, 1}},
+                b2[][] = {{1, 2}, {3, 1}, {0, 0}};
         int c[][] = MatrixAdder.add(a, b, 2);
+        int d[][] = MatrixMultiplier.mult(a2, b2, 2);
 
         // small sanity-check
-        System.out.println("Summing");
         Main.printMatrix(a);
         Main.printMatrix(b);
         Main.printMatrix(c);
+        Main.printMatrix(d);
+
 
         // bechmarks
         Main.benchmarkSum(10, 10, 1);
