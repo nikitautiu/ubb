@@ -1,76 +1,61 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.function.BinaryOperator;
+
 public class Main {
 
-    private static void printMatrix(int mat[][]) {
-        final int n = mat.length;
-        final int m = mat[0].length;
-
-        for(int i = 0; i < n; ++i) {
-            for (int j = 0; j < m; ++j)
-                System.out.print(mat[i][j] + " ");
-            System.out.print("\n");
-        }
-
-        System.out.print("\n");
-    }
-
-    /**
-     * Returns a random n x m matrix
-     */
-    private static int[][] randomMatrix(int n, int m) {
-        int matrix[][] = new int[n][m];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j< m; j++) {
-                matrix[i][j] = (int) (Math.random()*10); // geting numbres between 1 and 10
-            }
-        }
-
-        return matrix;
-    }
-
-    /**
-     * Prints the execution time of the sum of 2 matrices of n x m
-     * elements on numThreads threads.
-     */
-    private static void benchmarkSum(int n, int m, int numThreads) {
-        int a[][] = Main.randomMatrix(n, m), b[][] = Main.randomMatrix(n, m);
-
-        // add em up
-        final long startTime = System.nanoTime();
-        MatrixAdder.add(a, b, numThreads);
-        final long duration = System.nanoTime() - startTime;
-
-        // print results
-        System.out.println("Added 2 " + n + " by " + m + " matrices on " + numThreads + " threads in " +
-                           duration / 1000000. + " miliseconds");
-    }
-
     public static void main(String[] args) {
-        int a[][] = {{1, 2, 3}, {2, 1, 1}, {0, 3, 1}},
-            b[][] = {{-1, 2,1}, {1, 1, 1}, {0, -2, 3}};
-        int a2[][] = {{1, 2, 3}, {2, 1, 1}},
-                b2[][] = {{1, 2}, {3, 1}, {0, 0}};
-        int c[][] = MatrixAdder.add(a, b, 2);
+//        ArrayList<ArrayList<Integer>> a = {{1, 2, 3}, {2, 1, 1}, {0, 3, 1}},
+//            b[][] = {{-1, 2,1}, {1, 1, 1}, {0, -2, 3}};
+        int[][] a2 = {{1, 2, 3}, {2, 1, 1}},
+                b2 = {{1, 2}, {3, 1}, {0, 0}};
+
+        // initialize the arrays
+        ArrayList<ArrayList<Integer>> a = new ArrayList<>(), b = new ArrayList<>();
+//        ArrayList<ArrayList<Integer>> a2 = new ArrayList<>(), b2 = new ArrayList<>();
+
+        a.add(new ArrayList<>(Arrays.asList(1, 2, 3)));
+        a.add(new ArrayList<>(Arrays.asList(2, 1, 1)));
+        a.add(new ArrayList<>(Arrays.asList(0, 3, 1)));
+
+        b.add(new ArrayList<>(Arrays.asList(-1, 2, 1)));
+        b.add(new ArrayList<>(Arrays.asList(1, 1, 1)));
+        b.add(new ArrayList<>(Arrays.asList(0, -2, 3)));
+
+
+        // declare the sum operator
+        BinaryOperator<Integer> sumOp = (Integer x, Integer y) -> x + y;
+        ArrayList<ArrayList<Integer>> c = MatrixAdder.add(a, b, 2, sumOp);
         int d[][] = MatrixMultiplier.mult(a2, b2, 2);
 
         // small sanity-check
-        Main.printMatrix(a);
-        Main.printMatrix(b);
-        Main.printMatrix(c);
-        Main.printMatrix(d);
-
+        Utils.printMatrix(a);
+        Utils.printMatrix(b);
+        Utils.printMatrix(c);
+//        Main.printMatrix(d);
 
         // bechmarks
-        Main.benchmarkSum(10, 10, 1);
-        Main.benchmarkSum(10, 10, 2);
-        Main.benchmarkSum(10, 10, 4);
-        Main.benchmarkSum(10, 10, 8);
+        // integer
+        System.out.println("\nINTEGER ADDITION");
+        Benchmarks.runSumBenchmarks(sumOp, Utils::randomIntMatrix);
 
-        Main.benchmarkSum(1000, 1000, 1);
-        Main.benchmarkSum(1000, 1000, 2);
-        Main.benchmarkSum(1000, 1000, 4);
-        Main.benchmarkSum(1000, 1000, 8);
+        System.out.println("\nINTEGER MULTIPLICATION");
+        Benchmarks.runMultBenchmark();
 
+        System.out.println("\nINTEGER ELEM-WISE MULTIPLICATION");
+        Benchmarks.runSumBenchmarks((Integer x, Integer y) -> x * y, Utils::randomIntMatrix);
+
+        System.out.println("\nINTEGER DOTCIRCLE");
+        Benchmarks.runSumBenchmarks((Integer x, Integer y) -> 1*(1/x + 1/y), Utils::randomIntMatrix);
+
+        // complex
+        System.out.println("\nCOMPLEX ELEM-WISE MULTIPLICATION");
+        Benchmarks.runSumBenchmarks((Complex x, Complex y) -> x.mult(y), Utils::randomComplexMatrix);
+
+        System.out.println("\nCOMPLEX DOTCIRCLE");
+        Benchmarks.runSumBenchmarks((Complex x, Complex y) -> x.inv().add(y.inv()).inv(), Utils::randomComplexMatrix);
     }
+
 }

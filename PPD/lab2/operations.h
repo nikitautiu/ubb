@@ -8,6 +8,7 @@
 #include <vector>
 #include <functional>
 #include <thread>
+#include <complex>
 
 /*
  * Applies a binary operator element-wise on two
@@ -135,6 +136,35 @@ std::vector<std::vector<T>> mat_add(const std::vector<std::vector<T>> &first,
                                     const std::vector<std::vector<T>> &second,
                                     std::size_t num_threads = 4) {
     return mat_elemwise_op(first, second, num_threads);
+}
+
+
+template<typename T>
+std::vector<std::vector<T>> mat_elemwise_mult(const std::vector<std::vector<T>> &first,
+                                              const std::vector<std::vector<T>> &second,
+                                              std::size_t num_threads = 4) {
+    std::function<T(const T&, const T&)> op = [](const T& a, const T& b) -> T { return a * b; };
+    return mat_elemwise_op(first, second, num_threads, op);
+}
+
+
+template<typename T>
+std::vector<std::vector<T>> mat_dotcircle(const std::vector<std::vector<T>> &first,
+                                          const std::vector<std::vector<T>> &second,
+                                          std::size_t num_threads = 4) {
+    std::function<T(const T&, const T&)> op = [](const T& a, const T& b) -> T { return 1. / (1. / a + 1. / b); };
+    return mat_elemwise_op(first, second, num_threads, op);
+}
+
+template <>
+std::vector<std::vector<std::complex<double>>> mat_dotcircle(const std::vector<std::vector<std::complex<double>>> &first,
+                                          const std::vector<std::vector<std::complex<double>>> &second,
+                                          std::size_t num_threads) {
+    std::complex<double> one = 1.;
+    std::function<std::complex<double>(const std::complex<double>&, const std::complex<double>&)> op =
+            [one](const std::complex<double>& a, const std::complex<double>& b) -> std::complex<double>
+            { return std::complex<double>(one / (one / a + one / b)); };
+    return mat_elemwise_op(first, second, num_threads, op);
 }
 
 #endif //LAB2_OPERATIONS_H

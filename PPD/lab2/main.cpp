@@ -38,16 +38,48 @@ int main() {
     // now test for complex numbers as well
     std::cout << "COMPLEX\n";
     std::cout << "ADDITION\n";
-    std::cout << "1000 x 1000 - 1 thread - " << benchmark_mat_op<std::complex<float>>(1000, 1000, 1, mat_add<std::complex<float>>) << '\n';
-    std::cout << "1000 x 1000 - 2 thread - " << benchmark_mat_op<std::complex<float>>(1000, 1000, 2, mat_add<std::complex<float>>) << '\n';
-    std::cout << "1000 x 1000 - 4 thread - " << benchmark_mat_op<std::complex<float>>(1000, 1000, 4, mat_add<std::complex<float>>) << '\n';
-    std::cout << "1000 x 1000 - 6 thread - " << benchmark_mat_op<std::complex<float>>(1000, 1000, 6, mat_add<std::complex<float>>) << '\n';
-    std::cout << "1000 x 1000 - 8 thread - " << benchmark_mat_op<std::complex<float>>(1000, 1000, 8, mat_add<std::complex<float>>) << '\n';
+    std::cout << "1000 x 1000 - 1 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 1, mat_add<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 2 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 2, mat_add<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 4 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 4, mat_add<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 6 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 6, mat_add<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 8 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 8, mat_add<std::complex<double>>) << '\n';
 
     std::cout << "\nMULTIPLICATION\n";
-    std::cout << "1000 x 1000 - 1 thread - " << benchmark_mat_op<std::complex<float>>(1000, 1000, 1, mat_mult<std::complex<float>>) << '\n';
-    std::cout << "1000 x 1000 - 2 thread - " << benchmark_mat_op<std::complex<float>>(1000, 1000, 2, mat_mult<std::complex<float>>) << '\n';
-    std::cout << "1000 x 1000 - 4 thread - " << benchmark_mat_op<std::complex<float>>(1000, 1000, 4, mat_mult<std::complex<float>>) << '\n';
-    std::cout << "1000 x 1000 - 6 thread - " << benchmark_mat_op<std::complex<float>>(1000, 1000, 6, mat_mult<std::complex<float>>) << '\n';
-    std::cout << "1000 x 1000 - 8 thread - " << benchmark_mat_op<std::complex<float>>(1000, 1000, 8, mat_mult<std::complex<float>>) << '\n';
+    std::cout << "1000 x 1000 - 1 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 1, mat_mult<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 2 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 2, mat_mult<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 4 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 4, mat_mult<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 6 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 6, mat_mult<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 8 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 8, mat_mult<std::complex<double>>) << '\n';
+
+    // elemntwise multiplication
+    std::cout << "\nELEMENTWISE MULTIPLICATION\n";
+    std::cout << "INTEGER\n";
+    std::cout << "1000 x 1000 - 1 thread - " << benchmark_mat_op<int>(1000, 1000, 1, mat_elemwise_mult<int>) << '\n';
+    std::cout << "1000 x 1000 - 2 thread - " << benchmark_mat_op<int>(1000, 1000, 2, mat_elemwise_mult<int>) << '\n';
+    std::cout << "1000 x 1000 - 4 thread - " << benchmark_mat_op<int>(1000, 1000, 4, mat_elemwise_mult<int>) << '\n';
+    std::cout << "1000 x 1000 - 6 thread - " << benchmark_mat_op<int>(1000, 1000, 6, mat_elemwise_mult<int>) << '\n';
+    std::cout << "1000 x 1000 - 8 thread - " << benchmark_mat_op<int>(1000, 1000, 8, mat_elemwise_mult<int>) << '\n';
+
+    std::cout << "\nCOMPLEX\n";
+    std::cout << "1000 x 1000 - 1 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 1, mat_elemwise_mult<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 2 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 2, mat_elemwise_mult<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 4 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 4, mat_elemwise_mult<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 6 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 6, mat_elemwise_mult<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 8 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 8, mat_elemwise_mult<std::complex<double>>) << '\n';
+
+    // dot-circle operator
+    std::cout << "\nODOT\n";
+    std::cout << "INTEGER\n";
+    std::cout << "1000 x 1000 - 1 thread - " << benchmark_mat_op<float>(1000, 1000, 1, mat_dotcircle<float>) << '\n';
+    std::cout << "1000 x 1000 - 2 thread - " << benchmark_mat_op<float>(1000, 1000, 2, mat_dotcircle<float>) << '\n';
+    std::cout << "1000 x 1000 - 4 thread - " << benchmark_mat_op<float>(1000, 1000, 4, mat_dotcircle<float>) << '\n';
+    std::cout << "1000 x 1000 - 6 thread - " << benchmark_mat_op<float>(1000, 1000, 6, mat_dotcircle<float>) << '\n';
+    std::cout << "1000 x 1000 - 8 thread - " << benchmark_mat_op<float>(1000, 1000, 8, mat_dotcircle<float>) << '\n';
+
+    std::cout << "\nCOMPLEX\n";
+    std::cout << "1000 x 1000 - 1 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 1, mat_dotcircle<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 2 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 2, mat_dotcircle<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 4 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 4, mat_dotcircle<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 6 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 6, mat_dotcircle<std::complex<double>>) << '\n';
+    std::cout << "1000 x 1000 - 8 thread - " << benchmark_mat_op<std::complex<double>>(1000, 1000, 8, mat_dotcircle<std::complex<double>>) << '\n';
 }

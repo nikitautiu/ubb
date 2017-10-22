@@ -63,6 +63,15 @@ namespace helper {
     }
 
     /*
+    * float matrix generator
+    */
+    std::vector<std::vector<float>> gen_float_rand_mat(size_t n, size_t m) {
+        std::function<float(void)> gen  = []() -> float {return (float)std::rand();};
+        return _gen_mat<float>(n, m, gen);
+    }
+
+
+    /*
     * Complex number generator
     */
     template <typename T>
@@ -83,8 +92,13 @@ std::vector<std::vector<int>>  gen_rand_mat(size_t n, size_t m) {
 }
 
 template <>
-std::vector<std::vector<std::complex<float>>> gen_rand_mat(size_t n, size_t m) {
-    return helper::gen_complex_rand_mat<float>(n, m);
+std::vector<std::vector<float>>  gen_rand_mat(size_t n, size_t m) {
+    return helper::gen_float_rand_mat(n, m);
+}
+
+template <>
+std::vector<std::vector<std::complex<double>>> gen_rand_mat(size_t n, size_t m) {
+    return helper::gen_complex_rand_mat<double>(n, m);
 }
 
 
