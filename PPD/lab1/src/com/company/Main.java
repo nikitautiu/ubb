@@ -10,7 +10,9 @@ public class Main {
 //        ArrayList<ArrayList<Integer>> a = {{1, 2, 3}, {2, 1, 1}, {0, 3, 1}},
 //            b[][] = {{-1, 2,1}, {1, 1, 1}, {0, -2, 3}};
         int[][] a2 = {{1, 2, 3}, {2, 1, 1}},
-                b2 = {{1, 2}, {3, 1}, {0, 0}};
+                b2 = {{1, 2},
+                        {3, 1},
+                        {0, 0}};
 
         // initialize the arrays
         ArrayList<ArrayList<Integer>> a = new ArrayList<>(), b = new ArrayList<>();

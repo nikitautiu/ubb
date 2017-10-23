@@ -19,7 +19,8 @@ public class MatrixAdder {
      * @param numThreads the number of threads to parallelize the sum to
      * @return the result of the sum
      */
-    public static<T> ArrayList<ArrayList<T>> add (ArrayList<ArrayList<T>> first, ArrayList<ArrayList<T>> second, int numThreads, BinaryOperator<T> op) {
+    public static<T> ArrayList<ArrayList<T>> add (ArrayList<ArrayList<T>> first, ArrayList<ArrayList<T>> second, int numThreads,
+                                                  BinaryOperator<T> op) {
         final int n = first.size();
         final int m = first.get(0).size();
         ArrayList<T> contigFirst = new ArrayList<T>(n * m);

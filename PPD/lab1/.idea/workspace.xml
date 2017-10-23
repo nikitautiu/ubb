@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="57" column="90" lean-forward="false" selection-start-line="57" selection-start-column="90" selection-end-line="57" selection-end-column="90" />
+            <state relative-caret-position="163">
+              <caret line="56" column="64" lean-forward="false" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,32 +30,9 @@
       <file leaf-file-name="Complex.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Complex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2142">
-              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-              <folding>
-                <element signature="e#1273#1274#0" expanded="true" />
-                <element signature="e#1297#1298#0" expanded="true" />
-                <element signature="e#1373#1374#0" expanded="true" />
-                <element signature="e#1397#1398#0" expanded="true" />
-                <element signature="e#1478#1479#0" expanded="true" />
-                <element signature="e#1519#1520#0" expanded="true" />
-                <element signature="e#1617#1618#0" expanded="true" />
-                <element signature="e#1653#1654#0" expanded="true" />
-                <element signature="e#2128#2129#0" expanded="true" />
-                <element signature="e#2180#2181#0" expanded="true" />
-                <element signature="e#2397#2398#0" expanded="true" />
-                <element signature="e#2449#2450#0" expanded="true" />
-                <element signature="e#2564#2565#0" expanded="true" />
-                <element signature="e#2606#2607#0" expanded="true" />
-                <element signature="e#2828#2829#0" expanded="true" />
-                <element signature="e#2900#2901#0" expanded="true" />
-                <element signature="e#3115#3116#0" expanded="true" />
-                <element signature="e#3163#3164#0" expanded="true" />
-                <element signature="e#3663#3664#0" expanded="true" />
-                <element signature="e#3699#3700#0" expanded="true" />
-                <element signature="e#3805#3806#0" expanded="true" />
-                <element signature="e#3893#3894#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,8 +40,8 @@
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <state relative-caret-position="-47">
+              <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,8 +52,8 @@
       <file leaf-file-name="Benchmarks.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Benchmarks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+            <state relative-caret-position="157">
+              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,53 +71,71 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JAVA/com.company" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JAVA/com.company" pinned="false" current-in-tab="true">
         <entry file="uml://JAVA/com.company">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>JAVA</ID>
               <OriginalElement>com.company</OriginalElement>
               <nodes>
-                <node x="530.75" y="0.0">com.company.MatrixAdder</node>
-                <node x="0.0" y="141.0">com.company.MatrixMultiplier</node>
-                <node x="181.75000000000006" y="0.0">com.company.MatrixFactory</node>
-                <node x="377.00000000000006" y="282.0">com.company.Main</node>
-                <node x="0.0" y="382.0">com.company.Benchmarks</node>
-                <node x="230.00000000000006" y="105.0">com.company.Utils</node>
+                <node x="579.0" y="24.0">com.company.MatrixAdder</node>
+                <node x="0.0" y="24.0">com.company.MatrixMultiplier</node>
+                <node x="230.0" y="24.0">com.company.MatrixFactory</node>
+                <node x="673.3125" y="330.0">com.company.Main</node>
+                <node x="220.125" y="153.0">com.company.Benchmarks</node>
+                <node x="1247.0" y="0.0">com.company.Utils</node>
               </nodes>
               <notes />
               <edges>
-                <edge source="com.company.Utils" target="com.company.MatrixAdder">
-                  <point x="116.25" y="-63.5" />
-                  <point x="578.75" y="80.0" />
-                  <point x="692.75" y="80.0" />
-                  <point x="-162.0" y="27.5" />
-                </edge>
                 <edge source="com.company.Main" target="com.company.Utils">
-                  <point x="0.0" y="-27.5" />
+                  <point x="64.125" y="-27.5" />
+                  <point x="822.9375" y="310.0" />
+                  <point x="1561.25" y="310.0" />
+                  <point x="104.75" y="51.5" />
+                </edge>
+                <edge source="com.company.Benchmarks" target="com.company.MatrixFactory">
+                  <point x="-58.125" y="-63.5" />
+                  <point x="0.0" y="27.5" />
+                </edge>
+                <edge source="com.company.Main" target="com.company.Benchmarks">
+                  <point x="-21.375" y="-27.5" />
+                  <point x="737.4375" y="300.0" />
+                  <point x="452.625" y="300.0" />
                   <point x="0.0" y="63.5" />
                 </edge>
+                <edge source="com.company.Benchmarks" target="com.company.MatrixAdder">
+                  <point x="58.125" y="-63.5" />
+                  <point x="510.75" y="123.0" />
+                  <point x="741.0" y="123.0" />
+                  <point x="-162.0" y="27.5" />
+                </edge>
                 <edge source="com.company.Main" target="com.company.MatrixAdder">
-                  <point x="57.0" y="-27.5" />
-                  <point x="519.5" y="257.0" />
-                  <point x="1016.75" y="257.0" />
+                  <point x="21.375" y="-27.5" />
+                  <point x="780.1875" y="300.0" />
+                  <point x="1065.0" y="300.0" />
                   <point x="162.0" y="27.5" />
                 </edge>
-                <edge source="com.company.Utils" target="com.company.MatrixFactory">
-                  <point x="-116.25" y="-63.5" />
-                  <point x="0.0" y="27.5" />
+                <edge source="com.company.Benchmarks" target="com.company.Utils">
+                  <point x="174.375" y="-63.5" />
+                  <point x="627.0" y="133.0" />
+                  <point x="1351.75" y="133.0" />
+                  <point x="-104.75" y="51.5" />
+                </edge>
+                <edge source="com.company.Benchmarks" target="com.company.MatrixMultiplier">
+                  <point x="-174.375" y="-63.5" />
+                  <point x="278.25" y="133.0" />
+                  <point x="157.5" y="133.0" />
+                  <point x="52.5" y="27.5" />
                 </edge>
                 <edge source="com.company.Main" target="com.company.MatrixMultiplier">
-                  <point x="-57.0" y="-27.5" />
-                  <point x="405.50000000000006" y="257.0" />
-                  <point x="105.0" y="257.0" />
-                  <point x="0.0" y="27.5" />
+                  <point x="-64.125" y="-27.5" />
+                  <point x="694.6875" y="310.0" />
+                  <point x="52.5" y="310.0" />
+                  <point x="-52.5" y="27.5" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-155.5" y="38.0" />
-              <SelectedNodes>
-                <node>com.company.MatrixAdder</node>
-              </SelectedNodes>
+              <settings layout="Hierarchic Group" zoom="0.8" x="926.125" y="180.375" />
+              <SelectedNodes />
               <Categories>
                 <Category>Methods</Category>
               </Categories>
@@ -153,8 +148,8 @@
       <file leaf-file-name="MatrixAdder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/MatrixAdder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-676">
-              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+            <state relative-caret-position="-8">
+              <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,7 +160,7 @@
       <file leaf-file-name="ThreadingDemo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/ThreadingDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
+            <state relative-caret-position="170">
               <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
               <folding />
             </state>
@@ -175,8 +170,8 @@
       <file leaf-file-name="MatrixMultiplier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/MatrixMultiplier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-850">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="531">
+              <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -212,13 +207,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/company/ThreadingDemo.java" />
         <option value="/usr/lib/jvm/java-9-openjdk!/java.base/java/util/function/BinaryOperator.class" />
-        <option value="$PROJECT_DIR$/src/com/company/MatrixAdder.java" />
         <option value="$PROJECT_DIR$/src/com/company/MatrixFactory.java" />
         <option value="$PROJECT_DIR$/src/com/company/MatrixMultiplier.java" />
         <option value="$PROJECT_DIR$/src/com/company/Benchmarks.java" />
         <option value="$PROJECT_DIR$/src/com/company/Complex.java" />
         <option value="$PROJECT_DIR$/src/com/company/Utils.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/MatrixAdder.java" />
       </list>
     </option>
   </component>
@@ -228,7 +223,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="683" />
     <option name="y" value="25" />
     <option name="width" value="683" />
@@ -301,9 +296,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -326,12 +322,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -581,14 +576,15 @@
       <updated>1507548363523</updated>
       <workItem from="1508509487559" duration="3846000" />
       <workItem from="1508682951925" duration="10323000" />
+      <workItem from="1508757315258" duration="2923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14169000" />
+    <option name="totallyTimeSpent" value="17092000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="25" width="683" height="743" extended-state="4" />
+    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -598,14 +594,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.174727" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49487555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17642753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -619,6 +614,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,7 +625,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -638,6 +642,158 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Complex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Benchmarks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MatrixFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.company">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.company</OriginalElement>
+          <nodes>
+            <node x="579.0" y="24.0">com.company.MatrixAdder</node>
+            <node x="0.0" y="24.0">com.company.MatrixMultiplier</node>
+            <node x="230.0" y="24.0">com.company.MatrixFactory</node>
+            <node x="673.3125" y="330.0">com.company.Main</node>
+            <node x="220.125" y="153.0">com.company.Benchmarks</node>
+            <node x="1247.0" y="0.0">com.company.Utils</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.company.Main" target="com.company.Utils">
+              <point x="64.125" y="-27.5" />
+              <point x="822.9375" y="310.0" />
+              <point x="1561.25" y="310.0" />
+              <point x="104.75" y="51.5" />
+            </edge>
+            <edge source="com.company.Benchmarks" target="com.company.MatrixFactory">
+              <point x="-58.125" y="-63.5" />
+              <point x="0.0" y="27.5" />
+            </edge>
+            <edge source="com.company.Main" target="com.company.Benchmarks">
+              <point x="-21.375" y="-27.5" />
+              <point x="737.4375" y="300.0" />
+              <point x="452.625" y="300.0" />
+              <point x="0.0" y="63.5" />
+            </edge>
+            <edge source="com.company.Benchmarks" target="com.company.MatrixAdder">
+              <point x="58.125" y="-63.5" />
+              <point x="510.75" y="123.0" />
+              <point x="741.0" y="123.0" />
+              <point x="-162.0" y="27.5" />
+            </edge>
+            <edge source="com.company.Main" target="com.company.MatrixAdder">
+              <point x="21.375" y="-27.5" />
+              <point x="780.1875" y="300.0" />
+              <point x="1065.0" y="300.0" />
+              <point x="162.0" y="27.5" />
+            </edge>
+            <edge source="com.company.Benchmarks" target="com.company.Utils">
+              <point x="174.375" y="-63.5" />
+              <point x="627.0" y="133.0" />
+              <point x="1351.75" y="133.0" />
+              <point x="-104.75" y="51.5" />
+            </edge>
+            <edge source="com.company.Benchmarks" target="com.company.MatrixMultiplier">
+              <point x="-174.375" y="-63.5" />
+              <point x="278.25" y="133.0" />
+              <point x="157.5" y="133.0" />
+              <point x="52.5" y="27.5" />
+            </edge>
+            <edge source="com.company.Main" target="com.company.MatrixMultiplier">
+              <point x="-64.125" y="-27.5" />
+              <point x="694.6875" y="310.0" />
+              <point x="52.5" y="310.0" />
+              <point x="-52.5" y="27.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8" x="926.125" y="180.375" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MatrixAdder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ThreadingDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MatrixMultiplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -858,7 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="37" column="82" lean-forward="false" selection-start-line="37" selection-start-column="82" selection-end-line="37" selection-end-column="82" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -866,86 +1021,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ThreadingDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
+        <state relative-caret-position="170">
           <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.company">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.company</OriginalElement>
-          <nodes>
-            <node x="530.75" y="0.0">com.company.MatrixAdder</node>
-            <node x="0.0" y="141.0">com.company.MatrixMultiplier</node>
-            <node x="181.75000000000006" y="0.0">com.company.MatrixFactory</node>
-            <node x="377.00000000000006" y="282.0">com.company.Main</node>
-            <node x="0.0" y="382.0">com.company.Benchmarks</node>
-            <node x="230.00000000000006" y="105.0">com.company.Utils</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="com.company.Utils" target="com.company.MatrixAdder">
-              <point x="116.25" y="-63.5" />
-              <point x="578.75" y="80.0" />
-              <point x="692.75" y="80.0" />
-              <point x="-162.0" y="27.5" />
-            </edge>
-            <edge source="com.company.Main" target="com.company.Utils">
-              <point x="0.0" y="-27.5" />
-              <point x="0.0" y="63.5" />
-            </edge>
-            <edge source="com.company.Main" target="com.company.MatrixAdder">
-              <point x="57.0" y="-27.5" />
-              <point x="519.5" y="257.0" />
-              <point x="1016.75" y="257.0" />
-              <point x="162.0" y="27.5" />
-            </edge>
-            <edge source="com.company.Utils" target="com.company.MatrixFactory">
-              <point x="-116.25" y="-63.5" />
-              <point x="0.0" y="27.5" />
-            </edge>
-            <edge source="com.company.Main" target="com.company.MatrixMultiplier">
-              <point x="-57.0" y="-27.5" />
-              <point x="405.50000000000006" y="257.0" />
-              <point x="105.0" y="257.0" />
-              <point x="0.0" y="27.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-155.5" y="38.0" />
-          <SelectedNodes>
-            <node>com.company.MatrixAdder</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Benchmarks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/MatrixMultiplier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-850">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -958,51 +1040,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/MatrixAdder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Benchmarks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-676">
-          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Complex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2142">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#1273#1274#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1373#1374#0" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#1478#1479#0" expanded="true" />
-            <element signature="e#1519#1520#0" expanded="true" />
-            <element signature="e#1617#1618#0" expanded="true" />
-            <element signature="e#1653#1654#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2180#2181#0" expanded="true" />
-            <element signature="e#2397#2398#0" expanded="true" />
-            <element signature="e#2449#2450#0" expanded="true" />
-            <element signature="e#2564#2565#0" expanded="true" />
-            <element signature="e#2606#2607#0" expanded="true" />
-            <element signature="e#2828#2829#0" expanded="true" />
-            <element signature="e#2900#2901#0" expanded="true" />
-            <element signature="e#3115#3116#0" expanded="true" />
-            <element signature="e#3163#3164#0" expanded="true" />
-            <element signature="e#3663#3664#0" expanded="true" />
-            <element signature="e#3699#3700#0" expanded="true" />
-            <element signature="e#3805#3806#0" expanded="true" />
-            <element signature="e#3893#3894#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        <state relative-caret-position="157">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1011,11 +1052,119 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="57" column="90" lean-forward="false" selection-start-line="57" selection-start-column="90" selection-end-line="57" selection-end-column="90" />
+        <state relative-caret-position="163">
+          <caret line="56" column="64" lean-forward="false" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MatrixMultiplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MatrixAdder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Complex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.company">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.company</OriginalElement>
+          <nodes>
+            <node x="579.0" y="24.0">com.company.MatrixAdder</node>
+            <node x="0.0" y="24.0">com.company.MatrixMultiplier</node>
+            <node x="230.0" y="24.0">com.company.MatrixFactory</node>
+            <node x="673.3125" y="330.0">com.company.Main</node>
+            <node x="220.125" y="153.0">com.company.Benchmarks</node>
+            <node x="1247.0" y="0.0">com.company.Utils</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.company.Main" target="com.company.Utils">
+              <point x="64.125" y="-27.5" />
+              <point x="822.9375" y="310.0" />
+              <point x="1561.25" y="310.0" />
+              <point x="104.75" y="51.5" />
+            </edge>
+            <edge source="com.company.Benchmarks" target="com.company.MatrixFactory">
+              <point x="-58.125" y="-63.5" />
+              <point x="0.0" y="27.5" />
+            </edge>
+            <edge source="com.company.Main" target="com.company.Benchmarks">
+              <point x="-21.375" y="-27.5" />
+              <point x="737.4375" y="300.0" />
+              <point x="452.625" y="300.0" />
+              <point x="0.0" y="63.5" />
+            </edge>
+            <edge source="com.company.Benchmarks" target="com.company.MatrixAdder">
+              <point x="58.125" y="-63.5" />
+              <point x="510.75" y="123.0" />
+              <point x="741.0" y="123.0" />
+              <point x="-162.0" y="27.5" />
+            </edge>
+            <edge source="com.company.Main" target="com.company.MatrixAdder">
+              <point x="21.375" y="-27.5" />
+              <point x="780.1875" y="300.0" />
+              <point x="1065.0" y="300.0" />
+              <point x="162.0" y="27.5" />
+            </edge>
+            <edge source="com.company.Benchmarks" target="com.company.Utils">
+              <point x="174.375" y="-63.5" />
+              <point x="627.0" y="133.0" />
+              <point x="1351.75" y="133.0" />
+              <point x="-104.75" y="51.5" />
+            </edge>
+            <edge source="com.company.Benchmarks" target="com.company.MatrixMultiplier">
+              <point x="-174.375" y="-63.5" />
+              <point x="278.25" y="133.0" />
+              <point x="157.5" y="133.0" />
+              <point x="52.5" y="27.5" />
+            </edge>
+            <edge source="com.company.Main" target="com.company.MatrixMultiplier">
+              <point x="-64.125" y="-27.5" />
+              <point x="694.6875" y="310.0" />
+              <point x="52.5" y="310.0" />
+              <point x="-52.5" y="27.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8" x="926.125" y="180.375" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
