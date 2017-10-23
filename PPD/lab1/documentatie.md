@@ -1,11 +1,11 @@
 # Laborator 1 - Nichita Utiu 233
 ## Cerinta
-Se vor implementa in java operatiile de adunare si de inmultire a doua matrici intr-un mod paralelizat folosind multithreading(pe un numar de thread-uri parametrizabil). Datele vor fi distribuite pe threaduri intr-un mod echilibrat(*balanced distribution*). 
+Se vor implementa in java operatiile de adunare si de inmultire a doua matrici intr-un mod paralelizat folosind multithreading(pe un numar de thread-uri parametrizabil). Datele vor fi distribuite pe threaduri intr-un mod echilibrat(*balanced distribution*).
 
 Se vor face benchmark-uri pentru testarea performantei operatiilor pe matrici aleatoare de dimensiuni mari(1000 x 1000). Pentru fiecare benchmark se vor specifica:
 
 * dimensiunile matricei
-* numarul de thread-uri 
+* numarul de thread-uri
 * timpul de executie
 * specificatiile sistemului
 
@@ -23,7 +23,7 @@ Proiectul e impartit in urmatoarele clase:
 
 ### Adunare
 |  dimensiune | # thread-uri | timp(ms) |
-| - | - | - |
+| --- | --- | --- |
 | 1000 x 1000 | 1 | 177.813526 |
 | 1000 x 1000 | 2 | 255.770882 |
 | 1000 x 1000 | 4 | 103.896254 |
@@ -32,7 +32,7 @@ Proiectul e impartit in urmatoarele clase:
 
 ### Inmultire
 |  dimensiune | # thread-uri | timp(ms) |
-| - | - | - |
+| --- | --- | --- |
 | 1000 x 1000 | 1 | 811.05972 |
 | 1000 x 1000 | 2 | 445.144503 |
 | 1000 x 1000 | 4 | 417.072139 |

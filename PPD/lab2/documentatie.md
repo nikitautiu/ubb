@@ -1,10 +1,10 @@
-# Laborator 1 - Nichita Utiu 233
+# Laborator 2 - Nichita Utiu 233
 ## Cerinta
 Se vor generiza operatiile implementate la lab-ul 1 astefel incat sa poata primi matrici cu elemente de orice tip. De asemenea, operatia de adunare trebuie sa poata primi orice operator binar care sa fie aplicat pe elemente. **Codul va fi tradus si in C++**
 
 Se vor face benchmark-uri pentru testarea performantei operatiilor pe matrici aleatoare de dimensiuni mari(1000 x 1000).  Se vor testa pentru matrici de numere intregi si pentru numere complexe. Pentru fiecare se vor masura performantele cu umatorii 2 opertori:
 
-* cel de inmultier 
+* cel de inmultier
 * $a \odot b = 1 ( 1 / a + 1/ b )$
 
 ## Proiectare
@@ -20,9 +20,9 @@ Proiectul e impartit in urmatoarele clase:
 **Sistem:** Antergos Linux(Arch Linux) 64bit - Intel® Core™ i7-5500U CPU @ 2.40GHz × 4
 
 ### Java - Intreg
-#### Inmultire 
+#### Inmultire
 |  dimensiune | # thread-uri | timp(ms) |
-| - | - | - |
+| --- | --- | --- |
 | 1000 x 1000 | 1 | 86.130263 |
 | 1000 x 1000 | 2 | 69.434133 |
 | 1000 x 1000 | 4 | 63.750555 |
@@ -31,7 +31,7 @@ Proiectul e impartit in urmatoarele clase:
 
 #### $\odot$
 |  dimensiune | # thread-uri | timp(ms) |
-| - | - | - |
+| --- | --- | --- |
 | 1000 x 1000 | 1 | 86.158578 |
 | 1000 x 1000 | 2 | 71.65631 |
 | 1000 x 1000 | 4 | 91.52792 |
@@ -39,9 +39,9 @@ Proiectul e impartit in urmatoarele clase:
 | 1000 x 1000 | 8 | 63.534165 |
 
 ### Java - Complex
-#### Inmultire 
+#### Inmultire
 |  dimensiune | # thread-uri | timp(ms) |
-| - | - | - |
+| --- | --- | --- |
 | 1000 x 1000 | 1 | 84.452587 |
 | 1000 x 1000 | 2 | 330.193763 |
 | 1000 x 1000 | 4 | 135.053536 |
@@ -50,7 +50,7 @@ Proiectul e impartit in urmatoarele clase:
 
 #### $\odot$
 |  dimensiune | # thread-uri | timp(ms) |
-| - | - | - |
+| --- | --- | --- |
 | 1000 x 1000 | 1 | 137.180066 |
 | 1000 x 1000 | 2 | 207.063715 |
 | 1000 x 1000 | 4 | 238.237953 |
@@ -58,9 +58,9 @@ Proiectul e impartit in urmatoarele clase:
 | 1000 x 1000 | 8 | 229.179165 |
 
 ### C++ - Intreg
-#### Inmultire 
+#### Inmultire
 |  dimensiune | # thread-uri | timp(ms) |
-| - | - | - |
+| --- | --- | --- |
 | 1000 x 1000 | 1 | 71.6773 |
 | 1000 x 1000 | 2 | 59.268 |
 | 1000 x 1000 | 4 | 46.4045 |
@@ -69,7 +69,7 @@ Proiectul e impartit in urmatoarele clase:
 
 #### $\odot$
 |  dimensiune | # thread-uri | timp(ms) |
-| - | - | - |
+| --- | --- | --- |
 | 1000 x 1000 | 1 | 81.6074 |
 | 1000 x 1000 | 2 | 65.8035 |
 | 1000 x 1000 | 4 | 50.443 |
@@ -77,9 +77,9 @@ Proiectul e impartit in urmatoarele clase:
 | 1000 x 1000 | 8 | 52.2598 |
 
 ### C++ - Complex
-#### Inmultire 
+#### Inmultire
 |  dimensiune | # thread-uri | timp(ms) |
-| - | - | - |
+| --- | --- | --- |
 | 1000 x 1000 | 1 | 143.459 |
 | 1000 x 1000 | 2 | 123.359 |
 | 1000 x 1000 | 4 | 112.065 |
@@ -88,7 +88,7 @@ Proiectul e impartit in urmatoarele clase:
 
 #### $\odot$
 |  dimensiune | # thread-uri | timp(ms) |
-| - | - | - |
+| --- | --- | --- |
 | 1000 x 1000 | 1 | 219.871 |
 | 1000 x 1000 | 2 | 167.261 |
 | 1000 x 1000 | 4 | 140.096 |
