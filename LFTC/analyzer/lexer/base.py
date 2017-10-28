@@ -1,6 +1,7 @@
 import re
 from collections import namedtuple
 
+
 # the type to hold the definition of a symbol
 SymbolDefinition = namedtuple('SymbolDefinition', ['code', 'id', 'regex'])
 

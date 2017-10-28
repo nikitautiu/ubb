@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from lexer import BaseLexer, ParseError
+from lexer.base import ParseError, BaseLexer
 
 
 def remove_space_tokens(token_list):
