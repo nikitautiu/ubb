@@ -14,22 +14,26 @@ def symbol_def_from_list(def_tuples):
 
 
 class ParseError(Exception):
-    def __init__(self, line, pos, line_text):
-        error_msg = "A parse error occurred on line {}, position {}: \n {}".format(line, pos, line_text)
-        super().__init__(error_msg)
+    def __init__(self, *args):
+        if len(args) == 3:
+            line, pos, line_text = tuple(args)
+            error_msg = "A parse error occurred on line {}, position {}: \n {}".format(line, pos, line_text)
+            super().__init__(error_msg)
+        else:
+            super().__init__(args[0])
 
 
 class SymbolTable(object):
     def __init__(self):
-        self.symbols = []
+        self.symbols = {}
 
-    def get(self, hash):
-        return self.symbols[hash]
+    def get(self, symbol_hash):
+        return self.symbols[symbol_hash]
 
     def put(self, symbol):
-        if symbol not in self.symbols:
-            self.symbols.append(symbol)
-        return self.symbols.index(symbol)
+        if symbol not in self.symbols.values():
+            self.symbols[hash(symbol)] = symbol
+        return hash(symbol)
 
 
 class BaseLexer(object):

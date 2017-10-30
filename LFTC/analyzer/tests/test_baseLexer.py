@@ -1,10 +1,7 @@
 from unittest import TestCase
 
 from lexer.base import ParseError, BaseLexer
-
-
-def remove_space_tokens(token_list):
-    return list(filter(lambda x: x != 5, (fip[0] for fip in token_list)))
+from tests.utils import remove_space_tokens
 
 
 class TestBaseLexer(TestCase):
