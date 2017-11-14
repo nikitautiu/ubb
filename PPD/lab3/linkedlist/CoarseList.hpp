@@ -62,6 +62,5 @@ public:
     float getValue() override;
 };
 
-#include "IList.hpp"
 
 #endif //LAB3_COARSELIST_HPP

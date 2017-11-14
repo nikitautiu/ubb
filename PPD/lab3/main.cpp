@@ -3,6 +3,7 @@
 #include <vector>
 #include <atomic>
 #include "linkedlist/CoarseList.hpp"
+#include "linkedlist/FineList.hpp"
 
 // for millisecond literals
 using namespace std::chrono_literals;
@@ -22,10 +23,8 @@ void test1(IList& list) {
     auto thVect = std::vector<std::thread>();
     // first one inserts 10 values
     thVect.emplace_back([&]() {
-        for(auto i = 0; i < 10; ++i) {
+        for(auto i = 0; i < 10; ++i)
             list.insert(2);
-            std::this_thread::sleep_for(5ms);
-        }
         {
             // increment the counter
             auto lock = std::unique_lock<std::mutex>(cvMtx);
@@ -34,13 +33,13 @@ void test1(IList& list) {
         cv.notify_all();  // increase counter, notify all
     });
 
+
     // second one adds 5
     thVect.emplace_back([&]() {
-        for(auto i = 0; i < 5; ++i) {
+        for(auto i = 0; i < 5; ++i)
             list.insert(3);
-            std::this_thread::sleep_for(10ms);
-        }
         {
+            // increment the counter
             auto lock = std::unique_lock<std::mutex>(cvMtx);
             ++finishCounter;
         }
@@ -51,22 +50,34 @@ void test1(IList& list) {
     thVect.emplace_back([&]() {
         for(auto i = 0; i < 5; ++i) {
             list.remove(2);
-            std::this_thread::sleep_for(15ms);
         }
         {
+            // increment the counter
             auto lock = std::unique_lock<std::mutex>(cvMtx);
             ++finishCounter;
         }
         cv.notify_all();  // increase counter, notify all
     });
 
-    // fourth one iterates every so often and waits for the others to finish
+//     fourth one iterates every so often and waits for the others to finish
+    thVect.emplace_back([&]() {
+        auto ok = false;
+        while(!ok) {
+            {
+                auto lock = std::unique_lock<std::mutex>(cvMtx); // lock the mutex
+                ok = cv.wait_for(lock, 3ms, [&]{return finishCounter == 3;}); // wait for all to finish
+            }
+            for(auto it = list.getIterator(); it->isValid(); it->next())
+                it->getValue();
+        }
+    });
+
     thVect.emplace_back([&]() {
         auto ok = false;
         while(!ok) {
             {
                 std::unique_lock<std::mutex> lock(cvMtx); // lock the mutex
-                ok = cv.wait_for(lock, 50ms, [&]{return finishCounter == 3;}); // wait for all to finish
+                ok = cv.wait_for(lock, 1ms, [&]{return finishCounter == 3;}); // wait for all to finish
             }
             for(auto it = list.getIterator(); it->isValid(); it->next())
                 it->getValue();
@@ -99,7 +110,6 @@ void test2(IList& list) {
     thVect.emplace_back([&]() {
         for(auto i = 0; i < 100; ++i) {
             list.insert(2);
-            std::this_thread::sleep_for(5ms);
         }
         {
             // increment the counter
@@ -113,9 +123,10 @@ void test2(IList& list) {
     thVect.emplace_back([&]() {
         for(auto i = 0; i < 50; ++i) {
             list.insert(3);
-            std::this_thread::sleep_for(10ms);
+
         }
         {
+            // increment the counter
             auto lock = std::unique_lock<std::mutex>(cvMtx);
             ++finishCounter;
         }
@@ -126,9 +137,9 @@ void test2(IList& list) {
     thVect.emplace_back([&]() {
         for(auto i = 0; i < 50; ++i) {
             list.remove(2 + (i % 3) / 2);
-            std::this_thread::sleep_for(15ms);
         }
         {
+            // increment the counter
             auto lock = std::unique_lock<std::mutex>(cvMtx);
             ++finishCounter;
         }
@@ -141,12 +152,25 @@ void test2(IList& list) {
         while(!ok) {
             {
                 std::unique_lock<std::mutex> lock(cvMtx); // lock the mutex
-                ok = cv.wait_for(lock, 50ms, [&]{return finishCounter == 3;}); // wait for all to finish
+                ok = cv.wait_for(lock, 2ms, [&]{return finishCounter == 3;}); // wait for all to finish
             }
             for(auto it = list.getIterator(); it->isValid(); it->next())
                 it->getValue();
         }
     });
+
+    thVect.emplace_back([&]() {
+        auto ok = false;
+        while(!ok) {
+            {
+                std::unique_lock<std::mutex> lock(cvMtx); // lock the mutex
+                ok = cv.wait_for(lock, 2ms, [&]{return finishCounter == 3;}); // wait for all to finish
+            }
+            for(auto it = list.getIterator(); it->isValid(); it->next())
+                it->getValue();
+        }
+    });
+
 
     // wait on all threads
     for(auto& th : thVect) th.join();
@@ -159,7 +183,20 @@ void test2(IList& list) {
 
 
 int main() {
-    auto list1 = CoarseList("coarse1.log"), list2 = CoarseList("coarse2.log");
+    auto list1 = CoarseList("coarse1.log");
+    auto list2 = FineList("fine1.log");
     test1(list1);
-    test2(list2);
+    test1(list2);
+
+    std::cout << "\nBENCHMARK COARSE\n";
+    for(auto i = 0; i < 10; ++i) {
+        auto list = CoarseList("coarse2.log");
+        test2(list);
+    }
+
+    std::cout << "\nBENCHMARK FINE\n";
+    for(auto i = 0; i < 10; ++i) {
+        auto list = FineList("fine2.log");
+        test2(list);
+    }
 }
