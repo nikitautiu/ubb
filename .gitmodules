@@ -1,0 +1,6 @@
+[submodule "PPD/PPD/lab4/Simple-Web-Server"]
+	path = PPD/PPD/lab4/Simple-Web-Server
+	url = git@github.com:eidheim/Simple-Web-Server.git
+[submodule "PPD/lab4/Simple-Web-Server"]
+	path = PPD/lab4/Simple-Web-Server
+	url = git@github.com:eidheim/Simple-Web-Server.git
