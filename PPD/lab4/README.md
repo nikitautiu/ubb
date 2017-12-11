@@ -1,4 +1,4 @@
-# Documentatie
+# Lab 4 - Nichita Utiu 233
 ## Problema
 **Magazin**
 
@@ -24,4 +24,4 @@ Pentru a pastra aceasta abstractie si la nivelul de arhitectura client/server, `
 
 `ConcreteController` de asemena porneste in fundal un thread care log-eaza starea magazinului din 5 in 5 secunde pentru verificare. Worker-ul, Client-ul sunt pornite ca threadu-uri si consuma toate acelasi serviciu `IController`.
 
-![diag](diag.svg)
+![diag](doc/diag.svg)
