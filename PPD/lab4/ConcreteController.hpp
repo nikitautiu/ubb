@@ -51,7 +51,7 @@ public:
             }
         });
     }
-    void addTransaction(std::string name, int id, int quant) override; // add the transaction
+    std::future<void> addTransaction(std::string name, int id, int quant) override; // add the transaction
 private:
     void _addTransaction(std::string name, int id, int quant);
     std::thread loggerThread;

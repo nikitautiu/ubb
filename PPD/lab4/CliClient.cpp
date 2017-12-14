@@ -12,6 +12,10 @@ void CliClient::run() {
         // just do it till you get a Ctrl+C
         int id, quant;
         std::cin >> id >> quant;
-        ctrl->addTransaction("CLI", id, quant);
+        std::cout << "WAITING - ";
+        auto future = ctrl->addTransaction("CLI", id, quant);
+        // asteptam degeaba dupa un future
+        future.get();
+        std::cout << "DONE" << std::endl;
     }
 }

@@ -5,9 +5,8 @@
 #include <iomanip>
 #include "ConcreteController.hpp"
 
-void ConcreteController::addTransaction(std::string name, int id, int quant) {
-    pool.enqueue([=]() { this->_addTransaction(name, id, quant); });
-
+std::future<void> ConcreteController::addTransaction(std::string name, int id, int quant) {
+    return pool.enqueue([=]() { this->_addTransaction(name, id, quant); });
 }
 
 void ConcreteController::_addTransaction(std::string name, int id, int quant) {

@@ -27,7 +27,7 @@ private:
 public:
     HttpController(const std::string &conn);
 
-    void addTransaction(std::string name, int id, int quant) override;
+    std::future<void> addTransaction(std::string name, int id, int quant) override;
 };
 
 

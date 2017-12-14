@@ -6,10 +6,11 @@
 #define LAB4_ICONTROLLER_HPP
 
 #include <string>
+#include <future>
 
 class IController {
 public:
-    virtual void addTransaction(std::string name, int id, int quant) = 0;
+    virtual std::future<void> addTransaction(std::string name, int id, int quant) = 0;
 };
 
 
