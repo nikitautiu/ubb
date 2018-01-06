@@ -35,9 +35,10 @@ export default Actions = class  {
        type: flag ? ActionTypes.ITEM_FETCH_START : ActionTypes.ITEM_FETCH_STOP
     });
 
-    static setItems = (newItems) => ({
+    static setItems = ({items: newItems, lastModified}) => ({
         type: ActionTypes.SET_ITEMS,
-        items: newItems
+        items: newItems,
+        lastModified
     });
 
     /** Try logging in in the background given a username
@@ -58,7 +59,7 @@ export default Actions = class  {
             const onSuccess = token => dispatch(Actions.logInSuccess({
                 authToken: token,
                 name: username
-            })).then(() => dispatch(Actions.asyncGetItems({id: 1})));
+            })).then(() => dispatch(Actions.asyncPollForItems({id: 1})));
             const onFail = () => dispatch(Actions.logInFail());
 
             loginCall({username, password, onSuccess, onFail});
@@ -119,18 +120,20 @@ export default Actions = class  {
         };
     };
 
-    static asyncGetItems = (list) => {
+    static asyncGetItems = ({list, lastModified}) => {
         return (dispatch, getState) => {
             dispatch(Actions.setItemFetching(true));
             // on item get success, returns them all and sets them
-            const onSuccess = items => {
+            const onSuccess = ({items, lastModified}) => {
+                // null means it hasn't changd
+                if(items !== null) dispatch(Actions.setItems({items, lastModified}));
 
-                dispatch(Actions.setItems(items));
                 dispatch(Actions.setItemFetching(false)); // end api call flag
                 dispatch(Actions.asyncSaveStateToStorage());
             };
             itemGetCall({
                 list,  // the list ot fetch from
+                lastModified,
                 token: getState().currentUser.user.authToken,  // add the token from the state
                 onSuccess,
                 onFail: () => dispatch(Actions.setItemFetching(false))
@@ -145,7 +148,7 @@ export default Actions = class  {
     };
 
     /**
-     * Get the items given a list with {id}
+     * Get the items given a list with {id}, and a lastModified
      * @param list the list with {id}
      * @returns {function(*, *)}
      */
@@ -153,7 +156,7 @@ export default Actions = class  {
         return  (dispatch, getState) => {
             // only do this if logged in
             if(getState().currentUser.user.name !== null) {
-                dispatch(Actions.asyncGetItems(list))
+                dispatch(Actions.asyncGetItems({list, lastModified: getState().items.lastModified}))
             }
         };
     };

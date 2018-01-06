@@ -54,9 +54,10 @@ class ItemsReducer {
      * @param state
      * @param items
      */
-    static [ActionTypes.SET_ITEMS] = (state, {items}) => ({
+    static [ActionTypes.SET_ITEMS] = (state, {items, lastModified}) => ({
         ...state,
-        entities: items
+        entities: items,
+        lastModified
     });
 
     /**

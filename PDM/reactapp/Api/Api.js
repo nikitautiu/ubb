@@ -48,7 +48,7 @@ const apiCall = ({endpoint,
             responseObj = response;  // save the response status for return
             return response.json();
         }
-    ).then(data => onReceive({status: responseObj.status, data})
+    ).then(data => onReceive({status: responseObj.status, data, headers: responseObj.headers})
     ).catch(err => onReceive({status: -1}));  // means non-status error
 };
 
@@ -155,13 +155,14 @@ export const itemUpdateCall = ({item, onSuccess, onFail, token}) => {
 
 /**
  * Returns the list of items for a given list
- * returned item on success
+ * returned item on success if modified
  * @param listId the id of the list
  * @param token the jwt token to use
  * @param onSuccess the success callback
  * @param onFail the failure callback
+ * @param lastModified the last modified token
  */
-export const itemGetCall = ({list: {id: listId}, onSuccess, onFail, token}) => {
+export const itemGetCall = ({list: {id: listId}, onSuccess, onFail, token, lastModified = ""}) => {
     const endpoint = `/lists/${listId}/items/`;
     const httpMethod = 'GET';
 
@@ -169,17 +170,25 @@ export const itemGetCall = ({list: {id: listId}, onSuccess, onFail, token}) => {
         endpoint,
         httpMethod,
         token,
+        additionalHeaders: {
+            "If-Modified-Since": lastModified  // last modified
+        },
         // the token is passed from the component/thunk
         // where we can access state
         // the new item is received, but the fields must be renamed
         onReceive: response => (response.status === 200 ?
             // in case of success, returns a list with the converted items
-            onSuccess(response.data.map(
-                item => ({
-                    ...storeItemFromApi(item),
-                    listId // insert the list id alongside other data
-                })
-            )) :
+            onSuccess(response.status === 304 ? null :  // return null if nothing changed
+                {
+                    items: response.data.map(
+                        item => ({
+                            ...storeItemFromApi(item),
+                            listId // insert the list id alongside other data
+                        })
+                    ),
+                    lastModified: response.headers.lastModified
+                }
+                ) :
             onFail()),
         onFail // doubles as a failure callback
     });
