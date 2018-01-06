@@ -1,4 +1,6 @@
 import os
+
+import datetime
 from django.utils.log import DEFAULT_LOGGING
 
 # Project root directory
@@ -227,4 +229,6 @@ LOGGING['loggers']['django']['level'] = LOG_LEVEL
 
 JWT_AUTH = {
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),
+
 }
