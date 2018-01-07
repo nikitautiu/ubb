@@ -87,11 +87,13 @@ class BaseLexer(object):
 
         return None
 
-    def parse(self, text):
+    def parse(self, text, only_ids=False):
         """Receives a text, parses it and returns it internal form and
         the symbol tables corresponding to the identifiers and constants.
 
-        The return value is a tuple of (internal_form, identifier_table, constant_table)"""
+        The return value is a tuple of (internal_form, identifier_table, constant_table)
+        If only_ids, return only the ids as the internal form
+        """
         pos = 0
         internal_form = []
 
@@ -113,7 +115,7 @@ class BaseLexer(object):
                     index = constant_table.put(match_text)
 
                 # index will be -1 if neither of them
-                internal_form.append((match_def.code, index))  # add the token
+                internal_form.append((match_def.code if not only_ids else match_def.id, index))  # add the token
 
                 # increment the position
                 pos += len(match_text)
@@ -126,3 +128,8 @@ class BaseLexer(object):
 
         # return the result
         return internal_form, identifier_table, constant_table
+
+
+def get_non_terminals(lex, text):
+    """Just return the list of non-trerminals """
+    internal_form,  _, _ = lex.parse(text, only_ids=True)

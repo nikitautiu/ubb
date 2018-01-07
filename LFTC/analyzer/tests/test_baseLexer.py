@@ -71,3 +71,9 @@ class TestBaseLexer(TestCase):
         test_string = '1  + 2 - -3 * signed vari <= 15 > 0; 12 /  \n a + ^ b'
         with self.assertRaises(ParseError):
             self.lexer.parse(test_string)
+
+        # valid multiline test
+        test_string = '1  + 2 - -3 * signed vari <= 15 > 0; 12\n  a + b ;; a'
+        internal_form, _, _ = self.lexer.parse(test_string)
+
+        # TODO COMPARISON
