@@ -3,6 +3,8 @@ from collections import namedtuple
 
 
 # the type to hold the definition of a symbol
+from tests.utils import remove_space_tokens
+
 SymbolDefinition = namedtuple('SymbolDefinition', ['code', 'id', 'regex'])
 
 
@@ -87,7 +89,7 @@ class BaseLexer(object):
 
         return None
 
-    def parse(self, text, only_ids=False):
+    def lex(self, text, only_ids=False):
         """Receives a text, parses it and returns it internal form and
         the symbol tables corresponding to the identifiers and constants.
 
@@ -129,7 +131,11 @@ class BaseLexer(object):
         # return the result
         return internal_form, identifier_table, constant_table
 
+    def lex_with_names(self, text):
+        tokens, _, _ = self.lex(text, only_ids=True)   # returns only the ids
+        return remove_space_tokens(tokens, ' ')  # these only make parsing harder
+
 
 def get_non_terminals(lex, text):
     """Just return the list of non-trerminals """
-    internal_form,  _, _ = lex.parse(text, only_ids=True)
+    internal_form,  _, _ = lex.lex(text, only_ids=True)

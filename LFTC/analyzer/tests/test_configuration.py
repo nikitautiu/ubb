@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from lexer.grammar import Production
-from lexer.parser import Configuration
+from parser.grammar import Production
+from parser.parser import Configuration
 
 
 class TestConfiguration(TestCase):

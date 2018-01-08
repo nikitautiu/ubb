@@ -54,26 +54,26 @@ class TestBaseLexer(TestCase):
             1    # 12
         ]
 
-        internal_form, _, _ = self.lexer.parse(test_string)
+        internal_form, _, _ = self.lexer.lex(test_string)
         code_list = remove_space_tokens(internal_form)  # remove all spaces
         self.assertListEqual(code_list, expected_codes)
 
         # invalid example, invalid operator ^
         test_string = '1  + 2 - -3 * signed vari <= 15 > 0; ^ 12 /  a + b'
         with self.assertRaises(ParseError):
-            self.lexer.parse(test_string)
+            self.lexer.lex(test_string)
 
         # valid multiline test
         test_string = '1  + 2 - -3 * signed vari <= 15 > 0; 12\n  a + b ;; a'
-        internal_form, _, _ = self.lexer.parse(test_string)
+        internal_form, _, _ = self.lexer.lex(test_string)
 
         # invalid example, invalid operator ^
         test_string = '1  + 2 - -3 * signed vari <= 15 > 0; 12 /  \n a + ^ b'
         with self.assertRaises(ParseError):
-            self.lexer.parse(test_string)
+            self.lexer.lex(test_string)
 
         # valid multiline test
         test_string = '1  + 2 - -3 * signed vari <= 15 > 0; 12\n  a + b ;; a'
-        internal_form, _, _ = self.lexer.parse(test_string)
+        internal_form, _, _ = self.lexer.lex(test_string)
 
         # TODO COMPARISON

@@ -1,6 +1,6 @@
 from collections import namedtuple, defaultdict
 
-from lexer.grammar import is_terminal, Production
+from parser.grammar import is_terminal, Production
 
 
 class Configuration(object):
@@ -190,3 +190,77 @@ def table_from_grammar(grammar, start_symbol):
                 goto[start][symbol] = end
 
     return actions, goto
+
+
+# an item to put on the parser stack
+StackItem = namedtuple('StackItem', ('state', 'token'))
+
+
+class Parser(object):
+    """Parser class, intializable from an action and goto table LR0"""
+    def __init__(self, actions, goto):
+        self.goto = goto
+        self.actions = actions
+
+    @property
+    def is_parsed(self):
+        """Whether it raised an error or not"""
+        return self._is_parsed
+
+    @property
+    def derivations(self):
+        """the derivations used"""
+        return self._derivations
+
+    def parse(self, token_string):
+        """Parse the token string and return the derivation stream"""
+        # the stack is empty at first and we need the empty token at first
+        stack = [StackItem(0, 'START')]  # first token is the start
+        token_string = list(map(lambda token: token if token.startswith('"') else '"' + token + '"',
+                                token_string))
+        token_string.append('END')
+
+        self._is_parsed = None  # whether it's a success or not
+        self._derivations = []  # the productions used for derivation
+
+        # start from the first positon
+        string_pos = 0
+        while self._is_parsed is None:
+            next_symbol = token_string[string_pos]
+            # check what action corresponds to this transition
+            action = self.actions[stack[-1].state][next_symbol]
+
+            # accept just ends the loop
+            if action['action'] == 'ACCEPT':
+                self._is_parsed = True
+
+            # error is the same
+            if action['action'] == 'ERROR':
+                self._is_parsed = False
+
+            # if it's shift add it to the stack
+            if action['action'] == 'SHIFT':
+                stack.append(StackItem(action['end'], next_symbol))
+                string_pos += 1  # advance the string
+
+            # reduce needs to pop and add the corresponding goto state
+            if action['action'] == 'REDUCE':
+                num_popped = len(action['production'].symbols)
+                resulting_non_terminal = action['production'].non_terminal
+                top_state = stack[-num_popped-1]  # the remaining state after popping
+                goto_state_ind = self.goto[top_state.state][resulting_non_terminal]  # the state to goto
+
+                # pop the reduction
+                stack = stack[:-num_popped]
+                stack.append(StackItem(goto_state_ind, resulting_non_terminal))
+
+                # add it to the reductions
+                self._derivations.append(action['production'])
+
+        self._derivations = self._derivations[::-1]
+
+
+def parser_from_grammar(grammar, start_symbol):
+    """Given a grammar, return the parser"""
+    action_table, goto_table = table_from_grammar(grammar, start_symbol)
+    return Parser(action_table, goto_table)

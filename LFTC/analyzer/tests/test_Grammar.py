@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from lexer.grammar import Grammar, Production
+from parser.grammar import Grammar, Production
 
 
 class TestGrammar(TestCase):
