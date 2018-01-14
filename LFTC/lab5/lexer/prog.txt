@@ -1,0 +1,9 @@
+void print(int a, int b) {
+    int x = 10, y = a;
+    while(x < a) {
+        x = x + y;
+        y = a;
+    }
+    x(1, 2, 1);
+    return 7;
+}
