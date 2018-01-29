@@ -128,6 +128,39 @@ export default Actions = class  {
         };
     };
 
+    /**
+     * Given an item with an id and listId, toggle its checked
+     * state
+     * @param item
+     * @returns {function(*, *)}
+     */
+    static asyncUpdateItem = (item) => {
+        return  (dispatch, getState) => {
+            dispatch(Actions.setItemFetching(true));
+            /// get the item with the given id and listId
+            let newItem = getState().items.entities.find(
+                (it) => item.listId === it.listId && item.id === it.id);
+
+            newItem = {
+                ...newItem,
+                ...item
+            };
+
+            // on item update success
+            const onSuccess = item => {
+                dispatch(Actions.updateItem(item));
+                dispatch(Actions.asyncSaveStateToStorage());
+
+                dispatch(Actions.setItemFetching(false)); // end api call flag
+            };
+            itemUpdateCall({
+                item: newItem,  // the updated item
+                token: getState().currentUser.user.authToken,  // add the token from the state
+                onSuccess,
+                onFail: () => dispatch(Actions.setItemFetching(false))});
+        };
+    };
+
     static asyncGetItems = ({list, lastModified}) => {
         return (dispatch, getState) => {
             dispatch(Actions.setItemFetching(true));

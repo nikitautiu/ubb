@@ -3,11 +3,6 @@ import {Button, Container, Content, Form, Input, Item, Label, Text, Toast, View}
 
 // create a component
 class LoginForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {credentials: {username: '', password: ''}};
-    }
-
     onChange = (field, value) => this.setState({
         credentials: {
             ...this.state.credentials,
@@ -18,9 +13,7 @@ class LoginForm extends Component {
     onSubmit = () => this.props.logInUser(this.state.credentials.username, this.state.credentials.password);
 
     render = () => {
-
         return (
-
             <Form>
                 <Item inlineLabel>
                     <Label>Username</Label>
@@ -35,7 +28,7 @@ class LoginForm extends Component {
                         onChangeText={text => this.onChange('username', text)}
                     />
                 </Item>
-                <Item inlineLabel last error={this.props.isFailed}>
+                <Item inlineLabel last>
                     <Label>Password</Label>
                     <Input
                         ref={(input) => this.passwordInput = input}
@@ -45,13 +38,26 @@ class LoginForm extends Component {
                         onSubmitEditing={() => this.onSubmit()}
                     />
                 </Item>
-                {this.props.isFailed && <Text>Invalid username or password!</Text> }
                 <Button primary block onPress={() => this.onSubmit()}><Text> LOGIN </Text></Button>
 
             </Form>
-
-
         );
+    };
+
+    constructor(props) {
+        super(props);
+        this.state = {credentials: {username: '', password: '', showedError: false}};
+    }
+
+    componentDidUpdate(prevProps, prevState, prevContext) {
+        console.log(this.props);
+        if (this.props.isFailed && !this.state.showedError) {
+            Toast.show({
+                text: 'Invalid username or password',
+                position: 'bottom',
+            });
+            this.setState(this.setState({showedError: true}));
+        }
     }
 }
 
