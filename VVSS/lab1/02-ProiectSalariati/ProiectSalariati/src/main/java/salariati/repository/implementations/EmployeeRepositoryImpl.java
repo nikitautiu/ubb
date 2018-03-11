@@ -11,7 +11,7 @@ import salariati.model.Employee;
 import salariati.repository.interfaces.EmployeeRepositoryInterface;
 import salariati.validator.EmployeeValidator;
 
-public class EmployeeImpl implements EmployeeRepositoryInterface {
+public class EmployeeRepositoryImpl implements EmployeeRepositoryInterface {
 	
 	private final String employeeDBFile = "employeeDB/employees.txt";
 	private EmployeeValidator employeeValidator = new EmployeeValidator();

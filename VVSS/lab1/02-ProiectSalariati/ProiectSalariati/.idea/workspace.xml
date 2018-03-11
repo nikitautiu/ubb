@@ -13,24 +13,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="EmployeeRepositoryImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeRepositoryImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="191">
+              <caret line="84" column="23" lean-forward="false" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1244#1254#0" expanded="true" />
+                <element signature="e#2180#2190#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeImpl.java">
+      <file leaf-file-name="EmployeeRepositoryMock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/mock/EmployeeRepositoryMock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-264">
-              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-419">
+              <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -38,41 +40,40 @@
       <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/salariati/model/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+            <state relative-caret-position="36">
+              <caret line="124" column="79" lean-forward="false" selection-start-line="124" selection-start-column="79" selection-end-line="124" selection-end-column="79" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/exception/EmployeeException.java">
+      <file leaf-file-name="DidacticFunction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/enumeration/DidacticFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+            <state relative-caret-position="51">
+              <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding>
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeRepositoryInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/interfaces/EmployeeRepositoryInterface.java">
+      <file leaf-file-name="EmployeeFieldsTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/salariati/test/EmployeeFieldsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/main/StartApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="131">
+              <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,14 +84,65 @@
       <file leaf-file-name="EmployeeValidator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/salariati/validator/EmployeeValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="11" column="63" lean-forward="true" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EmployeeControllerInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/controller/interfaces/EmployeeControllerInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeViewInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/view/interfaces/EmployeeViewInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeViewMock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/salariati/view/implementations/EmployeeViewMock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="28" column="133" lean-forward="false" selection-start-line="28" selection-start-column="133" selection-end-line="28" selection-end-column="133" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#472#473#0" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>employeeControllerImpl</find>
+      <find>from str</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>this.ctrl</replace>
+    </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -101,8 +153,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/salariati/model/EmployeeValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/salariati/validator/EmployeeValidator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/salariati/test/EmployeeFieldsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/salariati/test/AddEmployeeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/repository/mock/EmployeeMock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/repository/mock/EmployeeRepositoryMock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/controller/EmployeeControllerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/controller/implementations/EmployeeControllerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/controller/interfaces/EmployeeControllerInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/view/EmployeeViewInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/view/interfaces/EmployeeViewInterface.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/main/StartApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/view/implementations/EmployeeViewImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/view/implementations/EmployeeViewMock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/salariati/validator/EmployeeValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/salariati/model/Employee.java" />
       </list>
     </option>
@@ -120,7 +187,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1622" />
@@ -141,10 +208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,34 +248,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="salariati" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProiectSalariati" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProiectSalariati" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="salariati" type="462c0819:PsiDirectoryNode" />
-              <item name="enumeration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProiectSalariati" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProiectSalariati" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="salariati" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProiectSalariati" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProiectSalariati" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="salariati" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProiectSalariati" type="b2602c69:ProjectViewProjectNode" />
@@ -266,6 +302,35 @@
               <item name="ProiectSalariati" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProiectSalariati" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="salariati" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProiectSalariati" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProiectSalariati" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="salariati" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProiectSalariati" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProiectSalariati" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="salariati" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProiectSalariati" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProiectSalariati" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -275,10 +340,22 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ProiectSalariati" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProiectSalariati" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,6 +366,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="salariati.controller" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -302,7 +385,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.salariati.test in ProiectSalariati">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="salariati.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="recording" autostart="false" />
+      <option name="MAIN_CLASS_NAME" value="salariati.main.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ProiectSalariati" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -387,6 +490,42 @@
       <properties />
       <listeners />
     </configuration>
+    <configuration name="salariati.test in ProiectSalariati" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="salariati.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <extension name="recording" autostart="true" />
+      <module name="ProiectSalariati" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="salariati.test" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.salariati.test in ProiectSalariati" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.salariati.test in ProiectSalariati" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -405,30 +544,41 @@
       <workItem from="1519166177674" duration="5534000" />
       <workItem from="1519201505432" duration="685000" />
       <workItem from="1520239160692" duration="1069000" />
+      <workItem from="1520788578933" duration="4312000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="salariati_test_in_ProiectSalariati - 2018.03.11 at 20h 23m 45s.xml">
+      <configuration name="salariati.test in ProiectSalariati" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="salariati_test_in_ProiectSalariati - 2018.03.11 at 20h 27m 01s.xml">
+      <configuration name="salariati.test in ProiectSalariati" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7288000" />
+    <option name="totallyTimeSpent" value="11600000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1366" height="769" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1366" height="769" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30284858" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33238637" sideWeight="0.5025094" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33238637" sideWeight="0.49749058" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33133432" sideWeight="0.49749058" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -440,9 +590,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="JDT AST" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30364963" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,12 +612,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/model/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="2448">
+          <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/exception/EmployeeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -482,7 +639,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/main/StartApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/validator/EmployeeValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1244#1254#0" expanded="true" />
+            <element signature="e#2180#2190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1244#1254#0" expanded="true" />
+            <element signature="e#2180#2190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/interfaces/EmployeeRepositoryInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -516,12 +731,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="966">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1244#1254#0" expanded="true" />
+            <element signature="e#2180#2190#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -542,7 +759,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/main/StartApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -568,202 +785,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/validator/EmployeeValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/interfaces/EmployeeRepositoryInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/salariati">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>salariati</OriginalElement>
-          <nodes>
-            <node x="742.2449206349206" y="181.5">salariati.validator.EmployeeValidator</node>
-            <node x="555.9949206349206" y="367.0">salariati.model.Employee</node>
-            <node x="654.7449206349206" y="965.5">salariati.controller.EmployeeController</node>
-            <node x="1100.7449206349206" y="952.0">salariati.repository.mock.EmployeeMock</node>
-            <node x="563.9949206349206" y="719.0">salariati.repository.interfaces.EmployeeRepositoryInterface</node>
-            <node x="0.0" y="168.0">salariati.exception.EmployeeException</node>
-            <node x="884.1970105820106" y="1251.0">salariati.main.StartApp</node>
-            <node x="144.99492063492073" y="952.5">salariati.repository.implementations.EmployeeImpl</node>
-            <node x="787.2449206349206" y="0.0">salariati.enumeration.DidacticFunction</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="salariati.repository.interfaces.EmployeeRepositoryInterface" target="salariati.model.Employee">
-              <point x="0.0" y="-86.5" />
-              <point x="0.0" y="141.0" />
-            </edge>
-            <edge source="salariati.repository.mock.EmployeeMock" target="salariati.repository.interfaces.EmployeeRepositoryInterface">
-              <point x="-170.57142857142856" y="-114.5" />
-              <point x="1129.1734920634922" y="922.0" />
-              <point x="922.1949206349207" y="922.0" />
-              <point x="159.20000000000005" y="86.5" />
-            </edge>
-            <edge source="salariati.validator.EmployeeValidator" target="salariati.enumeration.DidacticFunction">
-              <point x="0.0" y="-46.0" />
-              <point x="0.0" y="59.0" />
-            </edge>
-            <edge source="salariati.main.StartApp" target="salariati.enumeration.DidacticFunction">
-              <point x="93.33333333333337" y="-32.0" />
-              <point x="1082.530343915344" y="1231.0" />
-              <point x="1531.2449206349206" y="1231.0" />
-              <point x="1531.2449206349206" y="138.0" />
-              <point x="943.8449206349208" y="138.0" />
-              <point x="69.60000000000002" y="59.0" />
-            </edge>
-            <edge source="salariati.repository.implementations.EmployeeImpl" target="salariati.model.Employee">
-              <point x="33.16666666666674" y="-114.0" />
-              <point x="377.16158730158736" y="679.0" />
-              <point x="624.9949206349206" y="679.0" />
-              <point x="-138.0" y="141.0" />
-            </edge>
-            <edge source="salariati.model.Employee" target="salariati.exception.EmployeeException">
-              <point x="-172.5" y="-141.0" />
-              <point x="590.4949206349206" y="327.0" />
-              <point x="201.75" y="327.0" />
-              <point x="67.25" y="59.5" />
-            </edge>
-            <edge source="salariati.repository.mock.EmployeeMock" target="salariati.model.Employee">
-              <point x="-56.85714285714289" y="-114.5" />
-              <point x="1242.8877777777777" y="932.0" />
-              <point x="1234.8246031746032" y="932.0" />
-              <point x="1234.8246031746032" y="679.0" />
-              <point x="900.9949206349206" y="679.0" />
-              <point x="138.0" y="141.0" />
-            </edge>
-            <edge source="salariati.repository.mock.EmployeeMock" target="salariati.validator.EmployeeValidator">
-              <point x="113.71428571428567" y="-114.5" />
-              <point x="1413.4592063492064" y="922.0" />
-              <point x="1360.4190476190474" y="922.0" />
-              <point x="1360.4190476190474" y="327.0" />
-              <point x="932.9115873015874" y="327.0" />
-              <point x="58.66666666666663" y="46.0" />
-            </edge>
-            <edge source="salariati.main.StartApp" target="salariati.validator.EmployeeValidator">
-              <point x="46.66666666666663" y="-32.0" />
-              <point x="1035.8636772486773" y="1211.0" />
-              <point x="1509.2449206349206" y="1211.0" />
-              <point x="1509.2449206349206" y="317.0" />
-              <point x="962.2449206349206" y="317.0" />
-              <point x="87.99999999999989" y="46.0" />
-            </edge>
-            <edge source="salariati.main.StartApp" target="salariati.model.Employee">
-              <point x="-93.33333333333326" y="-32.0" />
-              <point x="895.8636772486774" y="1231.0" />
-              <point x="134.49492063492073" y="1231.0" />
-              <point x="134.49492063492073" y="669.0" />
-              <point x="578.9949206349206" y="669.0" />
-              <point x="-184.0" y="141.0" />
-            </edge>
-            <edge source="salariati.main.StartApp" target="salariati.repository.interfaces.EmployeeRepositoryInterface">
-              <point x="-46.66666666666663" y="-32.0" />
-              <point x="942.530343915344" y="1211.0" />
-              <point x="585.7449206349206" y="1211.0" />
-              <point x="585.7449206349206" y="932.0" />
-              <point x="683.3949206349207" y="932.0" />
-              <point x="-79.60000000000002" y="86.5" />
-            </edge>
-            <edge source="salariati.main.StartApp" target="salariati.controller.EmployeeController">
-              <point x="0.0" y="-32.0" />
-              <point x="989.1970105820106" y="1231.0" />
-              <point x="974.2449206349206" y="1231.0" />
-              <point x="106.5" y="101.0" />
-            </edge>
-            <edge source="salariati.validator.EmployeeValidator" target="salariati.model.Employee">
-              <point x="0.0" y="46.0" />
-              <point x="874.2449206349206" y="347.0" />
-              <point x="935.4949206349206" y="347.0" />
-              <point x="172.5" y="-141.0" />
-            </edge>
-            <edge source="salariati.repository.implementations.EmployeeImpl" target="salariati.repository.interfaces.EmployeeRepositoryInterface">
-              <point x="165.83333333333326" y="-114.0" />
-              <point x="509.828253968254" y="922.0" />
-              <point x="603.7949206349208" y="922.0" />
-              <point x="-159.19999999999993" y="86.5" />
-            </edge>
-            <edge source="salariati.controller.EmployeeController" target="salariati.repository.interfaces.EmployeeRepositoryInterface">
-              <point x="-142.0" y="-101.0" />
-              <point x="725.7449206349206" y="932.0" />
-              <point x="762.9949206349206" y="932.0" />
-              <point x="0.0" y="86.5" />
-            </edge>
-            <edge source="salariati.repository.mock.EmployeeMock" target="salariati.enumeration.DidacticFunction">
-              <point x="170.5714285714286" y="-114.5" />
-              <point x="1470.3163492063493" y="912.0" />
-              <point x="1407.8357142857144" y="912.0" />
-              <point x="1407.8357142857144" y="148.0" />
-              <point x="909.0449206349206" y="148.0" />
-              <point x="34.799999999999955" y="59.0" />
-            </edge>
-            <edge source="salariati.repository.implementations.EmployeeImpl" target="salariati.exception.EmployeeException">
-              <point x="-165.83333333333326" y="-114.0" />
-              <point x="178.16158730158747" y="932.0" />
-              <point x="67.25" y="932.0" />
-              <point x="-67.25" y="59.5" />
-            </edge>
-            <edge source="salariati.model.Employee" target="salariati.validator.EmployeeValidator">
-              <point x="103.5" y="-141.0" />
-              <point x="866.4949206349206" y="347.0" />
-              <point x="844.9115873015874" y="347.0" />
-              <point x="-29.33333333333337" y="46.0" />
-            </edge>
-            <edge source="salariati.repository.implementations.EmployeeImpl" target="salariati.validator.EmployeeValidator">
-              <point x="-99.5" y="-114.0" />
-              <point x="244.49492063492073" y="922.0" />
-              <point x="123.49492063492073" y="922.0" />
-              <point x="123.49492063492073" y="337.0" />
-              <point x="756.9115873015874" y="337.0" />
-              <point x="-117.33333333333337" y="46.0" />
-            </edge>
-            <edge source="salariati.controller.EmployeeController" target="salariati.model.Employee">
-              <point x="142.0" y="-101.0" />
-              <point x="1009.7449206349206" y="932.0" />
-              <point x="1025.6919312169312" y="932.0" />
-              <point x="1025.6919312169312" y="699.0" />
-              <point x="808.9949206349206" y="699.0" />
-              <point x="46.0" y="141.0" />
-            </edge>
-            <edge source="salariati.model.Employee" target="salariati.enumeration.DidacticFunction">
-              <point x="-103.5" y="-141.0" />
-              <point x="659.4949206349206" y="327.0" />
-              <point x="720.7449206349206" y="327.0" />
-              <point x="720.7449206349206" y="138.0" />
-              <point x="804.6449206349207" y="138.0" />
-              <point x="-69.60000000000002" y="59.0" />
-            </edge>
-            <edge source="salariati.main.StartApp" target="salariati.repository.mock.EmployeeMock">
-              <point x="23.33333333333337" y="-32.0" />
-              <point x="1012.530343915344" y="1201.0" />
-              <point x="1299.7449206349206" y="1201.0" />
-              <point x="0.0" y="114.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.3033457249070632" x="706.0" y="663.0" />
-          <SelectedNodes>
-            <node>salariati.exception.EmployeeException</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Inner Classes</Category>
-            <Category>Constructors</Category>
-            <Category>Properties</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -778,30 +804,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/model/Employee.java">
+    <entry file="uml://JAVA/salariati">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>salariati</OriginalElement>
+          <nodes>
+            <node x="158.0" y="228.0">salariati.view</node>
+            <node x="0.0" y="304.0">salariati.test</node>
+            <node x="0.0" y="0.0">salariati.enumeration</node>
+            <node x="185.0" y="76.0">salariati.controller</node>
+            <node x="0.0" y="228.0">salariati.main</node>
+            <node x="178.0" y="152.0">salariati.model</node>
+            <node x="0.0" y="152.0">salariati.validator</node>
+            <node x="0.0" y="76.0">salariati.exception</node>
+            <node x="201.0" y="0.0">salariati.repository</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-101.0" y="181.0" />
+          <SelectedNodes>
+            <node>salariati.enumeration</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/salariati/test/AddEmployeeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="144" column="32" lean-forward="false" selection-start-line="144" selection-start-column="32" selection-end-line="144" selection-end-column="32" />
+        <state relative-caret-position="363">
+          <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/main/StartApp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/controller/implementations/EmployeeControllerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/view/interfaces/EmployeeViewInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/controller/interfaces/EmployeeControllerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/salariati/test/EmployeeFieldsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="131">
+          <caret line="49" column="44" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/validator/EmployeeValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="63" lean-forward="true" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/view/implementations/EmployeeViewMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="28" column="133" lean-forward="false" selection-start-line="28" selection-start-column="133" selection-end-line="28" selection-end-column="133" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/mock/EmployeeRepositoryMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-419">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/enumeration/DidacticFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/model/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="124" column="79" lean-forward="false" selection-start-line="124" selection-start-column="79" selection-end-line="124" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/salariati/repository/implementations/EmployeeRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="84" column="23" lean-forward="false" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1244#1254#0" expanded="true" />
+            <element signature="e#2180#2190#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -834,7 +970,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

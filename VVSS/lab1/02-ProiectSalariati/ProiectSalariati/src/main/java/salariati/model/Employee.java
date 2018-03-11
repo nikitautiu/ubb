@@ -6,6 +6,7 @@ import salariati.validator.EmployeeValidator;
 
 public class Employee {
 
+	private String firstName;
 	/** The last name of the employee */
 	private String lastName;
 	
@@ -31,7 +32,8 @@ public class Employee {
 	/**
 	 * Constructor with fields for employee
 	 */
-	public Employee(String lastName, String cnp, DidacticFunction function, String salary) {
+	public Employee(String firstName, String lastName, String cnp, DidacticFunction function, String salary) {
+		this.firstName = firstName;
 		this.lastName  = lastName;
 		this.cnp       = cnp;
 		this.function  = function;
@@ -120,7 +122,7 @@ public class Employee {
 	/**
 	 * equals function for employee
 	 */
-	public boolean equals(Employee comparableEmployee) {
+	public boolean equals(Employee comparableEmployee) throws EmployeeException {
 		boolean hasSameLastName  = this.lastName.equals(comparableEmployee.getLastName()),
 				hasSameCNP       = this.cnp.equals(comparableEmployee.getCnp()),
 				hasSameFunction  = this.function.equals(comparableEmployee.getFunction()),
@@ -139,7 +141,7 @@ public class Employee {
 	 * @return if the given line is valid returns the corresponding Employee
 	 * @throws EmployeeException
 	 */
-	public Employee getEmployeeFromString(String _employee, int line) throws EmployeeException {
+	public static Employee getEmployeeFromString(String _employee, int line) throws EmployeeException {
 		Employee employee = new Employee();
 		
 		String[] attributes = _employee.split("[;]");
