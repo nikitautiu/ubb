@@ -52,4 +52,4 @@ class ListItemView(ModelViewSet):
     @staticmethod
     def get_retrieve_last_modified(view_instance, view_method, request, args, kwargs):
         """Get the date the object was last modified - single object"""
-        return view_instance.get_object().lastmodified
+        return view_instance.get_object().last_modified

@@ -3,7 +3,7 @@
  */
 import {fetch} from "cross-fetch";
 
-export const apiUrl = 'http://192.168.1.157:8000';
+export const apiUrl = 'http://192.168.43.236:8000';
 
 /**
  * Makes a call to the api given an endpoint, a payload

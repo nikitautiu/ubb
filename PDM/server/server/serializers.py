@@ -13,7 +13,7 @@ class ListItemSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         """Create a new list item, with the index the next one in the list"""
         largest_index = validated_data['list'].items.aggregate(max_ind=Max('index'))
-        validated_data['index'] = largest_index['max_ind'] + 1
+        validated_data['index'] = (largest_index['max_ind'] or 0) + 1
         return super().create(validated_data)
 
 

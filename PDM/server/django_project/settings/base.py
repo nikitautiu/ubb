@@ -18,6 +18,7 @@ DEBUG = os.getenv('server_DEBUG_IN_PRODUCTION', 'False') == 'True'
 
 ALLOWED_HOSTS = list(filter(lambda x: x, map(lambda x: x.strip(),
                                              os.getenv('server_ALLOWED_HOSTS', '').split(','))))
+
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition

@@ -8,7 +8,32 @@ import {Root} from "native-base";
 import Add from "./containers/Add";
 import Edit from "./containers/Edit";
 import Chart from "./containers/Chart";
+import {Easing, Animated} from "react-native";
 
+
+const transitionConfig = () => {
+    return {
+        transitionSpec: {
+            duration: 750,
+            easing: Easing.out(Easing.poly(4)),
+            timing: Animated.timing,
+            useNativeDriver: true,
+        },
+        screenInterpolator: sceneProps => {
+            const {layout, position, scene} = sceneProps
+
+            const thisSceneIndex = scene.index
+            const width = layout.initWidth
+
+            const translateX = position.interpolate({
+                inputRange: [thisSceneIndex - 1, thisSceneIndex],
+                outputRange: [width, 0],
+            });
+
+            return {transform: [{translateX}]}
+        },
+    }
+};
 
 const RootNavigator = StackNavigator(
     {
@@ -28,8 +53,14 @@ const RootNavigator = StackNavigator(
         Chart: {
             screen: Chart
         }
+    },
+    {
+        initialRouteName: 'Login',
+        transitionConfig,
     }
 );
+
+
 
 export class App extends React.Component {
     render() {
