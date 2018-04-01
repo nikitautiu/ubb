@@ -1,6 +1,8 @@
 package salariati.test;
 
 import static org.junit.Assert.*;
+
+import salariati.exception.EmployeeException;
 import salariati.model.Employee;
 
 import org.junit.Before;
@@ -32,7 +34,7 @@ public class AddEmployeeTest {
 	}
 	
 	@Test
-	public void testAddNewEmployee() {
+	public void testAddNewEmployee() throws EmployeeException {
 		Employee newEmployee = new Employee("Vasile", "ValidLastName", "1910509055057", DidacticFunction.ASISTENT, "3000");
 		assertTrue(employeeValidator.isValid(newEmployee));
 		controller.addEmployee(newEmployee);

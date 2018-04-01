@@ -1,5 +1,7 @@
 package salariati.view.interfaces;
 
+import java.io.IOException;
+
 public interface EmployeeViewInterface {
-    void run();
+    void run() throws IOException;
 }

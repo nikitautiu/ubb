@@ -7,6 +7,8 @@ import salariati.repository.mock.EmployeeRepositoryMock;
 import salariati.view.implementations.EmployeeViewMock;
 import salariati.view.interfaces.EmployeeViewInterface;
 
+import java.io.IOException;
+
 //functionalitati
 //i.	 adaugarea unui nou angajat (nume, prenume, CNP, functia didactica, salariul de incadrare);
 //ii.	 modificarea functiei didactice (asistent/lector/conferentiar/profesor) a unui angajat;
@@ -19,7 +21,11 @@ public class Main {
         EmployeeControllerInterface ctrl = new EmployeeControllerImpl(employeesRepository);
         EmployeeViewInterface view = new EmployeeViewMock(ctrl);
 
-        view.run();
+        try {
+            view.run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
