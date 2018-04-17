@@ -8,7 +8,7 @@ function pb3(n)
 
     % rezolvam cu Gauss ca sa verificam cu LUP  
     disp('Gauss : ');
-    x = prob_1(n,A,b);
+    x = pb1(A,b);
     disp(x);
 
     % rezolvam cu LUP 

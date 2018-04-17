@@ -28,7 +28,7 @@ function pb5(n)
     printf('Rezolvare cu LUP');
     disp(x);
     
-    x = pb1(n, A, b);
+    x = pb1(A, b);
     printf('Rezolvare cu Gauss');
     disp(x);
 end
