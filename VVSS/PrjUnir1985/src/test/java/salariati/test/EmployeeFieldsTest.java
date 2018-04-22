@@ -16,7 +16,7 @@ public class EmployeeFieldsTest {
 	@Before
 	public void setUp() {
 		employeeValidator = new EmployeeValidator();
-		employee = new Employee("George", "Ardelean", "1234567891234", DidacticFunction.ASISTENT, "1234");
+		employee = new Employee("Ana", "Radu", "1951207060028", DidacticFunction.ASISTENT, "1200");
 	}
 	
 	@Test
@@ -30,6 +30,21 @@ public class EmployeeFieldsTest {
 		employee.setLastName("Invalid#LastName");
 		assertFalse(employeeValidator.isValid(employee));
 		employee.setLastName("Invalid!@1");
+		assertFalse(employeeValidator.isValid(employee));
+	}
+
+
+	@Test
+	public void testValidFirstName() {
+		employee.setFirstName("ValidLastName");
+		assertTrue(employeeValidator.isValid(employee));
+	}
+
+	@Test
+	public void testInvalidFirstName() {
+		employee.setFirstName("Invalid#LastName");
+		assertFalse(employeeValidator.isValid(employee));
+		employee.setFirstName("Invalid!@1");
 		assertFalse(employeeValidator.isValid(employee));
 	}
 	
@@ -69,6 +84,16 @@ public class EmployeeFieldsTest {
 		assertFalse(employeeValidator.isValid(employee));
 		employee.setSalary("0");
 		assertFalse(employeeValidator.isValid(employee));
+	}
+
+	@Test
+	public void validFunction() {
+		employee.setFunction(DidacticFunction.ASISTENT);
+		assertTrue(employeeValidator.isValid(employee));
+		employee.setFunction(DidacticFunction.LECTURER);
+		assertTrue(employeeValidator.isValid(employee));
+		employee.setFunction(DidacticFunction.TEACHER);
+		assertTrue(employeeValidator.isValid(employee));
 	}
 
 }

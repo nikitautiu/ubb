@@ -13,8 +13,12 @@ import salariati.validator.EmployeeValidator;
 
 public class EmployeeRepositoryImpl implements EmployeeRepositoryInterface {
 	
-	private final String employeeDBFile = "employeeDB/employees.txt";
+	private String employeeDBFile;
 	private EmployeeValidator employeeValidator = new EmployeeValidator();
+
+	public EmployeeRepositoryImpl(String file) {
+		employeeDBFile = file;
+	}
 
 	@Override
 	public boolean addEmployee(Employee employee) {
@@ -35,8 +39,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepositoryInterface {
 
 	@Override
 	public void deleteEmployee(Employee employee) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
