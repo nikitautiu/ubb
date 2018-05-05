@@ -1,7 +1,7 @@
 function pb4(n)
     % construieste matricea
     A = randi([0, n+1], [n,n]);
-    A = A + eye(n) * 30;
+    A = A + eye(n) * 50;
     b = A * (1:n)';
     
     disp('MATRICEA SISTEMULUI ');

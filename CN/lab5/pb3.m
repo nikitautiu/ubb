@@ -42,11 +42,13 @@ function pb3(n)
     end
     
     % termeni liberi 2
-    b2 = ones(1,n) * 2;
+    b2 = ones(1,n);
     b2(1) = 3;
     b2(n) = 3;
-    b2(floor((n+1)/2)) = 1;
-    b2(ceil((n+1)/2)) = 1;
+    b2(2) = 2;
+    b2(3) = 2;
+    b2(n-1) = 2;
+    b2(n-2) = 2;
     b2 = b2';
 
     disp("SOLUTII");    
@@ -66,7 +68,7 @@ function pb3(n)
     disp([A2, b2]);
     
     disp("SOLUTII");
-    x = jacobi(A2, b2, ones(1,n)', 0.001, 0.001, 100);
+    x = jacobi(A2, b2, ones(1,n)', 0.0000001, 0.000001, 100);
     disp('Jacobi: ');
     disp(x);
     x = sor(A2,b2, ones(1,n)', 1.234, 0.001, 0.001, 100);
