@@ -10,7 +10,7 @@ defusedxml==0.5.0
 Django==1.11.1
 django-debug-toolbar==1.9.1
 django-rest-swagger==2.1.2
-djangorestframework==3.7.3
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 djangorestframework-last-modified==0.1.0
 drf-extensions==0.3.1
