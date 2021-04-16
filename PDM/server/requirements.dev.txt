@@ -1,4 +1,4 @@
 -r requirements.txt
 
 # development tools
-django-debug-toolbar==1.7
+django-debug-toolbar==1.11.1
