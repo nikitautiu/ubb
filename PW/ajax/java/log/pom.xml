@@ -8,7 +8,7 @@
 	<name>logrest</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<spring.version>4.0.5.RELEASE</spring.version>
+		<spring.version>5.2.20.RELEASE</spring.version>
 		<hibernate.version>4.3.5.Final</hibernate.version>
 		<log4j.version>1.2.17</log4j.version>
 		<jdk.version>1.8</jdk.version>
